@@ -1,0 +1,550 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"attestToken(address,uint32)": "c48fa115",
+			"bridgeContracts(uint16)": "ad66a5f1",
+			"chainId()": "9a8a0592",
+			"completeTransfer(bytes)": "c6878519",
+			"completeTransferAndUnwrapETH(bytes)": "ff200cde",
+			"completeTransferAndUnwrapETHWithPayload(bytes)": "1c8475e4",
+			"completeTransferWithPayload(bytes)": "c3f511c1",
+			"createWrapped(bytes)": "e8059810",
+			"governanceActionIsConsumed(bytes32)": "2c3c02a4",
+			"governanceChainId()": "fbe3c2cd",
+			"governanceContract()": "b172b222",
+			"isInitialized(address)": "d60b347f",
+			"isTransferCompleted(bytes32)": "aa4efa5b",
+			"isWrappedAsset(address)": "1a2be4da",
+			"outstandingBridged(address)": "b96c7e4d",
+			"tokenImplementation()": "2f3a3d5d",
+			"transferTokens(address,uint256,uint16,bytes32,uint256,uint32)": "0f5287b0",
+			"transferTokensWithPayload(address,uint256,uint16,bytes32,uint32,bytes)": "c5a5ebda",
+			"updateWrapped(bytes)": "f768441f",
+			"wrapAndTransferETH(uint16,bytes32,uint256,uint32)": "9981509f",
+			"wrapAndTransferETHWithPayload(uint16,bytes32,uint32,bytes)": "bee9cdfc",
+			"wrappedAsset(uint16,bytes32)": "1ff1e286"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "tokenAddress",
+					"type": "address"
+				},
+				{
+					"internalType": "uint32",
+					"name": "nonce",
+					"type": "uint32"
+				}
+			],
+			"name": "attestToken",
+			"outputs": [
+				{
+					"internalType": "uint64",
+					"name": "sequence",
+					"type": "uint64"
+				}
+			],
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint16",
+					"name": "chainId_",
+					"type": "uint16"
+				}
+			],
+			"name": "bridgeContracts",
+			"outputs": [
+				{
+					"internalType": "bytes32",
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "chainId",
+			"outputs": [
+				{
+					"internalType": "uint16",
+					"name": "",
+					"type": "uint16"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes",
+					"name": "encodedVm",
+					"type": "bytes"
+				}
+			],
+			"name": "completeTransfer",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes",
+					"name": "encodedVm",
+					"type": "bytes"
+				}
+			],
+			"name": "completeTransferAndUnwrapETH",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes",
+					"name": "encodedVm",
+					"type": "bytes"
+				}
+			],
+			"name": "completeTransferAndUnwrapETHWithPayload",
+			"outputs": [
+				{
+					"internalType": "bytes",
+					"name": "",
+					"type": "bytes"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes",
+					"name": "encodedVm",
+					"type": "bytes"
+				}
+			],
+			"name": "completeTransferWithPayload",
+			"outputs": [
+				{
+					"internalType": "bytes",
+					"name": "",
+					"type": "bytes"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes",
+					"name": "encodedVm",
+					"type": "bytes"
+				}
+			],
+			"name": "createWrapped",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "token",
+					"type": "address"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "hash",
+					"type": "bytes32"
+				}
+			],
+			"name": "governanceActionIsConsumed",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "governanceChainId",
+			"outputs": [
+				{
+					"internalType": "uint16",
+					"name": "",
+					"type": "uint16"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "governanceContract",
+			"outputs": [
+				{
+					"internalType": "bytes32",
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "impl",
+					"type": "address"
+				}
+			],
+			"name": "isInitialized",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "hash",
+					"type": "bytes32"
+				}
+			],
+			"name": "isTransferCompleted",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "token",
+					"type": "address"
+				}
+			],
+			"name": "isWrappedAsset",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "token",
+					"type": "address"
+				}
+			],
+			"name": "outstandingBridged",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "tokenImplementation",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "token",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint16",
+					"name": "recipientChain",
+					"type": "uint16"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "recipient",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "uint256",
+					"name": "arbiterFee",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint32",
+					"name": "nonce",
+					"type": "uint32"
+				}
+			],
+			"name": "transferTokens",
+			"outputs": [
+				{
+					"internalType": "uint64",
+					"name": "sequence",
+					"type": "uint64"
+				}
+			],
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "token",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "amount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint16",
+					"name": "recipientChain",
+					"type": "uint16"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "recipient",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "uint32",
+					"name": "nonce",
+					"type": "uint32"
+				},
+				{
+					"internalType": "bytes",
+					"name": "payload",
+					"type": "bytes"
+				}
+			],
+			"name": "transferTokensWithPayload",
+			"outputs": [
+				{
+					"internalType": "uint64",
+					"name": "sequence",
+					"type": "uint64"
+				}
+			],
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes",
+					"name": "encodedVm",
+					"type": "bytes"
+				}
+			],
+			"name": "updateWrapped",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "token",
+					"type": "address"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint16",
+					"name": "recipientChain",
+					"type": "uint16"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "recipient",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "uint256",
+					"name": "arbiterFee",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint32",
+					"name": "nonce",
+					"type": "uint32"
+				}
+			],
+			"name": "wrapAndTransferETH",
+			"outputs": [
+				{
+					"internalType": "uint64",
+					"name": "sequence",
+					"type": "uint64"
+				}
+			],
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint16",
+					"name": "recipientChain",
+					"type": "uint16"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "recipient",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "uint32",
+					"name": "nonce",
+					"type": "uint32"
+				},
+				{
+					"internalType": "bytes",
+					"name": "payload",
+					"type": "bytes"
+				}
+			],
+			"name": "wrapAndTransferETHWithPayload",
+			"outputs": [
+				{
+					"internalType": "uint64",
+					"name": "sequence",
+					"type": "uint64"
+				}
+			],
+			"stateMutability": "payable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint16",
+					"name": "tokenChainId",
+					"type": "uint16"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "tokenAddress",
+					"type": "bytes32"
+				}
+			],
+			"name": "wrappedAsset",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		}
+	]
+}

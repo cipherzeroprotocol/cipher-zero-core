@@ -1,0 +1,78 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getPublicKey",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "publicKey",
+						"type": "string"
+					}
+				],
+				"name": "setPublicKey",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/cipherzero/contracts/Encryption/EndToEndEncryption.sol": "EndToEndEncryption"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/cipherzero/contracts/Encryption/EndToEndEncryption.sol": {
+			"keccak256": "0xac9a4388f75844cdeaf4e5ddd78c74a127d9bf03d08517e2feb451821531b5fd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a8acb06275e449e86ba4b1799fb19583ba19c233c3360766b1869fa08b157290",
+				"dweb:/ipfs/QmcxtdrDCFcZN3dL93r2eaFVCEEh5tetzY9q61cdzbYtQH"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,86 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "retrieveData",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_data",
+						"type": "string"
+					}
+				],
+				"name": "storeData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/cipherzero/Storage.sol": "Storage"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/cipherzero/Storage.sol": {
+			"keccak256": "0x6bb31ae8fcc0e096d66ae12d48339b21aa0df25387ef03b8f52bd4fd259c33d4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://613ab61ebe3a5bf71d776479c64c9625fff0509d7a4903e661731032eb920132",
+				"dweb:/ipfs/QmbvLUT8QZob8bc7Yqo92uCYFrTKdYcjgP2q7MhNEDj2T1"
+			]
+		},
+		"contracts/cipherzero/interfaces/IStorage.sol": {
+			"keccak256": "0x20230dc8d7e47941b3bf071e538e0bca6f1a29c34021085d48a487be26d3d6a4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://eed4596fca67c4de7666708ab8ce8668e173dc56d6693a4787132d70f1ed3159",
+				"dweb:/ipfs/QmYENsZkmqUTpFP2yo6Zk9hesNVgUyvF847XCELww6uXmZ"
+			]
+		}
+	},
+	"version": 1
+}

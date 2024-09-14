@@ -1,0 +1,578 @@
+{
+	"id": "6045a3554d19c8dea38b1636669b6ad6",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/bridges/bridge/common/interfaces/IL2ContractDeployer.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.0;\r\n\r\n/**\r\n * @author Matter Labs\r\n * @notice System smart contract that is responsible for deploying other smart contracts on zkSync.\r\n */\r\ninterface IL2ContractDeployer {\r\n    /// @notice A struct that describes a forced deployment on an address.\r\n    /// @param bytecodeHash The bytecode hash to put on an address.\r\n    /// @param newAddress The address on which to deploy the bytecodehash to.\r\n    /// @param callConstructor Whether to run the constructor on the force deployment.\r\n    /// @param value The `msg.value` with which to initialize a contract.\r\n    /// @param input The constructor calldata.\r\n    struct ForceDeployment {\r\n        bytes32 bytecodeHash;\r\n        address newAddress;\r\n        bool callConstructor;\r\n        uint256 value;\r\n        bytes input;\r\n    }\r\n\r\n    /// @notice This method is to be used only during an upgrade to set bytecodes on specific addresses.\r\n    function forceDeployOnAddresses(ForceDeployment[] calldata _deployParams) external;\r\n\r\n    /// @notice Deploys a contract with similar address derivation rules to the EVM's `CREATE2` opcode.\r\n    /// @param _salt The create2 salt.\r\n    /// @param _bytecodeHash The correctly formatted hash of the bytecode.\r\n    /// @param _input The constructor calldata.\r\n    function create2(\r\n        bytes32 _salt,\r\n        bytes32 _bytecodeHash,\r\n        bytes calldata _input\r\n    ) external;\r\n}\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/bridges/bridge/common/interfaces/IL2ContractDeployer.sol": {
+				"IL2ContractDeployer": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "bytes32",
+									"name": "_salt",
+									"type": "bytes32"
+								},
+								{
+									"internalType": "bytes32",
+									"name": "_bytecodeHash",
+									"type": "bytes32"
+								},
+								{
+									"internalType": "bytes",
+									"name": "_input",
+									"type": "bytes"
+								}
+							],
+							"name": "create2",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						},
+						{
+							"inputs": [
+								{
+									"components": [
+										{
+											"internalType": "bytes32",
+											"name": "bytecodeHash",
+											"type": "bytes32"
+										},
+										{
+											"internalType": "address",
+											"name": "newAddress",
+											"type": "address"
+										},
+										{
+											"internalType": "bool",
+											"name": "callConstructor",
+											"type": "bool"
+										},
+										{
+											"internalType": "uint256",
+											"name": "value",
+											"type": "uint256"
+										},
+										{
+											"internalType": "bytes",
+											"name": "input",
+											"type": "bytes"
+										}
+									],
+									"internalType": "struct IL2ContractDeployer.ForceDeployment[]",
+									"name": "_deployParams",
+									"type": "tuple[]"
+								}
+							],
+							"name": "forceDeployOnAddresses",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"author": "Matter Labs",
+						"kind": "dev",
+						"methods": {
+							"create2(bytes32,bytes32,bytes)": {
+								"params": {
+									"_bytecodeHash": "The correctly formatted hash of the bytecode.",
+									"_input": "The constructor calldata.",
+									"_salt": "The create2 salt."
+								}
+							}
+						},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"create2(bytes32,bytes32,bytes)": "3cda3351",
+							"forceDeployOnAddresses((bytes32,address,bool,uint256,bytes)[])": "e9f18c17"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_salt\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"_bytecodeHash\",\"type\":\"bytes32\"},{\"internalType\":\"bytes\",\"name\":\"_input\",\"type\":\"bytes\"}],\"name\":\"create2\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"bytes32\",\"name\":\"bytecodeHash\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"newAddress\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"callConstructor\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"input\",\"type\":\"bytes\"}],\"internalType\":\"struct IL2ContractDeployer.ForceDeployment[]\",\"name\":\"_deployParams\",\"type\":\"tuple[]\"}],\"name\":\"forceDeployOnAddresses\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Matter Labs\",\"kind\":\"dev\",\"methods\":{\"create2(bytes32,bytes32,bytes)\":{\"params\":{\"_bytecodeHash\":\"The correctly formatted hash of the bytecode.\",\"_input\":\"The constructor calldata.\",\"_salt\":\"The create2 salt.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"create2(bytes32,bytes32,bytes)\":{\"notice\":\"Deploys a contract with similar address derivation rules to the EVM's `CREATE2` opcode.\"},\"forceDeployOnAddresses((bytes32,address,bool,uint256,bytes)[])\":{\"notice\":\"This method is to be used only during an upgrade to set bytecodes on specific addresses.\"}},\"notice\":\"System smart contract that is responsible for deploying other smart contracts on zkSync.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/bridges/bridge/common/interfaces/IL2ContractDeployer.sol\":\"IL2ContractDeployer\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/bridges/bridge/common/interfaces/IL2ContractDeployer.sol\":{\"keccak256\":\"0x387df3d6050a21e25cac76d76d332ca6c6bb7a7c746b59083960dd472e38fb33\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d4536fb80c6714de26d1d6d5330cc50af573115bd04d86c9c7068b2b460106d8\",\"dweb:/ipfs/QmP4am9JU3DWWw6DEhX2xtiFQDuyY61u394RdZrfkgc5TD\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {
+							"create2(bytes32,bytes32,bytes)": {
+								"notice": "Deploys a contract with similar address derivation rules to the EVM's `CREATE2` opcode."
+							},
+							"forceDeployOnAddresses((bytes32,address,bool,uint256,bytes)[])": {
+								"notice": "This method is to be used only during an upgrade to set bytecodes on specific addresses."
+							}
+						},
+						"notice": "System smart contract that is responsible for deploying other smart contracts on zkSync.",
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/bridges/bridge/common/interfaces/IL2ContractDeployer.sol": {
+				"ast": {
+					"absolutePath": "contracts/bridges/bridge/common/interfaces/IL2ContractDeployer.sol",
+					"exportedSymbols": {
+						"IL2ContractDeployer": [
+							33
+						]
+					},
+					"id": 34,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "35:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IL2ContractDeployer",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "62:133:0",
+								"text": " @author Matter Labs\n @notice System smart contract that is responsible for deploying other smart contracts on zkSync."
+							},
+							"fullyImplemented": false,
+							"id": 33,
+							"linearizedBaseContracts": [
+								33
+							],
+							"name": "IL2ContractDeployer",
+							"nameLocation": "207:19:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"canonicalName": "IL2ContractDeployer.ForceDeployment",
+									"documentation": {
+										"id": 3,
+										"nodeType": "StructuredDocumentation",
+										"src": "234:429:0",
+										"text": "@notice A struct that describes a forced deployment on an address.\n @param bytecodeHash The bytecode hash to put on an address.\n @param newAddress The address on which to deploy the bytecodehash to.\n @param callConstructor Whether to run the constructor on the force deployment.\n @param value The `msg.value` with which to initialize a contract.\n @param input The constructor calldata."
+									},
+									"id": 14,
+									"members": [
+										{
+											"constant": false,
+											"id": 5,
+											"mutability": "mutable",
+											"name": "bytecodeHash",
+											"nameLocation": "711:12:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 14,
+											"src": "703:20:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_bytes32",
+												"typeString": "bytes32"
+											},
+											"typeName": {
+												"id": 4,
+												"name": "bytes32",
+												"nodeType": "ElementaryTypeName",
+												"src": "703:7:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes32",
+													"typeString": "bytes32"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 7,
+											"mutability": "mutable",
+											"name": "newAddress",
+											"nameLocation": "742:10:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 14,
+											"src": "734:18:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_address",
+												"typeString": "address"
+											},
+											"typeName": {
+												"id": 6,
+												"name": "address",
+												"nodeType": "ElementaryTypeName",
+												"src": "734:7:0",
+												"stateMutability": "nonpayable",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 9,
+											"mutability": "mutable",
+											"name": "callConstructor",
+											"nameLocation": "768:15:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 14,
+											"src": "763:20:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_bool",
+												"typeString": "bool"
+											},
+											"typeName": {
+												"id": 8,
+												"name": "bool",
+												"nodeType": "ElementaryTypeName",
+												"src": "763:4:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bool",
+													"typeString": "bool"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 11,
+											"mutability": "mutable",
+											"name": "value",
+											"nameLocation": "802:5:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 14,
+											"src": "794:13:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_uint256",
+												"typeString": "uint256"
+											},
+											"typeName": {
+												"id": 10,
+												"name": "uint256",
+												"nodeType": "ElementaryTypeName",
+												"src": "794:7:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												}
+											},
+											"visibility": "internal"
+										},
+										{
+											"constant": false,
+											"id": 13,
+											"mutability": "mutable",
+											"name": "input",
+											"nameLocation": "824:5:0",
+											"nodeType": "VariableDeclaration",
+											"scope": 14,
+											"src": "818:11:0",
+											"stateVariable": false,
+											"storageLocation": "default",
+											"typeDescriptions": {
+												"typeIdentifier": "t_bytes_storage_ptr",
+												"typeString": "bytes"
+											},
+											"typeName": {
+												"id": 12,
+												"name": "bytes",
+												"nodeType": "ElementaryTypeName",
+												"src": "818:5:0",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes_storage_ptr",
+													"typeString": "bytes"
+												}
+											},
+											"visibility": "internal"
+										}
+									],
+									"name": "ForceDeployment",
+									"nameLocation": "676:15:0",
+									"nodeType": "StructDefinition",
+									"scope": 33,
+									"src": "669:168:0",
+									"visibility": "public"
+								},
+								{
+									"documentation": {
+										"id": 15,
+										"nodeType": "StructuredDocumentation",
+										"src": "845:100:0",
+										"text": "@notice This method is to be used only during an upgrade to set bytecodes on specific addresses."
+									},
+									"functionSelector": "e9f18c17",
+									"id": 22,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "forceDeployOnAddresses",
+									"nameLocation": "960:22:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 20,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 19,
+												"mutability": "mutable",
+												"name": "_deployParams",
+												"nameLocation": "1010:13:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 22,
+												"src": "983:40:0",
+												"stateVariable": false,
+												"storageLocation": "calldata",
+												"typeDescriptions": {
+													"typeIdentifier": "t_array$_t_struct$_ForceDeployment_$14_calldata_ptr_$dyn_calldata_ptr",
+													"typeString": "struct IL2ContractDeployer.ForceDeployment[]"
+												},
+												"typeName": {
+													"baseType": {
+														"id": 17,
+														"nodeType": "UserDefinedTypeName",
+														"pathNode": {
+															"id": 16,
+															"name": "ForceDeployment",
+															"nameLocations": [
+																"983:15:0"
+															],
+															"nodeType": "IdentifierPath",
+															"referencedDeclaration": 14,
+															"src": "983:15:0"
+														},
+														"referencedDeclaration": 14,
+														"src": "983:15:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_struct$_ForceDeployment_$14_storage_ptr",
+															"typeString": "struct IL2ContractDeployer.ForceDeployment"
+														}
+													},
+													"id": 18,
+													"nodeType": "ArrayTypeName",
+													"src": "983:17:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_array$_t_struct$_ForceDeployment_$14_storage_$dyn_storage_ptr",
+														"typeString": "struct IL2ContractDeployer.ForceDeployment[]"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "982:42:0"
+									},
+									"returnParameters": {
+										"id": 21,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "1033:0:0"
+									},
+									"scope": 33,
+									"src": "951:83:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"documentation": {
+										"id": 23,
+										"nodeType": "StructuredDocumentation",
+										"src": "1042:264:0",
+										"text": "@notice Deploys a contract with similar address derivation rules to the EVM's `CREATE2` opcode.\n @param _salt The create2 salt.\n @param _bytecodeHash The correctly formatted hash of the bytecode.\n @param _input The constructor calldata."
+									},
+									"functionSelector": "3cda3351",
+									"id": 32,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "create2",
+									"nameLocation": "1321:7:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 30,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 25,
+												"mutability": "mutable",
+												"name": "_salt",
+												"nameLocation": "1347:5:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 32,
+												"src": "1339:13:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes32",
+													"typeString": "bytes32"
+												},
+												"typeName": {
+													"id": 24,
+													"name": "bytes32",
+													"nodeType": "ElementaryTypeName",
+													"src": "1339:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes32",
+														"typeString": "bytes32"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 27,
+												"mutability": "mutable",
+												"name": "_bytecodeHash",
+												"nameLocation": "1371:13:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 32,
+												"src": "1363:21:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes32",
+													"typeString": "bytes32"
+												},
+												"typeName": {
+													"id": 26,
+													"name": "bytes32",
+													"nodeType": "ElementaryTypeName",
+													"src": "1363:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes32",
+														"typeString": "bytes32"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 29,
+												"mutability": "mutable",
+												"name": "_input",
+												"nameLocation": "1410:6:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 32,
+												"src": "1395:21:0",
+												"stateVariable": false,
+												"storageLocation": "calldata",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes_calldata_ptr",
+													"typeString": "bytes"
+												},
+												"typeName": {
+													"id": 28,
+													"name": "bytes",
+													"nodeType": "ElementaryTypeName",
+													"src": "1395:5:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes_storage_ptr",
+														"typeString": "bytes"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "1328:95:0"
+									},
+									"returnParameters": {
+										"id": 31,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "1432:0:0"
+									},
+									"scope": 33,
+									"src": "1312:121:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 34,
+							"src": "197:1239:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "35:1403:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

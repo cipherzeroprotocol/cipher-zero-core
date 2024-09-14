@@ -1,0 +1,202 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_chainId",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "facet",
+										"type": "address"
+									},
+									{
+										"internalType": "enum Diamond.Action",
+										"name": "action",
+										"type": "uint8"
+									},
+									{
+										"internalType": "bool",
+										"name": "isFreezable",
+										"type": "bool"
+									},
+									{
+										"internalType": "bytes4[]",
+										"name": "selectors",
+										"type": "bytes4[]"
+									}
+								],
+								"internalType": "struct Diamond.FacetCut[]",
+								"name": "facetCuts",
+								"type": "tuple[]"
+							},
+							{
+								"internalType": "address",
+								"name": "initAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes",
+								"name": "initCalldata",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct Diamond.DiamondCutData",
+						"name": "_diamondCut",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "bits",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "SafeCastOverflowedUintDowncast",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "facet",
+								"type": "address"
+							},
+							{
+								"internalType": "enum Diamond.Action",
+								"name": "action",
+								"type": "uint8"
+							},
+							{
+								"internalType": "bool",
+								"name": "isFreezable",
+								"type": "bool"
+							},
+							{
+								"internalType": "bytes4[]",
+								"name": "selectors",
+								"type": "bytes4[]"
+							}
+						],
+						"indexed": false,
+						"internalType": "struct Diamond.FacetCut[]",
+						"name": "facetCuts",
+						"type": "tuple[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "initAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "initCalldata",
+						"type": "bytes"
+					}
+				],
+				"name": "DiamondCut",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			}
+		],
+		"devdoc": {
+			"author": "Matter Labs",
+			"custom:security-contact": "security@matterlabs.dev",
+			"errors": {
+				"SafeCastOverflowedUintDowncast(uint8,uint256)": [
+					{
+						"details": "Value doesn't fit in an uint of `bits` size."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {},
+			"title": "Diamond Proxy Contract (EIP-2535)",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/zksync/DiamondProxy.sol": "DiamondProxy"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/math/SafeCast.sol": {
+			"keccak256": "0xe19a4d5f31d2861e7344e8e535e2feafb913d806d3e2b5fe7782741a2a7094fe",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4aed79c0fa6f0546ed02f2f683e8f77f0fd2ed7eb34d8bbf3d373c9a6d95b13c",
+				"dweb:/ipfs/QmWqVz6UAVqmnWU5pqYPt1o6iDEZyPaBraAA3rKfTTSfYj"
+			]
+		},
+		"contracts/bridges/bridge/common/libraries/UncheckedMath.sol": {
+			"keccak256": "0x2cf9e93e085f3261240197efe90c17f47635db4cb9dc3f6006e229334d72464f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6c2750b3ec07b265e363a99a422c2fe98b14629f849a7f7e04532c25bf6c57e3",
+				"dweb:/ipfs/QmcfvmA4dh1hTp45ogvXPmTVcdz9Cq6je3QnrbZdBbPfZY"
+			]
+		},
+		"contracts/bridges/bridge/zksync/DiamondProxy.sol": {
+			"keccak256": "0xea8a484fde272928b18da32feef76edd221eb34030c074a77f15515946928736",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a33e9ac125645ae60bc914148b76cd4f5dbc913d2a8938a7db7b895a2879c8b6",
+				"dweb:/ipfs/QmdQXcHMt7Va6UNf4tLKECPYfiXdLQuypJxp2GNpGjvw75"
+			]
+		},
+		"contracts/bridges/bridge/zksync/libraries/Diamond.sol": {
+			"keccak256": "0x85a5810ee5903adfe3a5fa8d003088ef90ce0b5fa8ce5ad3f7cb955649ff968a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9b79dc9686b663555af050450210b198ec6ad337f1f1432a94f5959bb6cd81cb",
+				"dweb:/ipfs/QmXxxLLCtiajsfe1eSnrvDR7PaDrTB9j3v6BKsvJPSP4EH"
+			]
+		}
+	},
+	"version": 1
+}

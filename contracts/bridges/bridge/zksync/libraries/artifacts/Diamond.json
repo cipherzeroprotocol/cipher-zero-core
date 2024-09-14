@@ -1,0 +1,120 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "6055604b600b8282823980515f1a607314603f577f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f80fdfea2646970667358221220ab9ef43c112a69f035e2a2dcea689b4ce21d9328b532e7ae6331a2f061a1f04664736f6c634300081a0033",
+			"opcodes": "PUSH1 0x55 PUSH1 0x4B PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH0 BYTE PUSH1 0x73 EQ PUSH1 0x3F JUMPI PUSH32 0x4E487B7100000000000000000000000000000000000000000000000000000000 PUSH0 MSTORE PUSH0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH0 REVERT JUMPDEST ADDRESS PUSH0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xAB SWAP15 DELEGATECALL EXTCODECOPY GT 0x2A PUSH10 0xF035E2A2DCEA689B4CE2 SAR SWAP4 0x28 0xB5 ORIGIN 0xE7 0xAE PUSH4 0x31A2F061 LOG1 CREATE CHAINID PUSH5 0x736F6C6343 STOP ADDMOD BYTE STOP CALLER ",
+			"sourceMap": "328:13917:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "730000000000000000000000000000000000000000301460806040525f80fdfea2646970667358221220ab9ef43c112a69f035e2a2dcea689b4ce21d9328b532e7ae6331a2f061a1f04664736f6c634300081a0033",
+			"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xAB SWAP15 DELEGATECALL EXTCODECOPY GT 0x2A PUSH10 0xF035E2A2DCEA689B4CE2 SAR SWAP4 0x28 0xB5 ORIGIN 0xE7 0xAE PUSH4 0x31A2F061 LOG1 CREATE CHAINID PUSH5 0x736F6C6343 STOP ADDMOD BYTE STOP CALLER ",
+			"sourceMap": "328:13917:2:-:0;;;;;;;;"
+		},
+		"gasEstimates": {
+			"creation": {
+				"codeDepositCost": "17000",
+				"executionCost": "92",
+				"totalCost": "17092"
+			},
+			"internal": {
+				"_addFunctions(address,bytes4[] memory,bool)": "infinite",
+				"_addOneFunction(address,bytes4,bool)": "infinite",
+				"_initializeDiamondCut(address,bytes memory)": "infinite",
+				"_removeFacet(address)": "infinite",
+				"_removeFunctions(address,bytes4[] memory)": "infinite",
+				"_removeOneFunction(address,bytes4)": "infinite",
+				"_replaceFunctions(address,bytes4[] memory,bool)": "infinite",
+				"_saveFacetIfNew(address)": "infinite",
+				"diamondCut(struct Diamond.DiamondCutData memory)": "infinite",
+				"getDiamondStorage()": "infinite"
+			}
+		},
+		"methodIdentifiers": {}
+	},
+	"abi": [
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"components": [
+						{
+							"internalType": "address",
+							"name": "facet",
+							"type": "address"
+						},
+						{
+							"internalType": "enum Diamond.Action",
+							"name": "action",
+							"type": "uint8"
+						},
+						{
+							"internalType": "bool",
+							"name": "isFreezable",
+							"type": "bool"
+						},
+						{
+							"internalType": "bytes4[]",
+							"name": "selectors",
+							"type": "bytes4[]"
+						}
+					],
+					"indexed": false,
+					"internalType": "struct Diamond.FacetCut[]",
+					"name": "facetCuts",
+					"type": "tuple[]"
+				},
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "initAddress",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"internalType": "bytes",
+					"name": "initCalldata",
+					"type": "bytes"
+				}
+			],
+			"name": "DiamondCut",
+			"type": "event"
+		}
+	]
+}

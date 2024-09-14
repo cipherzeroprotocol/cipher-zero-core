@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/infrastructure/storage/Storage.sol": "Storage"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/infrastructure/storage/Storage.sol": {
+			"keccak256": "0x3a8ffe67dbf48b01cafe2527a79639055581252f3fc64723eac90ce46c82a5ca",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7e16b0acb9940cdfe8e19d4c6b5731da6d665fbfdb1749d601a2dee1835fa7b4",
+				"dweb:/ipfs/QmXEDqiijs31vh7Tbd1EZeeTDdu5TzTVK6jsE5Bo4VvgCM"
+			]
+		},
+		"contracts/wallet/IWallet.sol": {
+			"keccak256": "0x419c35d8560646a01707b86608a77014c2998e88d3c9d5c239a69df936787cee",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://b5689f84dc8a12aea4c0c96b3494cc83f4e1a2dfdb6461af45be555c5fab3843",
+				"dweb:/ipfs/QmTrmgrvYgF55aZqA44GS9PwYDXKN9rntfcnxbuQnZs3we"
+			]
+		}
+	},
+	"version": 1
+}

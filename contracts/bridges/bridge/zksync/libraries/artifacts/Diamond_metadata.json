@@ -1,0 +1,120 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "facet",
+								"type": "address"
+							},
+							{
+								"internalType": "enum Diamond.Action",
+								"name": "action",
+								"type": "uint8"
+							},
+							{
+								"internalType": "bool",
+								"name": "isFreezable",
+								"type": "bool"
+							},
+							{
+								"internalType": "bytes4[]",
+								"name": "selectors",
+								"type": "bytes4[]"
+							}
+						],
+						"indexed": false,
+						"internalType": "struct Diamond.FacetCut[]",
+						"name": "facetCuts",
+						"type": "tuple[]"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "initAddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "initCalldata",
+						"type": "bytes"
+					}
+				],
+				"name": "DiamondCut",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"author": "Matter Labs",
+			"custom:security-contact": "security@matterlabs.dev",
+			"kind": "dev",
+			"methods": {},
+			"stateVariables": {
+				"DIAMOND_INIT_SUCCESS_RETURN_VALUE": {
+					"details": "Magic value that should be returned by diamond cut initialize contracts.Used to distinguish calls to contracts that were supposed to be used as diamond initializer from other contracts."
+				},
+				"DIAMOND_STORAGE_POSITION": {
+					"details": "Storage position of `DiamondStorage` structure."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "The helper library for managing the EIP-2535 diamond proxy.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/zksync/libraries/Diamond.sol": "Diamond"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/math/SafeCast.sol": {
+			"keccak256": "0xe19a4d5f31d2861e7344e8e535e2feafb913d806d3e2b5fe7782741a2a7094fe",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4aed79c0fa6f0546ed02f2f683e8f77f0fd2ed7eb34d8bbf3d373c9a6d95b13c",
+				"dweb:/ipfs/QmWqVz6UAVqmnWU5pqYPt1o6iDEZyPaBraAA3rKfTTSfYj"
+			]
+		},
+		"contracts/bridges/bridge/common/libraries/UncheckedMath.sol": {
+			"keccak256": "0x2cf9e93e085f3261240197efe90c17f47635db4cb9dc3f6006e229334d72464f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6c2750b3ec07b265e363a99a422c2fe98b14629f849a7f7e04532c25bf6c57e3",
+				"dweb:/ipfs/QmcfvmA4dh1hTp45ogvXPmTVcdz9Cq6je3QnrbZdBbPfZY"
+			]
+		},
+		"contracts/bridges/bridge/zksync/libraries/Diamond.sol": {
+			"keccak256": "0x85a5810ee5903adfe3a5fa8d003088ef90ce0b5fa8ce5ad3f7cb955649ff968a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9b79dc9686b663555af050450210b198ec6ad337f1f1432a94f5959bb6cd81cb",
+				"dweb:/ipfs/QmXxxLLCtiajsfe1eSnrvDR7PaDrTB9j3v6BKsvJPSP4EH"
+			]
+		}
+	},
+	"version": 1
+}

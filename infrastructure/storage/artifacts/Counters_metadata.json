@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Provides counters that can be incremented or decremented. This can be used for tracking ids, minting, or other use cases.",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/infrastructure/storage/Counters.sol": "Counters"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/infrastructure/storage/Counters.sol": {
+			"keccak256": "0xa890b9e4d2416f5d25afb556b179358d64cb1023da660a2813a18b2a21e87025",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3aa90aa1caa0112e22e77181daab2c43a665f142e1b0936b60700a0a76cc7c8a",
+				"dweb:/ipfs/QmXPWvW8dJGe1Vj8uPHMxPKXmWUVzP9W4i41SQcfLe7icY"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,121 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newReputation",
+						"type": "uint256"
+					}
+				],
+				"name": "ReputationUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getReputation",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "reputation",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "change",
+						"type": "uint256"
+					}
+				],
+				"name": "updateReputation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/cipherzero/contracts/Identity/ReputationSystem.sol": "ReputationSystem"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/cipherzero/contracts/Identity/ReputationSystem.sol": {
+			"keccak256": "0x66812e3b5424040180a949bd3c6a51869e721c0b1fe81f9cec3dfa0c1fe21cbf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1d3a4429277a8b4ad98e4c0c209f447363a59c48d436e352d7031038a0266b82",
+				"dweb:/ipfs/QmX9tEnKu4LPAttMBp5h1GkC45uQk87h5cZQvaMoeZ19aW"
+			]
+		}
+	},
+	"version": 1
+}

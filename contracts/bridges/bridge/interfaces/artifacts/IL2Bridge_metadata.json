@@ -1,0 +1,154 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_l1Sender",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_l2Receiver",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_l1Token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "finalizeDeposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "l1Bridge",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_l2Token",
+						"type": "address"
+					}
+				],
+				"name": "l1TokenAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_l1Token",
+						"type": "address"
+					}
+				],
+				"name": "l2TokenAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_l1Receiver",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_l2Token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Matter Labs",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/interfaces/IL2Bridge.sol": "IL2Bridge"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/bridge/interfaces/IL2Bridge.sol": {
+			"keccak256": "0x26a8db77c1a18db9251157f668c84319ec97b721126b3f135b1a7d8aedd018e7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a0a3414e9fe83a83a02822282e3f59c46b41d9aa806dad2296ba61673d698ac9",
+				"dweb:/ipfs/QmbhuhXQ8j2VAjXbyoTDZnrr5kpU2mPTDbsW8tnKBEAGKC"
+			]
+		}
+	},
+	"version": 1
+}

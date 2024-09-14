@@ -1,0 +1,120 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "verificationKeyHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "vkHash",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"name": "verify",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Matter Labs",
+			"details": "It uses a custom memory layout inside the inline assembly block. Each reserved memory cell is declared in the constants below.For a better understanding of the verifier algorithm please refer to the following papers: * Original Plonk Article: https://eprint.iacr.org/2019/953.pdf * Original LookUp Article: https://eprint.iacr.org/2020/315.pdf * Plonk for zkSync v1.1: https://github.com/matter-labs/solidity_plonk_verifier/raw/recursive/bellman_vk_codegen_recursive/RecursivePlonkUnrolledForEthereum.pdf The notation used in the code is the same as in the papers.",
+			"kind": "dev",
+			"methods": {
+				"verificationKeyHash()": {
+					"returns": {
+						"vkHash": "The keccak256 hash of the loaded verification keys."
+					}
+				},
+				"verify(uint256[],uint256[],uint256[])": {
+					"details": "Verifies a zk-SNARK proof.",
+					"returns": {
+						"_0": "A boolean value indicating whether the zk-SNARK proof is valid. Note: The function may revert execution instead of returning false in some cases."
+					}
+				}
+			},
+			"stateVariables": {
+				"FR_MASK": {
+					"details": "flip of 0xe000000000000000000000000000000000000000000000000000000000000000;"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"verificationKeyHash()": {
+					"notice": "Calculates a keccak256 hash of the runtime loaded verification keys."
+				}
+			},
+			"notice": "Modified version of the Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge (PLONK) verifier. Modifications have been made to optimize the proof system for zkSync Era circuits.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/zksync/Verifier.sol": "Verifier"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/bridge/zksync/Verifier.sol": {
+			"keccak256": "0x778f30e5f7f76670774443b96739790e7676f85fee183d8d973e2a06b5503f69",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://540109ae9cf55636153d75f944ec861447630b45eb91f344249508c4bdf7b150",
+				"dweb:/ipfs/QmTEv7JoGYHbfb38kugoSdTn6f6wyrFeRexYyGujaPWtzu"
+			]
+		},
+		"contracts/bridges/bridge/zksync/interfaces/IVerifier.sol": {
+			"keccak256": "0x6704250c491939d8ee423562046811aeffb9fd942ad72751f80818d0a3d57c0d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7622e9d9a519195105f997f6d88187c9f5428bf2a52f71b500c34bf78b3c766a",
+				"dweb:/ipfs/QmX7yEwnhy4guB79FJiMxgHChbuGnQ9Ens18mqThAi5shD"
+			]
+		}
+	},
+	"version": 1
+}

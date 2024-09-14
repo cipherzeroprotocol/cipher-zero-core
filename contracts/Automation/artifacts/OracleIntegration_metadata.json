@@ -1,0 +1,83 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_oracle",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "getOracleData",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "oracle",
+				"outputs": [
+					{
+						"internalType": "contract IOracle",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/cipherzero/contracts/Automation/OracleIntegration.sol": "OracleIntegration"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/cipherzero/contracts/Automation/OracleIntegration.sol": {
+			"keccak256": "0x52fe5f874d4149f60df911b8a2ac7145d5abc4694d494bbb077feef4fbfe26ec",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2117828252c5160c143238bd2ec436cac45e5271d8efee7c5988a0f2150f9a60",
+				"dweb:/ipfs/QmNurBPqngVPpkRL7LFNmfhPXFJAvSssoEFiEDEKPYCam4"
+			]
+		}
+	},
+	"version": 1
+}

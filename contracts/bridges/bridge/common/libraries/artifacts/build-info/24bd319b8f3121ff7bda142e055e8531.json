@@ -1,0 +1,773 @@
+{
+	"id": "24bd319b8f3121ff7bda142e055e8531",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/bridges/bridge/common/libraries/UncheckedMath.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.13;\r\n\r\n/**\r\n * @author Matter Labs\r\n * @custom:security-contact security@matterlabs.dev\r\n * @notice The library for unchecked math.\r\n */\r\nlibrary UncheckedMath {\r\n    function uncheckedInc(uint256 _number) internal pure returns (uint256) {\r\n        unchecked {\r\n            return _number + 1;\r\n        }\r\n    }\r\n\r\n    function uncheckedAdd(uint256 _lhs, uint256 _rhs) internal pure returns (uint256) {\r\n        unchecked {\r\n            return _lhs + _rhs;\r\n        }\r\n    }\r\n}\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/bridges/bridge/common/libraries/UncheckedMath.sol": {
+				"UncheckedMath": {
+					"abi": [],
+					"devdoc": {
+						"author": "Matter Labs",
+						"custom:security-contact": "security@matterlabs.dev",
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"contracts/bridges/bridge/common/libraries/UncheckedMath.sol\":194:533  library UncheckedMath {... */\n  dataSize(sub_0)\n  dataOffset(sub_0)\n  0x0b\n  dup3\n  dup3\n  dup3\n  codecopy\n  dup1\n  mload\n  0x00\n  byte\n  0x73\n  eq\n  tag_1\n  jumpi\n  mstore(0x00, 0x4e487b7100000000000000000000000000000000000000000000000000000000)\n  mstore(0x04, 0x00)\n  revert(0x00, 0x24)\ntag_1:\n  mstore(0x00, address)\n  0x73\n  dup2\n  mstore8\n  dup3\n  dup2\n  return\nstop\n\nsub_0: assembly {\n        /* \"contracts/bridges/bridge/common/libraries/UncheckedMath.sol\":194:533  library UncheckedMath {... */\n      eq(address, deployTimeAddress())\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa26469706673582212205bd83f97d7c378fa45458026c62282a19fb35af7f45774396c0421868ffc9e3a64736f6c634300081a0033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6055604b600b8282823980515f1a607314603f577f4e487b71000000000000000000000000000000000000000000000000000000005f525f60045260245ffd5b305f52607381538281f3fe730000000000000000000000000000000000000000301460806040525f80fdfea26469706673582212205bd83f97d7c378fa45458026c62282a19fb35af7f45774396c0421868ffc9e3a64736f6c634300081a0033",
+							"opcodes": "PUSH1 0x55 PUSH1 0x4B PUSH1 0xB DUP3 DUP3 DUP3 CODECOPY DUP1 MLOAD PUSH0 BYTE PUSH1 0x73 EQ PUSH1 0x3F JUMPI PUSH32 0x4E487B7100000000000000000000000000000000000000000000000000000000 PUSH0 MSTORE PUSH0 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH0 REVERT JUMPDEST ADDRESS PUSH0 MSTORE PUSH1 0x73 DUP2 MSTORE8 DUP3 DUP2 RETURN INVALID PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 JUMPDEST 0xD8 EXTCODEHASH SWAP8 0xD7 0xC3 PUSH25 0xFA45458026C62282A19FB35AF7F45774396C0421868FFC9E3A PUSH5 0x736F6C6343 STOP ADDMOD BYTE STOP CALLER ",
+							"sourceMap": "194:339:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "730000000000000000000000000000000000000000301460806040525f80fdfea26469706673582212205bd83f97d7c378fa45458026c62282a19fb35af7f45774396c0421868ffc9e3a64736f6c634300081a0033",
+							"opcodes": "PUSH20 0x0 ADDRESS EQ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 JUMPDEST 0xD8 EXTCODEHASH SWAP8 0xD7 0xC3 PUSH25 0xFA45458026C62282A19FB35AF7F45774396C0421868FFC9E3A PUSH5 0x736F6C6343 STOP ADDMOD BYTE STOP CALLER ",
+							"sourceMap": "194:339:0:-:0;;;;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "17000",
+								"executionCost": "92",
+								"totalCost": "17092"
+							},
+							"internal": {
+								"uncheckedAdd(uint256,uint256)": "infinite",
+								"uncheckedInc(uint256)": "infinite"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "PUSH",
+									"source": 0,
+									"value": "B"
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "MLOAD",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "BYTE",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "PUSH",
+									"source": 0,
+									"value": "73"
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "EQ",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "PUSH",
+									"source": 0,
+									"value": "4E487B7100000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "PUSH",
+									"source": 0,
+									"value": "4"
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "PUSH",
+									"source": 0,
+									"value": "24"
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "ADDRESS",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "PUSH",
+									"source": 0,
+									"value": "73"
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "MSTORE8",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "DUP3",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 194,
+									"end": 533,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a26469706673582212205bd83f97d7c378fa45458026c62282a19fb35af7f45774396c0421868ffc9e3a64736f6c634300081a0033",
+									".code": [
+										{
+											"begin": 194,
+											"end": 533,
+											"name": "PUSHDEPLOYADDRESS",
+											"source": 0
+										},
+										{
+											"begin": 194,
+											"end": 533,
+											"name": "ADDRESS",
+											"source": 0
+										},
+										{
+											"begin": 194,
+											"end": 533,
+											"name": "EQ",
+											"source": 0
+										},
+										{
+											"begin": 194,
+											"end": 533,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 194,
+											"end": 533,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 194,
+											"end": 533,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 194,
+											"end": 533,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 194,
+											"end": 533,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 194,
+											"end": 533,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							},
+							"sourceList": [
+								"contracts/bridges/bridge/common/libraries/UncheckedMath.sol",
+								"#utility.yul"
+							]
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"author\":\"Matter Labs\",\"custom:security-contact\":\"security@matterlabs.dev\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"The library for unchecked math.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/bridges/bridge/common/libraries/UncheckedMath.sol\":\"UncheckedMath\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/bridges/bridge/common/libraries/UncheckedMath.sol\":{\"keccak256\":\"0x2cf9e93e085f3261240197efe90c17f47635db4cb9dc3f6006e229334d72464f\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6c2750b3ec07b265e363a99a422c2fe98b14629f849a7f7e04532c25bf6c57e3\",\"dweb:/ipfs/QmcfvmA4dh1hTp45ogvXPmTVcdz9Cq6je3QnrbZdBbPfZY\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"notice": "The library for unchecked math.",
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/bridges/bridge/common/libraries/UncheckedMath.sol": {
+				"ast": {
+					"absolutePath": "contracts/bridges/bridge/common/libraries/UncheckedMath.sol",
+					"exportedSymbols": {
+						"UncheckedMath": [
+							31
+						]
+					},
+					"id": 32,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".13"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "35:24:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "UncheckedMath",
+							"contractDependencies": [],
+							"contractKind": "library",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "63:129:0",
+								"text": " @author Matter Labs\n @custom:security-contact security@matterlabs.dev\n @notice The library for unchecked math."
+							},
+							"fullyImplemented": true,
+							"id": 31,
+							"linearizedBaseContracts": [
+								31
+							],
+							"name": "UncheckedMath",
+							"nameLocation": "202:13:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"body": {
+										"id": 14,
+										"nodeType": "Block",
+										"src": "294:73:0",
+										"statements": [
+											{
+												"id": 13,
+												"nodeType": "UncheckedBlock",
+												"src": "305:55:0",
+												"statements": [
+													{
+														"expression": {
+															"commonType": {
+																"typeIdentifier": "t_uint256",
+																"typeString": "uint256"
+															},
+															"id": 11,
+															"isConstant": false,
+															"isLValue": false,
+															"isPure": false,
+															"lValueRequested": false,
+															"leftExpression": {
+																"id": 9,
+																"name": "_number",
+																"nodeType": "Identifier",
+																"overloadedDeclarations": [],
+																"referencedDeclaration": 4,
+																"src": "337:7:0",
+																"typeDescriptions": {
+																	"typeIdentifier": "t_uint256",
+																	"typeString": "uint256"
+																}
+															},
+															"nodeType": "BinaryOperation",
+															"operator": "+",
+															"rightExpression": {
+																"hexValue": "31",
+																"id": 10,
+																"isConstant": false,
+																"isLValue": false,
+																"isPure": true,
+																"kind": "number",
+																"lValueRequested": false,
+																"nodeType": "Literal",
+																"src": "347:1:0",
+																"typeDescriptions": {
+																	"typeIdentifier": "t_rational_1_by_1",
+																	"typeString": "int_const 1"
+																},
+																"value": "1"
+															},
+															"src": "337:11:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_uint256",
+																"typeString": "uint256"
+															}
+														},
+														"functionReturnParameters": 8,
+														"id": 12,
+														"nodeType": "Return",
+														"src": "330:18:0"
+													}
+												]
+											}
+										]
+									},
+									"id": 15,
+									"implemented": true,
+									"kind": "function",
+									"modifiers": [],
+									"name": "uncheckedInc",
+									"nameLocation": "232:12:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 5,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 4,
+												"mutability": "mutable",
+												"name": "_number",
+												"nameLocation": "253:7:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 15,
+												"src": "245:15:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 3,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "245:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "244:17:0"
+									},
+									"returnParameters": {
+										"id": 8,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 7,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 15,
+												"src": "285:7:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 6,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "285:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "284:9:0"
+									},
+									"scope": 31,
+									"src": "223:144:0",
+									"stateMutability": "pure",
+									"virtual": false,
+									"visibility": "internal"
+								},
+								{
+									"body": {
+										"id": 29,
+										"nodeType": "Block",
+										"src": "457:73:0",
+										"statements": [
+											{
+												"id": 28,
+												"nodeType": "UncheckedBlock",
+												"src": "468:55:0",
+												"statements": [
+													{
+														"expression": {
+															"commonType": {
+																"typeIdentifier": "t_uint256",
+																"typeString": "uint256"
+															},
+															"id": 26,
+															"isConstant": false,
+															"isLValue": false,
+															"isPure": false,
+															"lValueRequested": false,
+															"leftExpression": {
+																"id": 24,
+																"name": "_lhs",
+																"nodeType": "Identifier",
+																"overloadedDeclarations": [],
+																"referencedDeclaration": 17,
+																"src": "500:4:0",
+																"typeDescriptions": {
+																	"typeIdentifier": "t_uint256",
+																	"typeString": "uint256"
+																}
+															},
+															"nodeType": "BinaryOperation",
+															"operator": "+",
+															"rightExpression": {
+																"id": 25,
+																"name": "_rhs",
+																"nodeType": "Identifier",
+																"overloadedDeclarations": [],
+																"referencedDeclaration": 19,
+																"src": "507:4:0",
+																"typeDescriptions": {
+																	"typeIdentifier": "t_uint256",
+																	"typeString": "uint256"
+																}
+															},
+															"src": "500:11:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_uint256",
+																"typeString": "uint256"
+															}
+														},
+														"functionReturnParameters": 23,
+														"id": 27,
+														"nodeType": "Return",
+														"src": "493:18:0"
+													}
+												]
+											}
+										]
+									},
+									"id": 30,
+									"implemented": true,
+									"kind": "function",
+									"modifiers": [],
+									"name": "uncheckedAdd",
+									"nameLocation": "384:12:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 20,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 17,
+												"mutability": "mutable",
+												"name": "_lhs",
+												"nameLocation": "405:4:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 30,
+												"src": "397:12:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 16,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "397:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 19,
+												"mutability": "mutable",
+												"name": "_rhs",
+												"nameLocation": "419:4:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 30,
+												"src": "411:12:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 18,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "411:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "396:28:0"
+									},
+									"returnParameters": {
+										"id": 23,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 22,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 30,
+												"src": "448:7:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 21,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "448:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "447:9:0"
+									},
+									"scope": 31,
+									"src": "375:155:0",
+									"stateMutability": "pure",
+									"virtual": false,
+									"visibility": "internal"
+								}
+							],
+							"scope": 32,
+							"src": "194:339:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "35:500:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

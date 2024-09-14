@@ -1,0 +1,86 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getFiles",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "fileHash",
+						"type": "string"
+					}
+				],
+				"name": "uploadFile",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/cipherzero/cipherTorrentIntegration.sol": "BitTorrentIntegration"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/cipherzero/cipherTorrentIntegration.sol": {
+			"keccak256": "0xe932951d1c2ab07581ea9b2d49ea43a58b42a9d1f006ccd8d23aa53d0be73f1e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://17ba0d5177b10e7df0ac51c22d8af40036950b86cc9fc5005b58d77c801c2b6c",
+				"dweb:/ipfs/Qmc2rQPg588CH2kH1CNRoJnX7ozGyttpcAhPSq2Avm3g7h"
+			]
+		},
+		"contracts/cipherzero/interfaces/IBitTorrent.sol": {
+			"keccak256": "0x05a427c9f86fa86d7cccb9a447cd9fb86382ed84fa354e2995da79e9940e1562",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e13d14cfd062d2f7a4dc2bff24bb1c7045139909e0078b80074ef81ef5b223cf",
+				"dweb:/ipfs/QmR99Fs2FAGZzMnQjek7deYAgnnZNav1CP185p5qPayrwX"
+			]
+		}
+	},
+	"version": 1
+}

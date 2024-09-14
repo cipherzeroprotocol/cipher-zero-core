@@ -1,0 +1,921 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "_selector",
+						"type": "bytes4"
+					}
+				],
+				"name": "facetAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "facetAddresses",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_facet",
+						"type": "address"
+					}
+				],
+				"name": "facetFunctionSelectors",
+				"outputs": [
+					{
+						"internalType": "bytes4[]",
+						"name": "",
+						"type": "bytes4[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "facets",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "addr",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes4[]",
+								"name": "selectors",
+								"type": "bytes4[]"
+							}
+						],
+						"internalType": "struct IGetters.Facet[]",
+						"name": "result",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllowList",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getFirstUnprocessedPriorityTx",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getGovernor",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getL2BootloaderBytecodeHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getL2DefaultAccountBytecodeHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getL2SystemContractsUpgradeBatchNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getL2SystemContractsUpgradeBlockNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getL2SystemContractsUpgradeTxHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getName",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getPendingGovernor",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getPriorityQueueSize",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getPriorityTxMaxGasLimit",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getProtocolVersion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalBatchesCommitted",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalBatchesExecuted",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalBatchesVerified",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalBlocksCommitted",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalBlocksExecuted",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalBlocksVerified",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalPriorityTxs",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVerifier",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVerifierParams",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes32",
+								"name": "recursionNodeLevelVkHash",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "recursionLeafLevelVkHash",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "recursionCircuitsSetVksHash",
+								"type": "bytes32"
+							}
+						],
+						"internalType": "struct VerifierParams",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isDiamondStorageFrozen",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_l2BatchNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_l2MessageIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "isEthWithdrawalFinalized",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_facet",
+						"type": "address"
+					}
+				],
+				"name": "isFacetFreezable",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "isFreezable",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "_selector",
+						"type": "bytes4"
+					}
+				],
+				"name": "isFunctionFreezable",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "isValidator",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_batchNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "l2LogsRootHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "priorityQueueFrontOperation",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes32",
+								"name": "canonicalTxHash",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "uint64",
+								"name": "expirationTimestamp",
+								"type": "uint64"
+							},
+							{
+								"internalType": "uint192",
+								"name": "layer2Tip",
+								"type": "uint192"
+							}
+						],
+						"internalType": "struct PriorityOperation",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_batchNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "storedBatchHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_batchNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "storedBlockHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Matter Labs",
+			"custom:security-contact": "security@matterlabs.dev",
+			"kind": "dev",
+			"methods": {
+				"facetAddress(bytes4)": {
+					"returns": {
+						"_0": "Facet address associated with a selector. Zero if the selector is not added to the diamond"
+					}
+				},
+				"facetAddresses()": {
+					"returns": {
+						"_0": "NON-sorted array of facet addresses supported on diamond"
+					}
+				},
+				"facetFunctionSelectors(address)": {
+					"returns": {
+						"_0": "NON-sorted array with function selectors supported by a specific facet"
+					}
+				},
+				"facets()": {
+					"returns": {
+						"result": "All facet addresses and their function selectors"
+					}
+				},
+				"getAllowList()": {
+					"returns": {
+						"_0": "The allow list smart contract"
+					}
+				},
+				"getFirstUnprocessedPriorityTx()": {
+					"returns": {
+						"_0": "Index of the oldest priority operation that wasn't processed yet"
+					}
+				},
+				"getGovernor()": {
+					"returns": {
+						"_0": "The address of the current governor"
+					}
+				},
+				"getL2BootloaderBytecodeHash()": {
+					"returns": {
+						"_0": "Bytecode hash of bootloader program."
+					}
+				},
+				"getL2DefaultAccountBytecodeHash()": {
+					"returns": {
+						"_0": "Bytecode hash of default account (bytecode for EOA)."
+					}
+				},
+				"getL2SystemContractsUpgradeBatchNumber()": {
+					"details": "It is equal to 0 in the following two cases: - No upgrade transaction has ever been processed. - The upgrade transaction has been processed and the batch with such transaction has been executed (i.e. finalized).",
+					"returns": {
+						"_0": "The L2 batch number in which the upgrade transaction was processed."
+					}
+				},
+				"getL2SystemContractsUpgradeBlockNumber()": {
+					"details": "It is a *deprecated* method, please use `getL2SystemContractsUpgradeBatchNumber` instead.It is equal to 0 in the following two cases: - No upgrade transaction has ever been processed. - The upgrade transaction has been processed and the batch with such transaction has been executed (i.e. finalized).",
+					"returns": {
+						"_0": "The L2 batch number in which the upgrade transaction was processed."
+					}
+				},
+				"getL2SystemContractsUpgradeTxHash()": {
+					"returns": {
+						"_0": "The upgrade system contract transaction hash, 0 if the upgrade is not initialized"
+					}
+				},
+				"getPendingGovernor()": {
+					"returns": {
+						"_0": "The address of the pending governor"
+					}
+				},
+				"getPriorityQueueSize()": {
+					"returns": {
+						"_0": "The number of priority operations currently in the queue"
+					}
+				},
+				"getPriorityTxMaxGasLimit()": {
+					"returns": {
+						"_0": "The maximum number of L2 gas that a user can request for L1 -> L2 transactions"
+					}
+				},
+				"getProtocolVersion()": {
+					"returns": {
+						"_0": "The current protocol version"
+					}
+				},
+				"getTotalBatchesCommitted()": {
+					"returns": {
+						"_0": "The total number of batches that were committed"
+					}
+				},
+				"getTotalBatchesExecuted()": {
+					"returns": {
+						"_0": "The total number of batches that were committed & verified & executed"
+					}
+				},
+				"getTotalBatchesVerified()": {
+					"returns": {
+						"_0": "The total number of batches that were committed & verified"
+					}
+				},
+				"getTotalBlocksCommitted()": {
+					"details": "It is a *deprecated* method, please use `getTotalBatchesCommitted` instead",
+					"returns": {
+						"_0": "The total number of batches that were committed"
+					}
+				},
+				"getTotalBlocksExecuted()": {
+					"details": "It is a *deprecated* method, please use `getTotalBatchesExecuted` instead.",
+					"returns": {
+						"_0": "The total number of batches that were committed & verified & executed"
+					}
+				},
+				"getTotalBlocksVerified()": {
+					"details": "It is a *deprecated* method, please use `getTotalBatchesVerified` instead.",
+					"returns": {
+						"_0": "The total number of batches that were committed & verified"
+					}
+				},
+				"getTotalPriorityTxs()": {
+					"returns": {
+						"_0": "The total number of priority operations that were added to the priority queue, including all processed ones"
+					}
+				},
+				"getVerifier()": {
+					"returns": {
+						"_0": "The address of the verifier smart contract"
+					}
+				},
+				"getVerifierParams()": {
+					"returns": {
+						"_0": "Verifier parameters."
+					}
+				},
+				"isDiamondStorageFrozen()": {
+					"returns": {
+						"_0": "Whether the diamond is frozen or not"
+					}
+				},
+				"isEthWithdrawalFinalized(uint256,uint256)": {
+					"params": {
+						"_l2BatchNumber": "The L2 batch number within which the withdrawal happened.",
+						"_l2MessageIndex": "The index of the L2->L1 message denoting the withdrawal."
+					},
+					"returns": {
+						"_0": "Whether a withdrawal has been finalized."
+					}
+				},
+				"isFacetFreezable(address)": {
+					"returns": {
+						"isFreezable": "Whether the facet can be frozen by the governor or always accessible"
+					}
+				},
+				"isFunctionFreezable(bytes4)": {
+					"returns": {
+						"_0": "Whether the selector can be frozen by the governor or always accessible"
+					}
+				},
+				"isValidator(address)": {
+					"returns": {
+						"_0": "Whether the address has a validator access"
+					}
+				},
+				"l2LogsRootHash(uint256)": {
+					"returns": {
+						"_0": "Merkle root of the tree with L2 logs for the selected batch"
+					}
+				},
+				"priorityQueueFrontOperation()": {
+					"returns": {
+						"_0": "The first unprocessed priority operation from the queue"
+					}
+				},
+				"storedBatchHash(uint256)": {
+					"details": "returns zero for non-committed batches",
+					"returns": {
+						"_0": "The hash of committed L2 batch."
+					}
+				},
+				"storedBlockHash(uint256)": {
+					"details": "It is a *deprecated* method, please use `storedBatchHash` instead.returns zero for non-committed batches",
+					"returns": {
+						"_0": "The hash of committed L2 batch."
+					}
+				}
+			},
+			"title": "Getters Contract implements functions for getting contract state from outside the batchchain.",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getFirstUnprocessedPriorityTx()": {
+					"notice": "Returns zero if and only if no operations were processed from the queueReverts if there are no unprocessed priority transactions"
+				},
+				"storedBatchHash(uint256)": {
+					"notice": "For unfinalized (non executed) batches may change"
+				},
+				"storedBlockHash(uint256)": {
+					"notice": "For unfinalized (non executed) batches may change"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/zksync/facets/Getters.sol": "GettersFacet"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0xff6d0bb2e285473e5311d9d3caacb525ae3538a80758c10649a4d61029b017bb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8ed324d3920bb545059d66ab97d43e43ee85fd3bd52e03e401f020afb0b120f6",
+				"dweb:/ipfs/QmfEckWLmZkDDcoWrkEvMWhms66xwTLff9DDhegYpvHo1a"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6a708e8a5bdb1011c2c381c9a5cfd8a9a956d7d0a9dc1bd8bcdaf52f76ef2f12",
+				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/SafeCast.sol": {
+			"keccak256": "0xe19a4d5f31d2861e7344e8e535e2feafb913d806d3e2b5fe7782741a2a7094fe",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4aed79c0fa6f0546ed02f2f683e8f77f0fd2ed7eb34d8bbf3d373c9a6d95b13c",
+				"dweb:/ipfs/QmWqVz6UAVqmnWU5pqYPt1o6iDEZyPaBraAA3rKfTTSfYj"
+			]
+		},
+		"contracts/bridges/bridge/common/AllowListed.sol": {
+			"keccak256": "0xfa60da24f1d22fbb48b9efc58a454f0b995596ddf9181a2d18279dc51d617527",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3e6dd2def1c838e5c5fe48eb91966e3d6e1c6ec00002631e5313e33ca65b1016",
+				"dweb:/ipfs/QmNj64FKAntdtWH5BsR2eycccb2XYRDza4vsXtwPZT5SAd"
+			]
+		},
+		"contracts/bridges/bridge/common/ReentrancyGuard.sol": {
+			"keccak256": "0xf17bfdce868037a2dabe64986f6d96be29ef2a9266fa749f84d8526b4d1784b0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8eb19deadde2961e77507cb2b5f72d345586ed9b16f902255ed4d26c9193df23",
+				"dweb:/ipfs/QmTQ4tYx1fgqeRKuz283nayCuZHWGeiLT8GfMNMbzomB9a"
+			]
+		},
+		"contracts/bridges/bridge/common/interfaces/IAllowList.sol": {
+			"keccak256": "0xa73d93ec249506a9c7e45d6701d594f641a221d5cd63aab18fed51a3d7cee612",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f6ae14641c15d6b407b12b6b18ee3bd3960947fae9f0c9a52541fd1f8f7eb3c8",
+				"dweb:/ipfs/QmZtD1Y26FNPqqnxrwvnF5fc3TVSk5VcCB9cGeZ535DZgu"
+			]
+		},
+		"contracts/bridges/bridge/common/libraries/UncheckedMath.sol": {
+			"keccak256": "0x2cf9e93e085f3261240197efe90c17f47635db4cb9dc3f6006e229334d72464f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6c2750b3ec07b265e363a99a422c2fe98b14629f849a7f7e04532c25bf6c57e3",
+				"dweb:/ipfs/QmcfvmA4dh1hTp45ogvXPmTVcdz9Cq6je3QnrbZdBbPfZY"
+			]
+		},
+		"contracts/bridges/bridge/zksync/Storage.sol": {
+			"keccak256": "0xbbbd33f5928ad4c4308ff5bdc8f58ceb32a665480228498858941e8238fb2236",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a0aac0650cf4768a229e16707a7553de930411378950c233596ed8ec2bfcc174",
+				"dweb:/ipfs/Qmc8YrjqpVcz5BD8tk8RGocraRNai7c9z29qMJSB9RAQWo"
+			]
+		},
+		"contracts/bridges/bridge/zksync/facets/Base.sol": {
+			"keccak256": "0xf544b22bfa327546ed8092167c5f6a8b8d17ccdf483b7da124e8089ab3f9bafc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e1ed1112cbb7a75f1cb3d9231740c65bb87ada41efb7c8521701443f517eaaf9",
+				"dweb:/ipfs/QmXRMi6W5SfyTRNwYywyAyQT6DPgSWSBkrfsxQ8g7cmzwd"
+			]
+		},
+		"contracts/bridges/bridge/zksync/facets/Getters.sol": {
+			"keccak256": "0x8937d4af33107aa0d2f65e519e8dee9e4a13fbcc893ffdea871867ca42e5a30b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://90f6803b2e3e4209a5a31e158e414ab0e879ec490b2250800f81ffef01a6e36b",
+				"dweb:/ipfs/QmeNbZ62QMBMwwPYNEjStr636NQLrG4soyfzLw11qR94xb"
+			]
+		},
+		"contracts/bridges/bridge/zksync/interfaces/IBase.sol": {
+			"keccak256": "0xb17b35d795844842084c105f166fbcaf53b07ed83383ebd612a701d3b0c70462",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://bd0f13a5a48a455f19c23cdf937dcfb8127891be28382d320f22b24f5fe92ecc",
+				"dweb:/ipfs/QmSEP9dDsLP7mR94mbFnsuPM9ZAYxwJy5mH86bphrub6WT"
+			]
+		},
+		"contracts/bridges/bridge/zksync/interfaces/IGetters.sol": {
+			"keccak256": "0x1d6a3ee436df74aa2fae4af87f25f524e6c96e1d302ecd39206f0c3f7a92361f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8783cadd8b72b59412b589af6e2f7777d3e14ed05d769993cc67fb636fa4beb5",
+				"dweb:/ipfs/Qmb346GgToeNnipysEGQGXjsLASS2x6282KgtbjY6uyrci"
+			]
+		},
+		"contracts/bridges/bridge/zksync/interfaces/ILegacyGetters.sol": {
+			"keccak256": "0x7f0f33043de969c7f9eaab841791e0774c2510b966e3fe078f91880ee21fb0d6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4e836a94cf2b2fb18b612a7e92509380658155e9bb8a6f8de941809c38f375b2",
+				"dweb:/ipfs/QmXfxKLCuh7HR6czapD2PNFYyAoMFmfqyAeVzyMex8UYxb"
+			]
+		},
+		"contracts/bridges/bridge/zksync/interfaces/IVerifier.sol": {
+			"keccak256": "0x6704250c491939d8ee423562046811aeffb9fd942ad72751f80818d0a3d57c0d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7622e9d9a519195105f997f6d88187c9f5428bf2a52f71b500c34bf78b3c766a",
+				"dweb:/ipfs/QmX7yEwnhy4guB79FJiMxgHChbuGnQ9Ens18mqThAi5shD"
+			]
+		},
+		"contracts/bridges/bridge/zksync/libraries/Diamond.sol": {
+			"keccak256": "0x85a5810ee5903adfe3a5fa8d003088ef90ce0b5fa8ce5ad3f7cb955649ff968a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9b79dc9686b663555af050450210b198ec6ad337f1f1432a94f5959bb6cd81cb",
+				"dweb:/ipfs/QmXxxLLCtiajsfe1eSnrvDR7PaDrTB9j3v6BKsvJPSP4EH"
+			]
+		},
+		"contracts/bridges/bridge/zksync/libraries/PriorityQueue.sol": {
+			"keccak256": "0x0340dcaa8744e0ad548375bc5c681e994f274a92435e7053d16beeba2d3adf26",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3fe288f3b8fd86749e287fa78fafd2f373d29187b3a243539c1830e5b8074104",
+				"dweb:/ipfs/QmcY6C5Qk2qohee9YtSWqdDMtVuXyXauSkaCJqAoXVR9cR"
+			]
+		}
+	},
+	"version": 1
+}

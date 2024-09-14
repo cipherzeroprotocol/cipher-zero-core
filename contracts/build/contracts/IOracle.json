@@ -1,0 +1,465 @@
+{
+  "contractName": "IOracle",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getLatestData",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getLatestData\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Automation/OracleIntegration.sol\":\"IOracle\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Automation/OracleIntegration.sol\":{\"keccak256\":\"0x52fe5f874d4149f60df911b8a2ac7145d5abc4694d494bbb077feef4fbfe26ec\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2117828252c5160c143238bd2ec436cac45e5271d8efee7c5988a0f2150f9a60\",\"dweb:/ipfs/QmNurBPqngVPpkRL7LFNmfhPXFJAvSssoEFiEDEKPYCam4\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.26;\n\ninterface IOracle {\n    function getLatestData() external view returns (uint256);\n}\n\ncontract OracleIntegration {\n    IOracle public oracle;\n\n    constructor(address _oracle) {\n        oracle = IOracle(_oracle);\n    }\n\n    function getOracleData() external view returns (uint256) {\n        return oracle.getLatestData();\n    }\n}\n",
+  "sourcePath": "/home/arhan/BitThetaSecure/contracts/bitthetasecure/contracts/Automation/OracleIntegration.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Automation/OracleIntegration.sol",
+    "exportedSymbols": {
+      "IOracle": [
+        452
+      ],
+      "OracleIntegration": [
+        478
+      ]
+    },
+    "id": 479,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 446,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".26"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:24:7"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IOracle",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 452,
+        "linearizedBaseContracts": [
+          452
+        ],
+        "name": "IOracle",
+        "nameLocation": "68:7:7",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "ab757d61",
+            "id": 451,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLatestData",
+            "nameLocation": "91:13:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 447,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "104:2:7"
+            },
+            "returnParameters": {
+              "id": 450,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 449,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 451,
+                  "src": "130:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 448,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "130:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "129:9:7"
+            },
+            "scope": 452,
+            "src": "82:57:7",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 479,
+        "src": "58:83:7",
+        "usedErrors": [],
+        "usedEvents": []
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "OracleIntegration",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 478,
+        "linearizedBaseContracts": [
+          478
+        ],
+        "name": "OracleIntegration",
+        "nameLocation": "152:17:7",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "7dc0d1d0",
+            "id": 455,
+            "mutability": "mutable",
+            "name": "oracle",
+            "nameLocation": "191:6:7",
+            "nodeType": "VariableDeclaration",
+            "scope": 478,
+            "src": "176:21:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IOracle_$452",
+              "typeString": "contract IOracle"
+            },
+            "typeName": {
+              "id": 454,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 453,
+                "name": "IOracle",
+                "nameLocations": [
+                  "176:7:7"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 452,
+                "src": "176:7:7"
+              },
+              "referencedDeclaration": 452,
+              "src": "176:7:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IOracle_$452",
+                "typeString": "contract IOracle"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 466,
+              "nodeType": "Block",
+              "src": "233:42:7",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 464,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 460,
+                      "name": "oracle",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 455,
+                      "src": "243:6:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IOracle_$452",
+                        "typeString": "contract IOracle"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 462,
+                          "name": "_oracle",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 457,
+                          "src": "260:7:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 461,
+                        "name": "IOracle",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 452,
+                        "src": "252:7:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_IOracle_$452_$",
+                          "typeString": "type(contract IOracle)"
+                        }
+                      },
+                      "id": 463,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "252:16:7",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IOracle_$452",
+                        "typeString": "contract IOracle"
+                      }
+                    },
+                    "src": "243:25:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IOracle_$452",
+                      "typeString": "contract IOracle"
+                    }
+                  },
+                  "id": 465,
+                  "nodeType": "ExpressionStatement",
+                  "src": "243:25:7"
+                }
+              ]
+            },
+            "id": 467,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 458,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 457,
+                  "mutability": "mutable",
+                  "name": "_oracle",
+                  "nameLocation": "224:7:7",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 467,
+                  "src": "216:15:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 456,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "216:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "215:17:7"
+            },
+            "returnParameters": {
+              "id": 459,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "233:0:7"
+            },
+            "scope": 478,
+            "src": "204:71:7",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 476,
+              "nodeType": "Block",
+              "src": "338:46:7",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 472,
+                        "name": "oracle",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 455,
+                        "src": "355:6:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IOracle_$452",
+                          "typeString": "contract IOracle"
+                        }
+                      },
+                      "id": 473,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "362:13:7",
+                      "memberName": "getLatestData",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 451,
+                      "src": "355:20:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_uint256_$",
+                        "typeString": "function () view external returns (uint256)"
+                      }
+                    },
+                    "id": 474,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "355:22:7",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 471,
+                  "id": 475,
+                  "nodeType": "Return",
+                  "src": "348:29:7"
+                }
+              ]
+            },
+            "functionSelector": "6481c5e6",
+            "id": 477,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getOracleData",
+            "nameLocation": "290:13:7",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 468,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "303:2:7"
+            },
+            "returnParameters": {
+              "id": 471,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 470,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 477,
+                  "src": "329:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 469,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "329:7:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "328:9:7"
+            },
+            "scope": 478,
+            "src": "281:103:7",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 479,
+        "src": "143:243:7",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "32:355:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.26+commit.8a97fa7a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-07-19T19:01:04.797Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

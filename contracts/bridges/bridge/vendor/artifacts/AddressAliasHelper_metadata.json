@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/vendor/AddressAliasHelper.sol": "AddressAliasHelper"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/bridge/vendor/AddressAliasHelper.sol": {
+			"keccak256": "0x416da45a499ff73a4b166337dacb94228d037d36a3252e05a0896af324a56a23",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://1876bc397ad24f7ae4162ba76d0b86ca6809e46b3630f1757e70e7f2d7a43e73",
+				"dweb:/ipfs/QmPZ88VAAAmKiRcesawhuZJQXBVYQTi9Ay7xYDv2YPPw2Y"
+			]
+		}
+	},
+	"version": 1
+}

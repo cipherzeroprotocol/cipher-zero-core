@@ -1,0 +1,48 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Matter Labs",
+			"custom:security-contact": "security@matterlabs.dev",
+			"details": "The library provides the API to interact with the priority queue containerOrder of processing operations from queue - FIFO (Fist in - first out)",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/zksync/libraries/PriorityQueue.sol": "PriorityQueue"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/bridge/zksync/libraries/PriorityQueue.sol": {
+			"keccak256": "0x0340dcaa8744e0ad548375bc5c681e994f274a92435e7053d16beeba2d3adf26",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3fe288f3b8fd86749e287fa78fafd2f373d29187b3a243539c1830e5b8074104",
+				"dweb:/ipfs/QmcY6C5Qk2qohee9YtSWqdDMtVuXyXauSkaCJqAoXVR9cR"
+			]
+		}
+	},
+	"version": 1
+}

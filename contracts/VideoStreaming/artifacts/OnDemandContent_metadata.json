@@ -1,0 +1,121 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "contentId",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "ContentMonetized",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "contentId",
+						"type": "string"
+					}
+				],
+				"name": "ContentUploaded",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "contentId",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "monetizeContent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "contentId",
+						"type": "string"
+					}
+				],
+				"name": "uploadContent",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/cipherzero/contracts/VideoStreaming/OnDemandContent.sol": "OnDemandContent"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/cipherzero/contracts/VideoStreaming/OnDemandContent.sol": {
+			"keccak256": "0x6ae5ca7bd5a4c0c147e00fceaf78cde02bb097958904099f73db544a53c6e310",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2a59991d3be530bebd0c38d891dc6fbc7dd486b9649546ff49ac32fac40350d8",
+				"dweb:/ipfs/QmUP5Jt6XSPGxuxkwCqcQGsVECttprRw5m7mHKTjpcyPaY"
+			]
+		}
+	},
+	"version": 1
+}

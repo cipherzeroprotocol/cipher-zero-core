@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Matter Labs",
+			"custom:security-contact": "security@matterlabs.dev",
+			"kind": "dev",
+			"methods": {},
+			"stateVariables": {
+				"CREATE2_PREFIX": {
+					"details": "The prefix used to create CREATE2 addresses."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Helper library for working with L2 contracts on L1.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/common/libraries/L2ContractHelper.sol": "L2ContractHelper"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/bridge/common/libraries/L2ContractHelper.sol": {
+			"keccak256": "0xd453116305de377558bd321c96ea15376f36371aefc5e764f4d8ee0d038b9e22",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a1f7457d7e60cf9d7b733e8a0e3affd5770c531b4e27c461a0d9bf452c8fd52a",
+				"dweb:/ipfs/QmSyHD1HXZb2QHDLsSi3cCFfBGs93zpUsTQ3BBeRegPLqV"
+			]
+		}
+	},
+	"version": 1
+}

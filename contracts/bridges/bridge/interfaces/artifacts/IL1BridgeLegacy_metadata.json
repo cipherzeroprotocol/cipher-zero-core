@@ -1,0 +1,86 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_l2Receiver",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_l1Token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_l2TxGasLimit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_l2TxGasPerPubdataByte",
+						"type": "uint256"
+					}
+				],
+				"name": "deposit",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "txHash",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Matter Labs",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/interfaces/IL1BridgeLegacy.sol": "IL1BridgeLegacy"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/bridge/interfaces/IL1BridgeLegacy.sol": {
+			"keccak256": "0x27b9be596745a8138a64cbca61bf3789923bc9eb515364cdb15d7ce9e0d5d7ad",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://565dcfaf16322714b50240f77cb4e91e1903eef24d43bf406f92d9810e4775c5",
+				"dweb:/ipfs/QmbTott1CkhhSqPecZBDLuND6CgkszB4APtjf2espXE5Av"
+			]
+		}
+	},
+	"version": 1
+}

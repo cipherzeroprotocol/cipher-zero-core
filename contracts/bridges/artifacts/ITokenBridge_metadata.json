@@ -1,0 +1,526 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint32",
+						"name": "nonce",
+						"type": "uint32"
+					}
+				],
+				"name": "attestToken",
+				"outputs": [
+					{
+						"internalType": "uint64",
+						"name": "sequence",
+						"type": "uint64"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "chainId_",
+						"type": "uint16"
+					}
+				],
+				"name": "bridgeContracts",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "chainId",
+				"outputs": [
+					{
+						"internalType": "uint16",
+						"name": "",
+						"type": "uint16"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "encodedVm",
+						"type": "bytes"
+					}
+				],
+				"name": "completeTransfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "encodedVm",
+						"type": "bytes"
+					}
+				],
+				"name": "completeTransferAndUnwrapETH",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "encodedVm",
+						"type": "bytes"
+					}
+				],
+				"name": "completeTransferAndUnwrapETHWithPayload",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "encodedVm",
+						"type": "bytes"
+					}
+				],
+				"name": "completeTransferWithPayload",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "encodedVm",
+						"type": "bytes"
+					}
+				],
+				"name": "createWrapped",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					}
+				],
+				"name": "governanceActionIsConsumed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "governanceChainId",
+				"outputs": [
+					{
+						"internalType": "uint16",
+						"name": "",
+						"type": "uint16"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "governanceContract",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "impl",
+						"type": "address"
+					}
+				],
+				"name": "isInitialized",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "hash",
+						"type": "bytes32"
+					}
+				],
+				"name": "isTransferCompleted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "isWrappedAsset",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "outstandingBridged",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenImplementation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint16",
+						"name": "recipientChain",
+						"type": "uint16"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "recipient",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "arbiterFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint32",
+						"name": "nonce",
+						"type": "uint32"
+					}
+				],
+				"name": "transferTokens",
+				"outputs": [
+					{
+						"internalType": "uint64",
+						"name": "sequence",
+						"type": "uint64"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint16",
+						"name": "recipientChain",
+						"type": "uint16"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "recipient",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint32",
+						"name": "nonce",
+						"type": "uint32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "payload",
+						"type": "bytes"
+					}
+				],
+				"name": "transferTokensWithPayload",
+				"outputs": [
+					{
+						"internalType": "uint64",
+						"name": "sequence",
+						"type": "uint64"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "encodedVm",
+						"type": "bytes"
+					}
+				],
+				"name": "updateWrapped",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "recipientChain",
+						"type": "uint16"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "recipient",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "arbiterFee",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint32",
+						"name": "nonce",
+						"type": "uint32"
+					}
+				],
+				"name": "wrapAndTransferETH",
+				"outputs": [
+					{
+						"internalType": "uint64",
+						"name": "sequence",
+						"type": "uint64"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "recipientChain",
+						"type": "uint16"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "recipient",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint32",
+						"name": "nonce",
+						"type": "uint32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "payload",
+						"type": "bytes"
+					}
+				],
+				"name": "wrapAndTransferETHWithPayload",
+				"outputs": [
+					{
+						"internalType": "uint64",
+						"name": "sequence",
+						"type": "uint64"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint16",
+						"name": "tokenChainId",
+						"type": "uint16"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "tokenAddress",
+						"type": "bytes32"
+					}
+				],
+				"name": "wrappedAsset",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/ITokenBridge.sol": "ITokenBridge"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/BridgeGetters.sol": {
+			"keccak256": "0x9f0943f31319c6a794d5be62f4eeb6b8355337b66a8e41b7819c3a4e9d59bb7d",
+			"license": "Apache 2",
+			"urls": [
+				"bzz-raw://f34d674a311eebb5c40a5144a9998b7b1d33bd81a14131b2da76201fc1d95b87",
+				"dweb:/ipfs/QmS7wmPF3uqkeJy4bwpgMiS3zetEUVn3E4jP8XCULR75uY"
+			]
+		},
+		"contracts/bridges/ITokenBridge.sol": {
+			"keccak256": "0xf49845259dda9c4435acb12c8e13178211697437285ad299efc8cf611aa3abdc",
+			"license": "Apache 2",
+			"urls": [
+				"bzz-raw://6b9d1147fb02ed8be8415ae94fd07f1f1d7408d62e9aade0ab3cf26df4c5756e",
+				"dweb:/ipfs/QmUZNdd9dW7ye4Y9XDx4hkqyqQy3BRw8AcFJfihBJyXBzK"
+			]
+		}
+	},
+	"version": 1
+}

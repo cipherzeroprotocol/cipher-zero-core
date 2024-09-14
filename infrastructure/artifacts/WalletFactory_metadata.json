@@ -1,0 +1,513 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_walletImplementation",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_guardianStorage",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_refundAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_manager",
+						"type": "address"
+					}
+				],
+				"name": "ManagerAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_manager",
+						"type": "address"
+					}
+				],
+				"name": "ManagerRevoked",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnerChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "RefundAddressChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "wallet",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "guardian",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "refundToken",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "refundAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "WalletCreated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_manager",
+						"type": "address"
+					}
+				],
+				"name": "addManager",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "changeOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_refundAddress",
+						"type": "address"
+					}
+				],
+				"name": "changeRefundAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_modules",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address",
+						"name": "_guardian",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes20",
+						"name": "_salt",
+						"type": "bytes20"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_refundAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_refundToken",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_ownerSignature",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_managerSignature",
+						"type": "bytes"
+					}
+				],
+				"name": "createCounterfactualWallet",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_modules",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address",
+						"name": "_guardian",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes20",
+						"name": "_salt",
+						"type": "bytes20"
+					}
+				],
+				"name": "getAddressForCounterfactualWallet",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "guardianStorage",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract BaseWallet",
+						"name": "_wallet",
+						"type": "address"
+					}
+				],
+				"name": "init",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "managers",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "refundAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "revokeManager",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "walletImplementation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addManager(address)": {
+					"params": {
+						"_manager": "The address of the manager."
+					}
+				},
+				"changeOwner(address)": {
+					"params": {
+						"_newOwner": "The new owner."
+					}
+				},
+				"changeRefundAddress(address)": {
+					"params": {
+						"_refundAddress": "The address to use for refunds."
+					}
+				},
+				"createCounterfactualWallet(address,address[],address,bytes20,uint256,address,bytes,bytes)": {
+					"params": {
+						"_guardian": "The guardian address.",
+						"_managerSignature": "The manager signature on the wallet address.",
+						"_modules": "The list of modules for the wallet.",
+						"_owner": "The account address.",
+						"_ownerSignature": "The owner signature on the refund info.",
+						"_refundAmount": "The amount to refund to the relayer.",
+						"_refundToken": "The token to use to refund the relayer.",
+						"_salt": "The salt."
+					}
+				},
+				"getAddressForCounterfactualWallet(address,address[],address,bytes20)": {
+					"params": {
+						"_guardian": "The guardian address.",
+						"_modules": "The list of modules for wallet.",
+						"_owner": "The account address.",
+						"_salt": "The salt."
+					},
+					"returns": {
+						"_wallet": "The address that the wallet will have when created using CREATE2 and the same input parameters."
+					}
+				},
+				"init(address)": {
+					"params": {
+						"_wallet": "The wallet."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addManager(address)": {
+					"notice": "Adds a manager."
+				},
+				"changeOwner(address)": {
+					"notice": "Lets the owner transfer ownership of the contract to a new owner."
+				},
+				"changeRefundAddress(address)": {
+					"notice": "Lets the owner of the factory change the refund address."
+				},
+				"constructor": {
+					"notice": "Default constructor."
+				},
+				"createCounterfactualWallet(address,address[],address,bytes20,uint256,address,bytes,bytes)": {
+					"notice": "Creates a wallet for an owner account at a specific address. The wallet is initialised with the target modules and a first guardian by default. The wallet is created using the CREATE2 opcode and must have been approved  by a manager of the factory."
+				},
+				"getAddressForCounterfactualWallet(address,address[],address,bytes20)": {
+					"notice": "Gets the address of a counterfactual wallet with a first default guardian."
+				},
+				"init(address)": {
+					"notice": "Required to make the factory a module during the  initialisation of the wallet. "
+				},
+				"revokeManager(address)": {
+					"notice": "Disables the ability for the owner of the factory to revoke a manager."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/infrastructure/WalletFactory.sol": "WalletFactory"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/infrastructure/WalletFactory.sol": {
+			"keccak256": "0x3b3fb706e2d485eaed97593ec556e53c373253c9b9e87b88c8d885780613cb57",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://62b7c4b1917ac31e84c8a8b527fafb40b6fc96d041645561fc3e2763febd8277",
+				"dweb:/ipfs/QmQMfMXbgMHB4P3dSfPYD8T4EbDQnHSxCK5k8j7hMoRt7r"
+			]
+		},
+		"contracts/infrastructure/base/Managed.sol": {
+			"keccak256": "0x0936b9df683ec20244e2c4497eccb746a7621d5164b931f6046f61a0b59d5acf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0b5b92a1f69d0c0a97979fef644e3fe319777ae59a7da64d55136e499f6e77e0",
+				"dweb:/ipfs/QmWnev6oQ3WeFQghBxCcRQL9YiSbdPsnAvKu6ZETvauUt7"
+			]
+		},
+		"contracts/infrastructure/base/Owned.sol": {
+			"keccak256": "0xddf62fe9ac8fa3260afa266fc1390e83312a12ce1935849a2a5579c373479360",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://d8d83cc1d911ab0d2dcc9f4251ca6fe69c9ea4eeb7056d262d5229a95f197f80",
+				"dweb:/ipfs/QmWAWrKzAzVBkHF9Vscnu8hSwRhfnG8uFgJwBbGbcUMZmX"
+			]
+		},
+		"contracts/infrastructure/storage/IGuardianStorage.sol": {
+			"keccak256": "0x61b10b8bd19d6a582aff52e8d761fd44d7839ef1384ecb70648c61e22dc7d456",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://6011062542be5e3d38a224dcfb5f36cda41c1ed5a7e02271ff37f6083beb1dde",
+				"dweb:/ipfs/QmUFbe2CJBtkajeMMu6VYqniej8SzWZB3ExUoVmUrSLBCH"
+			]
+		},
+		"contracts/modules/common/IModule.sol": {
+			"keccak256": "0xdb7e81eb115c5723f73fde6a27d852cbccb53dc0ec23004bcbf05c46e479e903",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://fe693dcda5649f4e3671e545daf9597da621401633c25eb9c2cc4b5a1542564b",
+				"dweb:/ipfs/QmPddVqoEZPTiSN6akqhxxdwqTwHbLfyHLCBLpz2nEfdPi"
+			]
+		},
+		"contracts/modules/common/Utils.sol": {
+			"keccak256": "0xab8d2e664994be92e96975e096bc0b645ba269e427da41f831da8e32c14c5e1a",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://8527e8479295fdf80c3a98c32882c32d62a6c1be72121005f59e1112d5e0ebca",
+				"dweb:/ipfs/QmRMq7kMQ4oxjSSK9vz6LFbC1EHFpeGSe6ZjA8iL2t9ABK"
+			]
+		},
+		"contracts/wallet/BaseWallet.sol": {
+			"keccak256": "0xfc0203560d572a8eb75ec143f40a2b33624007ee7992b7abe91a9cdca8a805cf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a17515324ac705263c6621c4f1e1311089a8222c438fa6df5913bc8dbcaff4a1",
+				"dweb:/ipfs/QmfYcsz5z1WeNAcCwDAT9Q1R3xN7ezAEgftLCVsaNf9Z3V"
+			]
+		},
+		"contracts/wallet/IWallet.sol": {
+			"keccak256": "0x419c35d8560646a01707b86608a77014c2998e88d3c9d5c239a69df936787cee",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://b5689f84dc8a12aea4c0c96b3494cc83f4e1a2dfdb6461af45be555c5fab3843",
+				"dweb:/ipfs/QmTrmgrvYgF55aZqA44GS9PwYDXKN9rntfcnxbuQnZs3we"
+			]
+		},
+		"contracts/wallet/Proxy.sol": {
+			"keccak256": "0x78c2ffa86fe4250987e0956ac11f948dd41630a7fe5771caaefa59e8f486dc34",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://6a952c5b20ac974dabddcd24f983c46b51c77e645c40c88a7d1dfebeaea0a070",
+				"dweb:/ipfs/Qmeje2PxaBuAjvsFLb95qrhF595SFMdhYM8UHhKGnsC5eg"
+			]
+		}
+	},
+	"version": 1
+}

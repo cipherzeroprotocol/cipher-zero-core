@@ -1,0 +1,47 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Solady (https://github.com/vectorized/solady/blob/main/src/utils/LibMap.sol)",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Library for storage of packed unsigned integers.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/zksync/libraries/LibMap.sol": "LibMap"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/bridge/zksync/libraries/LibMap.sol": {
+			"keccak256": "0x8d50cd9c46e6075eab39b21614b00cedc136fa2b753c76ee56488d574c7b3697",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ebff13b1ef6bbe0fb5a9e2b0f875be12185d646d91fa6a49e7de0fbf1b543580",
+				"dweb:/ipfs/QmcB1uNTR8TxAbxgucF9tZJph3dHbxRDNxV8GKrrBGH2o6"
+			]
+		}
+	},
+	"version": 1
+}

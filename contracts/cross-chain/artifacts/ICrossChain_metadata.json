@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/cipherzero/contracts/CrossChain/CrossChainTransfers.sol": "ICrossChain"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/cipherzero/contracts/CrossChain/CrossChainTransfers.sol": {
+			"keccak256": "0xd558cb150309ef11c552918db95e0b32f63fffb24a23a63a7c06e95957557fe1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dbb72e275d6b6bf9ae7f258b7a50f1e0355c2c3a97be2fcba4c8e10b9df409f5",
+				"dweb:/ipfs/QmXdmbdQCG5mRPp3vxBtpJopt8FG2RsKDjWAvMS2bNSqVr"
+			]
+		}
+	},
+	"version": 1
+}

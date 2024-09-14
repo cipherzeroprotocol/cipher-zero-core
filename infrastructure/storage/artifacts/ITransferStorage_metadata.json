@@ -1,0 +1,95 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_target",
+						"type": "address"
+					}
+				],
+				"name": "getWhitelist",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_target",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "setWhitelist",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "ITransferStorage",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "TransferStorage interface",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/infrastructure/storage/ITransferStorage.sol": "ITransferStorage"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/infrastructure/storage/ITransferStorage.sol": {
+			"keccak256": "0x7e928dd0006ae792605a8503466f824f614b07601e66c149b557784e2144b547",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://7f64e90f038f7665193a510222590700a64d975e6345e0cd09c37d4a306fbf1f",
+				"dweb:/ipfs/QmdkKY3JdwbmV3N8u9VDiofrtLSyYaSnqJep2qbSq9Sd4V"
+			]
+		}
+	},
+	"version": 1
+}

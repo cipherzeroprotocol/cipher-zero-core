@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.13+commit.abaa5c0e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/zksync/zksync/libraries/LibMap.sol": "LibMap"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/zksync/zksync/libraries/LibMap.sol": {
+			"keccak256": "0xc5572ac0acee3217b57e8449fff8dfcab9213be014cbe5103b41865604621a16",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://760bcc180c30db78afc3a4326e953306d9fe87cf5c052b00dc35c19040ec127b",
+				"dweb:/ipfs/Qmawq3fMQ3VGXLgKf5g847Py3JXwUmGni1nHykhLESvLCo"
+			]
+		}
+	},
+	"version": 1
+}

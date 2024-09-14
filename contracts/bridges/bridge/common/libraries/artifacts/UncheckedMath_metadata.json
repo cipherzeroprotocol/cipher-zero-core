@@ -1,0 +1,48 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Matter Labs",
+			"custom:security-contact": "security@matterlabs.dev",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "The library for unchecked math.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/common/libraries/UncheckedMath.sol": "UncheckedMath"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/bridge/common/libraries/UncheckedMath.sol": {
+			"keccak256": "0x2cf9e93e085f3261240197efe90c17f47635db4cb9dc3f6006e229334d72464f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6c2750b3ec07b265e363a99a422c2fe98b14629f849a7f7e04532c25bf6c57e3",
+				"dweb:/ipfs/QmcfvmA4dh1hTp45ogvXPmTVcdz9Cq6je3QnrbZdBbPfZY"
+			]
+		}
+	},
+	"version": 1
+}

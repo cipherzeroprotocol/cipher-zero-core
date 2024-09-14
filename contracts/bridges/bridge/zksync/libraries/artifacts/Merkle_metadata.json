@@ -1,0 +1,55 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Matter Labs",
+			"custom:security-contact": "security@matterlabs.dev",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/zksync/libraries/Merkle.sol": "Merkle"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/bridge/common/libraries/UncheckedMath.sol": {
+			"keccak256": "0x2cf9e93e085f3261240197efe90c17f47635db4cb9dc3f6006e229334d72464f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6c2750b3ec07b265e363a99a422c2fe98b14629f849a7f7e04532c25bf6c57e3",
+				"dweb:/ipfs/QmcfvmA4dh1hTp45ogvXPmTVcdz9Cq6je3QnrbZdBbPfZY"
+			]
+		},
+		"contracts/bridges/bridge/zksync/libraries/Merkle.sol": {
+			"keccak256": "0xc4bf1ccf0587ce2b871709691b6152ae3b2ac9c590a99bfe478290a1d24e5c0e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d2661947e97be6dd7502ce94f9027cbe7ea304df612784a6d6059009b53c6cbe",
+				"dweb:/ipfs/QmRfMJ5RTzbcpaibxuWtdXvpAUaXT4voVNZcBKkDTqCzMP"
+			]
+		}
+	},
+	"version": 1
+}

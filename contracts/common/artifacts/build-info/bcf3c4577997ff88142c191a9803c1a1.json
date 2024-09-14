@@ -1,0 +1,994 @@
+{
+	"id": "bcf3c4577997ff88142c191a9803c1a1",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/common/ReentrancyGuard.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.13;\r\n\r\n/**\r\n * @custom:security-contact security@matterlabs.dev\r\n * @dev Contract module that helps prevent reentrant calls to a function.\r\n *\r\n * Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier\r\n * available, which can be applied to functions to make sure there are no nested\r\n * (reentrant) calls to them.\r\n *\r\n * Note that because there is a single `nonReentrant` guard, functions marked as\r\n * `nonReentrant` may not call one another. This can be worked around by making\r\n * those functions `private`, and then adding `external` `nonReentrant` entry\r\n * points to them.\r\n *\r\n * TIP: If you would like to learn more about reentrancy and alternative ways\r\n * to protect against it, check out our blog post\r\n * https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul].\r\n *\r\n * _Since v2.5.0:_ this module is now much more gas efficient, given net gas\r\n * metering changes introduced in the Istanbul hardfork.\r\n */\r\nabstract contract ReentrancyGuard {\r\n    /// @dev Address of lock flag variable.\r\n    /// @dev Flag is placed at random memory location to not interfere with Storage contract.\r\n    // keccak256(\"ReentrancyGuard\") - 1;\r\n    uint256 private constant LOCK_FLAG_ADDRESS = 0x8e94fed44239eb2314ab7a406345e6c5a8f0ccedf3b600de3d004e672c33abf4;\r\n\r\n    // solhint-disable-next-line max-line-length\r\n    // https://github.com/OpenZeppelin/openzeppelin-contracts/blob/566a774222707e424896c0c390a84dc3c13bdcb2/contracts/security/ReentrancyGuard.sol\r\n    // The values being non-zero value makes deployment a bit more expensive,\r\n    // but in exchange the refund on every call to nonReentrant will be lower in\r\n    // amount. Since refunds are capped to a percentage of the total\r\n    // transaction's gas, it is best to keep them low in cases like this one, to\r\n    // increase the likelihood of the full refund coming into effect.\r\n    uint256 private constant _NOT_ENTERED = 1;\r\n    uint256 private constant _ENTERED = 2;\r\n\r\n    modifier reentrancyGuardInitializer() {\r\n        _initializeReentrancyGuard();\r\n        _;\r\n    }\r\n\r\n    function _initializeReentrancyGuard() private {\r\n        uint256 lockSlotOldValue;\r\n\r\n        // Storing an initial non-zero value makes deployment a bit more\r\n        // expensive but in exchange every call to nonReentrant\r\n        // will be cheaper.\r\n        assembly {\r\n            lockSlotOldValue := sload(LOCK_FLAG_ADDRESS)\r\n            sstore(LOCK_FLAG_ADDRESS, _NOT_ENTERED)\r\n        }\r\n\r\n        // Check that storage slot for reentrancy guard is empty to rule out possibility of slot conflict\r\n        require(lockSlotOldValue == 0, \"1B\");\r\n    }\r\n\r\n    /**\r\n     * @dev Prevents a contract from calling itself, directly or indirectly.\r\n     * Calling a `nonReentrant` function from another `nonReentrant`\r\n     * function is not supported. It is possible to prevent this from happening\r\n     * by making the `nonReentrant` function external, and make it call a\r\n     * `private` function that does the actual work.\r\n     */\r\n    modifier nonReentrant() {\r\n        uint256 _status;\r\n        assembly {\r\n            _status := sload(LOCK_FLAG_ADDRESS)\r\n        }\r\n\r\n        // On the first call to nonReentrant, _notEntered will be true\r\n        require(_status == _NOT_ENTERED, \"r1\");\r\n\r\n        // Any calls to nonReentrant after this point will fail\r\n        assembly {\r\n            sstore(LOCK_FLAG_ADDRESS, _ENTERED)\r\n        }\r\n\r\n        _;\r\n\r\n        // By storing the original value once again, a refund is triggered (see\r\n        // https://eips.ethereum.org/EIPS/eip-2200)\r\n        assembly {\r\n            sstore(LOCK_FLAG_ADDRESS, _NOT_ENTERED)\r\n        }\r\n    }\r\n}\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/common/ReentrancyGuard.sol": {
+				"ReentrancyGuard": {
+					"abi": [],
+					"devdoc": {
+						"custom:security-contact": "security@matterlabs.dev",
+						"details": "Contract module that helps prevent reentrant calls to a function. Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier available, which can be applied to functions to make sure there are no nested (reentrant) calls to them. Note that because there is a single `nonReentrant` guard, functions marked as `nonReentrant` may not call one another. This can be worked around by making those functions `private`, and then adding `external` `nonReentrant` entry points to them. TIP: If you would like to learn more about reentrancy and alternative ways to protect against it, check out our blog post https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul]. _Since v2.5.0:_ this module is now much more gas efficient, given net gas metering changes introduced in the Istanbul hardfork.",
+						"kind": "dev",
+						"methods": {},
+						"stateVariables": {
+							"LOCK_FLAG_ADDRESS": {
+								"details": "Address of lock flag variable.Flag is placed at random memory location to not interfere with Storage contract."
+							}
+						},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"custom:security-contact\":\"security@matterlabs.dev\",\"details\":\"Contract module that helps prevent reentrant calls to a function. Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier available, which can be applied to functions to make sure there are no nested (reentrant) calls to them. Note that because there is a single `nonReentrant` guard, functions marked as `nonReentrant` may not call one another. This can be worked around by making those functions `private`, and then adding `external` `nonReentrant` entry points to them. TIP: If you would like to learn more about reentrancy and alternative ways to protect against it, check out our blog post https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul]. _Since v2.5.0:_ this module is now much more gas efficient, given net gas metering changes introduced in the Istanbul hardfork.\",\"kind\":\"dev\",\"methods\":{},\"stateVariables\":{\"LOCK_FLAG_ADDRESS\":{\"details\":\"Address of lock flag variable.Flag is placed at random memory location to not interfere with Storage contract.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/common/ReentrancyGuard.sol\":\"ReentrancyGuard\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/common/ReentrancyGuard.sol\":{\"keccak256\":\"0xf17bfdce868037a2dabe64986f6d96be29ef2a9266fa749f84d8526b4d1784b0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8eb19deadde2961e77507cb2b5f72d345586ed9b16f902255ed4d26c9193df23\",\"dweb:/ipfs/QmTQ4tYx1fgqeRKuz283nayCuZHWGeiLT8GfMNMbzomB9a\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/common/ReentrancyGuard.sol": {
+				"ast": {
+					"absolutePath": "contracts/common/ReentrancyGuard.sol",
+					"exportedSymbols": {
+						"ReentrancyGuard": [
+							53
+						]
+					},
+					"id": 54,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".13"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "35:24:0"
+						},
+						{
+							"abstract": true,
+							"baseContracts": [],
+							"canonicalName": "ReentrancyGuard",
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "63:958:0",
+								"text": " @custom:security-contact security@matterlabs.dev\n @dev Contract module that helps prevent reentrant calls to a function.\n Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier\n available, which can be applied to functions to make sure there are no nested\n (reentrant) calls to them.\n Note that because there is a single `nonReentrant` guard, functions marked as\n `nonReentrant` may not call one another. This can be worked around by making\n those functions `private`, and then adding `external` `nonReentrant` entry\n points to them.\n TIP: If you would like to learn more about reentrancy and alternative ways\n to protect against it, check out our blog post\n https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul].\n _Since v2.5.0:_ this module is now much more gas efficient, given net gas\n metering changes introduced in the Istanbul hardfork."
+							},
+							"fullyImplemented": true,
+							"id": 53,
+							"linearizedBaseContracts": [
+								53
+							],
+							"name": "ReentrancyGuard",
+							"nameLocation": "1041:15:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"constant": true,
+									"documentation": {
+										"id": 3,
+										"nodeType": "StructuredDocumentation",
+										"src": "1064:134:0",
+										"text": "@dev Address of lock flag variable.\n @dev Flag is placed at random memory location to not interfere with Storage contract."
+									},
+									"id": 6,
+									"mutability": "constant",
+									"name": "LOCK_FLAG_ADDRESS",
+									"nameLocation": "1271:17:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 53,
+									"src": "1246:111:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 4,
+										"name": "uint256",
+										"nodeType": "ElementaryTypeName",
+										"src": "1246:7:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"value": {
+										"hexValue": "307838653934666564343432333965623233313461623761343036333435653663356138663063636564663362363030646533643030346536373263333361626634",
+										"id": 5,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "number",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "1291:66:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_rational_64491676630466243809640389642816699344250122302177356955313734891917720923124_by_1",
+											"typeString": "int_const 6449...(69 digits omitted)...3124"
+										},
+										"value": "0x8e94fed44239eb2314ab7a406345e6c5a8f0ccedf3b600de3d004e672c33abf4"
+									},
+									"visibility": "private"
+								},
+								{
+									"constant": true,
+									"id": 9,
+									"mutability": "constant",
+									"name": "_NOT_ENTERED",
+									"nameLocation": "1973:12:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 53,
+									"src": "1948:41:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 7,
+										"name": "uint256",
+										"nodeType": "ElementaryTypeName",
+										"src": "1948:7:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"value": {
+										"hexValue": "31",
+										"id": 8,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "number",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "1988:1:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_rational_1_by_1",
+											"typeString": "int_const 1"
+										},
+										"value": "1"
+									},
+									"visibility": "private"
+								},
+								{
+									"constant": true,
+									"id": 12,
+									"mutability": "constant",
+									"name": "_ENTERED",
+									"nameLocation": "2021:8:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 53,
+									"src": "1996:37:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 10,
+										"name": "uint256",
+										"nodeType": "ElementaryTypeName",
+										"src": "1996:7:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"value": {
+										"hexValue": "32",
+										"id": 11,
+										"isConstant": false,
+										"isLValue": false,
+										"isPure": true,
+										"kind": "number",
+										"lValueRequested": false,
+										"nodeType": "Literal",
+										"src": "2032:1:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_rational_2_by_1",
+											"typeString": "int_const 2"
+										},
+										"value": "2"
+									},
+									"visibility": "private"
+								},
+								{
+									"body": {
+										"id": 18,
+										"nodeType": "Block",
+										"src": "2080:59:0",
+										"statements": [
+											{
+												"expression": {
+													"arguments": [],
+													"expression": {
+														"argumentTypes": [],
+														"id": 14,
+														"name": "_initializeReentrancyGuard",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [],
+														"referencedDeclaration": 34,
+														"src": "2091:26:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+															"typeString": "function ()"
+														}
+													},
+													"id": 15,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"kind": "functionCall",
+													"lValueRequested": false,
+													"nameLocations": [],
+													"names": [],
+													"nodeType": "FunctionCall",
+													"src": "2091:28:0",
+													"tryCall": false,
+													"typeDescriptions": {
+														"typeIdentifier": "t_tuple$__$",
+														"typeString": "tuple()"
+													}
+												},
+												"id": 16,
+												"nodeType": "ExpressionStatement",
+												"src": "2091:28:0"
+											},
+											{
+												"id": 17,
+												"nodeType": "PlaceholderStatement",
+												"src": "2130:1:0"
+											}
+										]
+									},
+									"id": 19,
+									"name": "reentrancyGuardInitializer",
+									"nameLocation": "2051:26:0",
+									"nodeType": "ModifierDefinition",
+									"parameters": {
+										"id": 13,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "2077:2:0"
+									},
+									"src": "2042:97:0",
+									"virtual": false,
+									"visibility": "internal"
+								},
+								{
+									"body": {
+										"id": 33,
+										"nodeType": "Block",
+										"src": "2193:511:0",
+										"statements": [
+											{
+												"assignments": [
+													23
+												],
+												"declarations": [
+													{
+														"constant": false,
+														"id": 23,
+														"mutability": "mutable",
+														"name": "lockSlotOldValue",
+														"nameLocation": "2212:16:0",
+														"nodeType": "VariableDeclaration",
+														"scope": 33,
+														"src": "2204:24:0",
+														"stateVariable": false,
+														"storageLocation": "default",
+														"typeDescriptions": {
+															"typeIdentifier": "t_uint256",
+															"typeString": "uint256"
+														},
+														"typeName": {
+															"id": 22,
+															"name": "uint256",
+															"nodeType": "ElementaryTypeName",
+															"src": "2204:7:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_uint256",
+																"typeString": "uint256"
+															}
+														},
+														"visibility": "internal"
+													}
+												],
+												"id": 24,
+												"nodeType": "VariableDeclarationStatement",
+												"src": "2204:24:0"
+											},
+											{
+												"AST": {
+													"nativeSrc": "2418:123:0",
+													"nodeType": "YulBlock",
+													"src": "2418:123:0",
+													"statements": [
+														{
+															"nativeSrc": "2433:44:0",
+															"nodeType": "YulAssignment",
+															"src": "2433:44:0",
+															"value": {
+																"arguments": [
+																	{
+																		"name": "LOCK_FLAG_ADDRESS",
+																		"nativeSrc": "2459:17:0",
+																		"nodeType": "YulIdentifier",
+																		"src": "2459:17:0"
+																	}
+																],
+																"functionName": {
+																	"name": "sload",
+																	"nativeSrc": "2453:5:0",
+																	"nodeType": "YulIdentifier",
+																	"src": "2453:5:0"
+																},
+																"nativeSrc": "2453:24:0",
+																"nodeType": "YulFunctionCall",
+																"src": "2453:24:0"
+															},
+															"variableNames": [
+																{
+																	"name": "lockSlotOldValue",
+																	"nativeSrc": "2433:16:0",
+																	"nodeType": "YulIdentifier",
+																	"src": "2433:16:0"
+																}
+															]
+														},
+														{
+															"expression": {
+																"arguments": [
+																	{
+																		"name": "LOCK_FLAG_ADDRESS",
+																		"nativeSrc": "2498:17:0",
+																		"nodeType": "YulIdentifier",
+																		"src": "2498:17:0"
+																	},
+																	{
+																		"name": "_NOT_ENTERED",
+																		"nativeSrc": "2517:12:0",
+																		"nodeType": "YulIdentifier",
+																		"src": "2517:12:0"
+																	}
+																],
+																"functionName": {
+																	"name": "sstore",
+																	"nativeSrc": "2491:6:0",
+																	"nodeType": "YulIdentifier",
+																	"src": "2491:6:0"
+																},
+																"nativeSrc": "2491:39:0",
+																"nodeType": "YulFunctionCall",
+																"src": "2491:39:0"
+															},
+															"nativeSrc": "2491:39:0",
+															"nodeType": "YulExpressionStatement",
+															"src": "2491:39:0"
+														}
+													]
+												},
+												"evmVersion": "cancun",
+												"externalReferences": [
+													{
+														"declaration": 6,
+														"isOffset": false,
+														"isSlot": false,
+														"src": "2459:17:0",
+														"valueSize": 1
+													},
+													{
+														"declaration": 6,
+														"isOffset": false,
+														"isSlot": false,
+														"src": "2498:17:0",
+														"valueSize": 1
+													},
+													{
+														"declaration": 9,
+														"isOffset": false,
+														"isSlot": false,
+														"src": "2517:12:0",
+														"valueSize": 1
+													},
+													{
+														"declaration": 23,
+														"isOffset": false,
+														"isSlot": false,
+														"src": "2433:16:0",
+														"valueSize": 1
+													}
+												],
+												"id": 25,
+												"nodeType": "InlineAssembly",
+												"src": "2409:132:0"
+											},
+											{
+												"expression": {
+													"arguments": [
+														{
+															"commonType": {
+																"typeIdentifier": "t_uint256",
+																"typeString": "uint256"
+															},
+															"id": 29,
+															"isConstant": false,
+															"isLValue": false,
+															"isPure": false,
+															"lValueRequested": false,
+															"leftExpression": {
+																"id": 27,
+																"name": "lockSlotOldValue",
+																"nodeType": "Identifier",
+																"overloadedDeclarations": [],
+																"referencedDeclaration": 23,
+																"src": "2668:16:0",
+																"typeDescriptions": {
+																	"typeIdentifier": "t_uint256",
+																	"typeString": "uint256"
+																}
+															},
+															"nodeType": "BinaryOperation",
+															"operator": "==",
+															"rightExpression": {
+																"hexValue": "30",
+																"id": 28,
+																"isConstant": false,
+																"isLValue": false,
+																"isPure": true,
+																"kind": "number",
+																"lValueRequested": false,
+																"nodeType": "Literal",
+																"src": "2688:1:0",
+																"typeDescriptions": {
+																	"typeIdentifier": "t_rational_0_by_1",
+																	"typeString": "int_const 0"
+																},
+																"value": "0"
+															},
+															"src": "2668:21:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_bool",
+																"typeString": "bool"
+															}
+														},
+														{
+															"hexValue": "3142",
+															"id": 30,
+															"isConstant": false,
+															"isLValue": false,
+															"isPure": true,
+															"kind": "string",
+															"lValueRequested": false,
+															"nodeType": "Literal",
+															"src": "2691:4:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_stringliteral_73661624d3d9d622617907ec04fc037e9913f4237ce6560d7963508388d43472",
+																"typeString": "literal_string \"1B\""
+															},
+															"value": "1B"
+														}
+													],
+													"expression": {
+														"argumentTypes": [
+															{
+																"typeIdentifier": "t_bool",
+																"typeString": "bool"
+															},
+															{
+																"typeIdentifier": "t_stringliteral_73661624d3d9d622617907ec04fc037e9913f4237ce6560d7963508388d43472",
+																"typeString": "literal_string \"1B\""
+															}
+														],
+														"id": 26,
+														"name": "require",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [
+															4294967278,
+															4294967278,
+															4294967278
+														],
+														"referencedDeclaration": 4294967278,
+														"src": "2660:7:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+															"typeString": "function (bool,string memory) pure"
+														}
+													},
+													"id": 31,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"kind": "functionCall",
+													"lValueRequested": false,
+													"nameLocations": [],
+													"names": [],
+													"nodeType": "FunctionCall",
+													"src": "2660:36:0",
+													"tryCall": false,
+													"typeDescriptions": {
+														"typeIdentifier": "t_tuple$__$",
+														"typeString": "tuple()"
+													}
+												},
+												"id": 32,
+												"nodeType": "ExpressionStatement",
+												"src": "2660:36:0"
+											}
+										]
+									},
+									"id": 34,
+									"implemented": true,
+									"kind": "function",
+									"modifiers": [],
+									"name": "_initializeReentrancyGuard",
+									"nameLocation": "2156:26:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 20,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "2182:2:0"
+									},
+									"returnParameters": {
+										"id": 21,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "2193:0:0"
+									},
+									"scope": 53,
+									"src": "2147:557:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "private"
+								},
+								{
+									"body": {
+										"id": 51,
+										"nodeType": "Block",
+										"src": "3112:618:0",
+										"statements": [
+											{
+												"assignments": [
+													38
+												],
+												"declarations": [
+													{
+														"constant": false,
+														"id": 38,
+														"mutability": "mutable",
+														"name": "_status",
+														"nameLocation": "3131:7:0",
+														"nodeType": "VariableDeclaration",
+														"scope": 51,
+														"src": "3123:15:0",
+														"stateVariable": false,
+														"storageLocation": "default",
+														"typeDescriptions": {
+															"typeIdentifier": "t_uint256",
+															"typeString": "uint256"
+														},
+														"typeName": {
+															"id": 37,
+															"name": "uint256",
+															"nodeType": "ElementaryTypeName",
+															"src": "3123:7:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_uint256",
+																"typeString": "uint256"
+															}
+														},
+														"visibility": "internal"
+													}
+												],
+												"id": 39,
+												"nodeType": "VariableDeclarationStatement",
+												"src": "3123:15:0"
+											},
+											{
+												"AST": {
+													"nativeSrc": "3158:61:0",
+													"nodeType": "YulBlock",
+													"src": "3158:61:0",
+													"statements": [
+														{
+															"nativeSrc": "3173:35:0",
+															"nodeType": "YulAssignment",
+															"src": "3173:35:0",
+															"value": {
+																"arguments": [
+																	{
+																		"name": "LOCK_FLAG_ADDRESS",
+																		"nativeSrc": "3190:17:0",
+																		"nodeType": "YulIdentifier",
+																		"src": "3190:17:0"
+																	}
+																],
+																"functionName": {
+																	"name": "sload",
+																	"nativeSrc": "3184:5:0",
+																	"nodeType": "YulIdentifier",
+																	"src": "3184:5:0"
+																},
+																"nativeSrc": "3184:24:0",
+																"nodeType": "YulFunctionCall",
+																"src": "3184:24:0"
+															},
+															"variableNames": [
+																{
+																	"name": "_status",
+																	"nativeSrc": "3173:7:0",
+																	"nodeType": "YulIdentifier",
+																	"src": "3173:7:0"
+																}
+															]
+														}
+													]
+												},
+												"evmVersion": "cancun",
+												"externalReferences": [
+													{
+														"declaration": 6,
+														"isOffset": false,
+														"isSlot": false,
+														"src": "3190:17:0",
+														"valueSize": 1
+													},
+													{
+														"declaration": 38,
+														"isOffset": false,
+														"isSlot": false,
+														"src": "3173:7:0",
+														"valueSize": 1
+													}
+												],
+												"id": 40,
+												"nodeType": "InlineAssembly",
+												"src": "3149:70:0"
+											},
+											{
+												"expression": {
+													"arguments": [
+														{
+															"commonType": {
+																"typeIdentifier": "t_uint256",
+																"typeString": "uint256"
+															},
+															"id": 44,
+															"isConstant": false,
+															"isLValue": false,
+															"isPure": false,
+															"lValueRequested": false,
+															"leftExpression": {
+																"id": 42,
+																"name": "_status",
+																"nodeType": "Identifier",
+																"overloadedDeclarations": [],
+																"referencedDeclaration": 38,
+																"src": "3311:7:0",
+																"typeDescriptions": {
+																	"typeIdentifier": "t_uint256",
+																	"typeString": "uint256"
+																}
+															},
+															"nodeType": "BinaryOperation",
+															"operator": "==",
+															"rightExpression": {
+																"id": 43,
+																"name": "_NOT_ENTERED",
+																"nodeType": "Identifier",
+																"overloadedDeclarations": [],
+																"referencedDeclaration": 9,
+																"src": "3322:12:0",
+																"typeDescriptions": {
+																	"typeIdentifier": "t_uint256",
+																	"typeString": "uint256"
+																}
+															},
+															"src": "3311:23:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_bool",
+																"typeString": "bool"
+															}
+														},
+														{
+															"hexValue": "7231",
+															"id": 45,
+															"isConstant": false,
+															"isLValue": false,
+															"isPure": true,
+															"kind": "string",
+															"lValueRequested": false,
+															"nodeType": "Literal",
+															"src": "3336:4:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_stringliteral_7d836ba56b88abad41af9a2d0e7a278279f5d24a80179a540545eb5cc8621d6e",
+																"typeString": "literal_string \"r1\""
+															},
+															"value": "r1"
+														}
+													],
+													"expression": {
+														"argumentTypes": [
+															{
+																"typeIdentifier": "t_bool",
+																"typeString": "bool"
+															},
+															{
+																"typeIdentifier": "t_stringliteral_7d836ba56b88abad41af9a2d0e7a278279f5d24a80179a540545eb5cc8621d6e",
+																"typeString": "literal_string \"r1\""
+															}
+														],
+														"id": 41,
+														"name": "require",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [
+															4294967278,
+															4294967278,
+															4294967278
+														],
+														"referencedDeclaration": 4294967278,
+														"src": "3303:7:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+															"typeString": "function (bool,string memory) pure"
+														}
+													},
+													"id": 46,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"kind": "functionCall",
+													"lValueRequested": false,
+													"nameLocations": [],
+													"names": [],
+													"nodeType": "FunctionCall",
+													"src": "3303:38:0",
+													"tryCall": false,
+													"typeDescriptions": {
+														"typeIdentifier": "t_tuple$__$",
+														"typeString": "tuple()"
+													}
+												},
+												"id": 47,
+												"nodeType": "ExpressionStatement",
+												"src": "3303:38:0"
+											},
+											{
+												"AST": {
+													"nativeSrc": "3428:61:0",
+													"nodeType": "YulBlock",
+													"src": "3428:61:0",
+													"statements": [
+														{
+															"expression": {
+																"arguments": [
+																	{
+																		"name": "LOCK_FLAG_ADDRESS",
+																		"nativeSrc": "3450:17:0",
+																		"nodeType": "YulIdentifier",
+																		"src": "3450:17:0"
+																	},
+																	{
+																		"name": "_ENTERED",
+																		"nativeSrc": "3469:8:0",
+																		"nodeType": "YulIdentifier",
+																		"src": "3469:8:0"
+																	}
+																],
+																"functionName": {
+																	"name": "sstore",
+																	"nativeSrc": "3443:6:0",
+																	"nodeType": "YulIdentifier",
+																	"src": "3443:6:0"
+																},
+																"nativeSrc": "3443:35:0",
+																"nodeType": "YulFunctionCall",
+																"src": "3443:35:0"
+															},
+															"nativeSrc": "3443:35:0",
+															"nodeType": "YulExpressionStatement",
+															"src": "3443:35:0"
+														}
+													]
+												},
+												"evmVersion": "cancun",
+												"externalReferences": [
+													{
+														"declaration": 6,
+														"isOffset": false,
+														"isSlot": false,
+														"src": "3450:17:0",
+														"valueSize": 1
+													},
+													{
+														"declaration": 12,
+														"isOffset": false,
+														"isSlot": false,
+														"src": "3469:8:0",
+														"valueSize": 1
+													}
+												],
+												"id": 48,
+												"nodeType": "InlineAssembly",
+												"src": "3419:70:0"
+											},
+											{
+												"id": 49,
+												"nodeType": "PlaceholderStatement",
+												"src": "3501:1:0"
+											},
+											{
+												"AST": {
+													"nativeSrc": "3658:65:0",
+													"nodeType": "YulBlock",
+													"src": "3658:65:0",
+													"statements": [
+														{
+															"expression": {
+																"arguments": [
+																	{
+																		"name": "LOCK_FLAG_ADDRESS",
+																		"nativeSrc": "3680:17:0",
+																		"nodeType": "YulIdentifier",
+																		"src": "3680:17:0"
+																	},
+																	{
+																		"name": "_NOT_ENTERED",
+																		"nativeSrc": "3699:12:0",
+																		"nodeType": "YulIdentifier",
+																		"src": "3699:12:0"
+																	}
+																],
+																"functionName": {
+																	"name": "sstore",
+																	"nativeSrc": "3673:6:0",
+																	"nodeType": "YulIdentifier",
+																	"src": "3673:6:0"
+																},
+																"nativeSrc": "3673:39:0",
+																"nodeType": "YulFunctionCall",
+																"src": "3673:39:0"
+															},
+															"nativeSrc": "3673:39:0",
+															"nodeType": "YulExpressionStatement",
+															"src": "3673:39:0"
+														}
+													]
+												},
+												"evmVersion": "cancun",
+												"externalReferences": [
+													{
+														"declaration": 6,
+														"isOffset": false,
+														"isSlot": false,
+														"src": "3680:17:0",
+														"valueSize": 1
+													},
+													{
+														"declaration": 9,
+														"isOffset": false,
+														"isSlot": false,
+														"src": "3699:12:0",
+														"valueSize": 1
+													}
+												],
+												"id": 50,
+												"nodeType": "InlineAssembly",
+												"src": "3649:74:0"
+											}
+										]
+									},
+									"documentation": {
+										"id": 35,
+										"nodeType": "StructuredDocumentation",
+										"src": "2712:370:0",
+										"text": " @dev Prevents a contract from calling itself, directly or indirectly.\n Calling a `nonReentrant` function from another `nonReentrant`\n function is not supported. It is possible to prevent this from happening\n by making the `nonReentrant` function external, and make it call a\n `private` function that does the actual work."
+									},
+									"id": 52,
+									"name": "nonReentrant",
+									"nameLocation": "3097:12:0",
+									"nodeType": "ModifierDefinition",
+									"parameters": {
+										"id": 36,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "3109:2:0"
+									},
+									"src": "3088:642:0",
+									"virtual": false,
+									"visibility": "internal"
+								}
+							],
+							"scope": 54,
+							"src": "1023:2710:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "35:3700:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

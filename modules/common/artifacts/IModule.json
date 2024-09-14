@@ -1,0 +1,107 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"addModule(address,address)": "5a1db8c4",
+			"init(address)": "19ab453c",
+			"supportsStaticCall(bytes4)": "25b50934"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_wallet",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "_module",
+					"type": "address"
+				}
+			],
+			"name": "addModule",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_wallet",
+					"type": "address"
+				}
+			],
+			"name": "init",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "bytes4",
+					"name": "_methodId",
+					"type": "bytes4"
+				}
+			],
+			"name": "supportsStaticCall",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "_isSupported",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		}
+	]
+}

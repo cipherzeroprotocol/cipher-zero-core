@@ -1,0 +1,415 @@
+{
+	"id": "7850d380ebf99de6cb195e5fac10427d",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/cipherzero/interfaces/IMessaging.sol": {
+				"content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.26;\n\nstruct Message {\n    // Define the properties of the Message struct\n    uint256 id;\n}\n\ninterface IMessaging {\n    function sendMessage(address _to, string calldata _message) external;\n    function getMessages(address _address) external view returns (Message[] memory);\n}\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/cipherzero/interfaces/IMessaging.sol": {
+				"IMessaging": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "_address",
+									"type": "address"
+								}
+							],
+							"name": "getMessages",
+							"outputs": [
+								{
+									"components": [
+										{
+											"internalType": "uint256",
+											"name": "id",
+											"type": "uint256"
+										}
+									],
+									"internalType": "struct Message[]",
+									"name": "",
+									"type": "tuple[]"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "_to",
+									"type": "address"
+								},
+								{
+									"internalType": "string",
+									"name": "_message",
+									"type": "string"
+								}
+							],
+							"name": "sendMessage",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"getMessages(address)": "b2f71322",
+							"sendMessage(address,string)": "de6f24bb"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"getMessages\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"internalType\":\"struct Message[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"_message\",\"type\":\"string\"}],\"name\":\"sendMessage\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/cipherzero/interfaces/IMessaging.sol\":\"IMessaging\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/cipherzero/interfaces/IMessaging.sol\":{\"keccak256\":\"0x1aef72f1e4b74bef3da6f74b3c179a7dc25d2c188a537e84664f47ede95926fa\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0e2c8b5bf5e48ca4fae7502d2540ceae8aaea3f4bf2da2b105189ac94ee39e57\",\"dweb:/ipfs/QmPQWsXJD5y7xnZy5y5XXA4zE4YCT9xYBzgTVP882sHpMe\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/cipherzero/interfaces/IMessaging.sol": {
+				"ast": {
+					"absolutePath": "contracts/cipherzero/interfaces/IMessaging.sol",
+					"exportedSymbols": {
+						"IMessaging": [
+							21
+						],
+						"Message": [
+							4
+						]
+					},
+					"id": 22,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".26"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "32:24:0"
+						},
+						{
+							"canonicalName": "Message",
+							"id": 4,
+							"members": [
+								{
+									"constant": false,
+									"id": 3,
+									"mutability": "mutable",
+									"name": "id",
+									"nameLocation": "138:2:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 4,
+									"src": "130:10:0",
+									"stateVariable": false,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 2,
+										"name": "uint256",
+										"nodeType": "ElementaryTypeName",
+										"src": "130:7:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"visibility": "internal"
+								}
+							],
+							"name": "Message",
+							"nameLocation": "65:7:0",
+							"nodeType": "StructDefinition",
+							"scope": 22,
+							"src": "58:85:0",
+							"visibility": "public"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IMessaging",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"fullyImplemented": false,
+							"id": 21,
+							"linearizedBaseContracts": [
+								21
+							],
+							"name": "IMessaging",
+							"nameLocation": "155:10:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"functionSelector": "de6f24bb",
+									"id": 11,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "sendMessage",
+									"nameLocation": "181:11:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 9,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 6,
+												"mutability": "mutable",
+												"name": "_to",
+												"nameLocation": "201:3:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 11,
+												"src": "193:11:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 5,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "193:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 8,
+												"mutability": "mutable",
+												"name": "_message",
+												"nameLocation": "222:8:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 11,
+												"src": "206:24:0",
+												"stateVariable": false,
+												"storageLocation": "calldata",
+												"typeDescriptions": {
+													"typeIdentifier": "t_string_calldata_ptr",
+													"typeString": "string"
+												},
+												"typeName": {
+													"id": 7,
+													"name": "string",
+													"nodeType": "ElementaryTypeName",
+													"src": "206:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_string_storage_ptr",
+														"typeString": "string"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "192:39:0"
+									},
+									"returnParameters": {
+										"id": 10,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "240:0:0"
+									},
+									"scope": 21,
+									"src": "172:69:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"functionSelector": "b2f71322",
+									"id": 20,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "getMessages",
+									"nameLocation": "255:11:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 14,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 13,
+												"mutability": "mutable",
+												"name": "_address",
+												"nameLocation": "275:8:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 20,
+												"src": "267:16:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 12,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "267:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "266:18:0"
+									},
+									"returnParameters": {
+										"id": 19,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 18,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 20,
+												"src": "308:16:0",
+												"stateVariable": false,
+												"storageLocation": "memory",
+												"typeDescriptions": {
+													"typeIdentifier": "t_array$_t_struct$_Message_$4_memory_ptr_$dyn_memory_ptr",
+													"typeString": "struct Message[]"
+												},
+												"typeName": {
+													"baseType": {
+														"id": 16,
+														"nodeType": "UserDefinedTypeName",
+														"pathNode": {
+															"id": 15,
+															"name": "Message",
+															"nameLocations": [
+																"308:7:0"
+															],
+															"nodeType": "IdentifierPath",
+															"referencedDeclaration": 4,
+															"src": "308:7:0"
+														},
+														"referencedDeclaration": 4,
+														"src": "308:7:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_struct$_Message_$4_storage_ptr",
+															"typeString": "struct Message"
+														}
+													},
+													"id": 17,
+													"nodeType": "ArrayTypeName",
+													"src": "308:9:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_array$_t_struct$_Message_$4_storage_$dyn_storage_ptr",
+														"typeString": "struct Message[]"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "307:18:0"
+									},
+									"scope": 21,
+									"src": "246:80:0",
+									"stateMutability": "view",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 22,
+							"src": "145:183:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "32:297:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

@@ -1,0 +1,218 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					}
+				],
+				"name": "deregisterModule",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_upgrader",
+						"type": "address"
+					}
+				],
+				"name": "deregisterUpgrader",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					}
+				],
+				"name": "isRegisteredModule",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_modules",
+						"type": "address[]"
+					}
+				],
+				"name": "isRegisteredModule",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_upgrader",
+						"type": "address"
+					}
+				],
+				"name": "isRegisteredUpgrader",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					}
+				],
+				"name": "moduleInfo",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					}
+				],
+				"name": "recoverToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "_name",
+						"type": "bytes32"
+					}
+				],
+				"name": "registerModule",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_upgrader",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "_name",
+						"type": "bytes32"
+					}
+				],
+				"name": "registerUpgrader",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_upgrader",
+						"type": "address"
+					}
+				],
+				"name": "upgraderInfo",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "IModuleRegistry",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Interface for the registry of authorised modules.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/infrastructure/IModuleRegistry.sol": "IModuleRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/infrastructure/IModuleRegistry.sol": {
+			"keccak256": "0x3973176b829751ce6387d5a7d0ec383ebadf30c6872cfab1a2f4d289a9be54cc",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://690ce7b41ed9946ff9773b56a3d6a4cfca928f6ca889c27f79d62d726991f096",
+				"dweb:/ipfs/Qmd3vasUSZJxUm34AsxgkqUV4F6uLsPDuVBfEUCkKLscBe"
+			]
+		}
+	},
+	"version": 1
+}

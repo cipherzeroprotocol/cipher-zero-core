@@ -1,0 +1,206 @@
+{
+	"compiler": {
+		"version": "0.8.3+commit.8d00100c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract IModuleRegistry",
+						"name": "_registry",
+						"type": "address"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_toDisable",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_toEnable",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "addModule",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					}
+				],
+				"name": "init",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsStaticCall",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_isSupported",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "toDisable",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "toEnable",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addModule(address,address)": {
+					"params": {
+						"_module": "The modules to authorise.\t",
+						"_wallet": "The target wallet.\t"
+					}
+				},
+				"init(address)": {
+					"params": {
+						"_wallet": "The target wallet."
+					}
+				},
+				"supportsStaticCall(bytes4)": {
+					"params": {
+						"_methodId": "The method id."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addModule(address,address)": {
+					"notice": "Adds a module to a wallet. Cannot execute when wallet is locked (or under recovery)\t"
+				},
+				"init(address)": {
+					"notice": "Perform the upgrade for a wallet. This method gets called when SimpleUpgrader is temporarily added as a module."
+				},
+				"supportsStaticCall(bytes4)": {
+					"notice": "Returns whether the module implements a callback for a given static call method."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/modules/SimpleUpgrader.sol": "SimpleUpgrader"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/infrastructure/IModuleRegistry.sol": {
+			"keccak256": "0x3973176b829751ce6387d5a7d0ec383ebadf30c6872cfab1a2f4d289a9be54cc",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://690ce7b41ed9946ff9773b56a3d6a4cfca928f6ca889c27f79d62d726991f096",
+				"dweb:/ipfs/Qmd3vasUSZJxUm34AsxgkqUV4F6uLsPDuVBfEUCkKLscBe"
+			]
+		},
+		"contracts/modules/SimpleUpgrader.sol": {
+			"keccak256": "0xe6daede834ad5174c3d9077e58a9df34241e79dcc441e1baacc7e5bc2fb29b9e",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://249a837c49dd924c652acd3fa7fcd03604a64eaa98d7a4d33b0696904817cd0f",
+				"dweb:/ipfs/QmectvXVYRLeaPBPFi2vUqqir76v2mM6MarvzGzgVKpfjP"
+			]
+		},
+		"contracts/modules/common/IModule.sol": {
+			"keccak256": "0xdb7e81eb115c5723f73fde6a27d852cbccb53dc0ec23004bcbf05c46e479e903",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://fe693dcda5649f4e3671e545daf9597da621401633c25eb9c2cc4b5a1542564b",
+				"dweb:/ipfs/QmPddVqoEZPTiSN6akqhxxdwqTwHbLfyHLCBLpz2nEfdPi"
+			]
+		},
+		"contracts/wallet/IWallet.sol": {
+			"keccak256": "0x419c35d8560646a01707b86608a77014c2998e88d3c9d5c239a69df936787cee",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://b5689f84dc8a12aea4c0c96b3494cc83f4e1a2dfdb6461af45be555c5fab3843",
+				"dweb:/ipfs/QmTrmgrvYgF55aZqA44GS9PwYDXKN9rntfcnxbuQnZs3we"
+			]
+		}
+	},
+	"version": 1
+}

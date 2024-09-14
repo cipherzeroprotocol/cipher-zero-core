@@ -1,0 +1,251 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_guardian",
+						"type": "address"
+					}
+				],
+				"name": "addGuardian",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					}
+				],
+				"name": "getGuardians",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					}
+				],
+				"name": "getLock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					}
+				],
+				"name": "getLocker",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					}
+				],
+				"name": "guardianCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_guardian",
+						"type": "address"
+					}
+				],
+				"name": "isGuardian",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					}
+				],
+				"name": "isLocked",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_guardian",
+						"type": "address"
+					}
+				],
+				"name": "revokeGuardian",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_releaseAfter",
+						"type": "uint256"
+					}
+				],
+				"name": "setLock",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addGuardian(address,address)": {
+					"params": {
+						"_guardian": "The guardian to add.",
+						"_wallet": "The target wallet."
+					}
+				},
+				"isGuardian(address,address)": {
+					"params": {
+						"_guardian": "The account.",
+						"_wallet": "The target wallet."
+					},
+					"returns": {
+						"_0": "true if the account is a guardian for a wallet."
+					}
+				},
+				"revokeGuardian(address,address)": {
+					"params": {
+						"_guardian": "The guardian to revoke.",
+						"_wallet": "The target wallet."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addGuardian(address,address)": {
+					"notice": "Lets an authorised module add a guardian to a wallet."
+				},
+				"isGuardian(address,address)": {
+					"notice": "Checks if an account is a guardian for a wallet."
+				},
+				"revokeGuardian(address,address)": {
+					"notice": "Lets an authorised module revoke a guardian from a wallet."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/infrastructure/storage/IGuardianStorage.sol": "IGuardianStorage"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/infrastructure/storage/IGuardianStorage.sol": {
+			"keccak256": "0x61b10b8bd19d6a582aff52e8d761fd44d7839ef1384ecb70648c61e22dc7d456",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://6011062542be5e3d38a224dcfb5f36cda41c1ed5a7e02271ff37f6083beb1dde",
+				"dweb:/ipfs/QmUFbe2CJBtkajeMMu6VYqniej8SzWZB3ExUoVmUrSLBCH"
+			]
+		}
+	},
+	"version": 1
+}

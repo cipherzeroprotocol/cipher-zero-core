@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/Structs.sol": "Structs"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/Structs.sol": {
+			"keccak256": "0x5e75a087f74d8de0ca18e8e5ab2cff988d4e20bb643a51e08e2a70540334a53a",
+			"license": "Apache 2",
+			"urls": [
+				"bzz-raw://ef3509efdd2065f7c0a01e9463fb66ea5c021a01bad6e115f39ecfcb074ff1f3",
+				"dweb:/ipfs/QmdYAwANELc9D9ePCfpBwYE78nVdfMc2uM9CDSqMmsfVzM"
+			]
+		}
+	},
+	"version": 1
+}

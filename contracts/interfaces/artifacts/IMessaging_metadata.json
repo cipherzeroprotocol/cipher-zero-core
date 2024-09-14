@@ -1,0 +1,90 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "getMessages",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct Message[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_message",
+						"type": "string"
+					}
+				],
+				"name": "sendMessage",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/cipherzero/interfaces/IMessaging.sol": "IMessaging"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/cipherzero/interfaces/IMessaging.sol": {
+			"keccak256": "0x1aef72f1e4b74bef3da6f74b3c179a7dc25d2c188a537e84664f47ede95926fa",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0e2c8b5bf5e48ca4fae7502d2540ceae8aaea3f4bf2da2b105189ac94ee39e57",
+				"dweb:/ipfs/QmPQWsXJD5y7xnZy5y5XXA4zE4YCT9xYBzgTVP882sHpMe"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,141 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_target",
+						"type": "address"
+					}
+				],
+				"name": "getWhitelist",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_target",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "setWhitelist",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"getWhitelist(address,address)": {
+					"params": {
+						"_target": "The account.",
+						"_wallet": "The target wallet."
+					},
+					"returns": {
+						"_0": "The epoch time at which an account starts to be whitelisted, or zero if the account is not whitelisted"
+					}
+				},
+				"setWhitelist(address,address,uint256)": {
+					"params": {
+						"_target": "The account to add/remove.",
+						"_value": "The epoch time at which an account starts to be whitelisted, or zero if the account is not whitelisted",
+						"_wallet": "The target wallet."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getWhitelist(address,address)": {
+					"notice": "Gets the whitelist state of an account for a wallet."
+				},
+				"setWhitelist(address,address,uint256)": {
+					"notice": "Lets an authorised module add or remove an account from the whitelist of a wallet."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/infrastructure/storage/TransferStorage.sol": "TransferStorage"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/infrastructure/storage/ITransferStorage.sol": {
+			"keccak256": "0x7e928dd0006ae792605a8503466f824f614b07601e66c149b557784e2144b547",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://7f64e90f038f7665193a510222590700a64d975e6345e0cd09c37d4a306fbf1f",
+				"dweb:/ipfs/QmdkKY3JdwbmV3N8u9VDiofrtLSyYaSnqJep2qbSq9Sd4V"
+			]
+		},
+		"contracts/infrastructure/storage/Storage.sol": {
+			"keccak256": "0x3a8ffe67dbf48b01cafe2527a79639055581252f3fc64723eac90ce46c82a5ca",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7e16b0acb9940cdfe8e19d4c6b5731da6d665fbfdb1749d601a2dee1835fa7b4",
+				"dweb:/ipfs/QmXEDqiijs31vh7Tbd1EZeeTDdu5TzTVK6jsE5Bo4VvgCM"
+			]
+		},
+		"contracts/infrastructure/storage/TransferStorage.sol": {
+			"keccak256": "0x9553d54dbaf1f59a92fcb5274a1739a00252c66a09f93577968433da9173adb9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d9041e8e1c650018dd78bb415441d344ed74ddff3ceee9aab4669d62c52d197d",
+				"dweb:/ipfs/QmWowk5swJcoGxNZrQUfFYf7Zqmm4uXi6FsdkdKWBMRJNw"
+			]
+		},
+		"contracts/wallet/IWallet.sol": {
+			"keccak256": "0x419c35d8560646a01707b86608a77014c2998e88d3c9d5c239a69df936787cee",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://b5689f84dc8a12aea4c0c96b3494cc83f4e1a2dfdb6461af45be555c5fab3843",
+				"dweb:/ipfs/QmTrmgrvYgF55aZqA44GS9PwYDXKN9rntfcnxbuQnZs3we"
+			]
+		}
+	},
+	"version": 1
+}

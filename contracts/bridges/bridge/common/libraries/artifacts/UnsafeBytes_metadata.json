@@ -1,0 +1,48 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Matter Labs",
+			"custom:security-contact": "security@matterlabs.dev",
+			"details": "The library provides a set of functions that help read data from an \"abi.encodePacked\" byte array.Each of the functions accepts the `bytes memory` and the offset where data should be read and returns a value of a certain type.WARNING! 1) Functions don't check the length of the bytes array, so it can go out of bounds. The user of the library must check for bytes length before using any functions from the library! 2) Read variables are not cleaned up - https://docs.soliditylang.org/en/v0.8.16/internals/variable_cleanup.html. Using data in inline assembly can lead to unexpected behavior!",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/common/libraries/UnsafeBytes.sol": "UnsafeBytes"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/bridge/common/libraries/UnsafeBytes.sol": {
+			"keccak256": "0xb0403fbbe99294d0b6286a9f360893293a8a0ed4a128502ddfa11249a2fa149a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0673bda911f5520af69949c2614fabaef12fa885fc2182ff23d302a1fd8ec7c9",
+				"dweb:/ipfs/QmZH81na9mdTFPFH7B7QtYbReCy4hZEMM5GKWSYrJpgy5F"
+			]
+		}
+	},
+	"version": 1
+}

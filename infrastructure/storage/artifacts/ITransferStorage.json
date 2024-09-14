@@ -1,0 +1,105 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"getWhitelist(address,address)": "13f4a0ea",
+			"setWhitelist(address,address,uint256)": "80bfbe68"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_wallet",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "_target",
+					"type": "address"
+				}
+			],
+			"name": "getWhitelist",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_wallet",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "_target",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_value",
+					"type": "uint256"
+				}
+			],
+			"name": "setWhitelist",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

@@ -1,0 +1,110 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "streamKey",
+						"type": "string"
+					}
+				],
+				"name": "StreamStarted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "streamKey",
+						"type": "string"
+					}
+				],
+				"name": "StreamStopped",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "streamKey",
+						"type": "string"
+					}
+				],
+				"name": "startStream",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "streamKey",
+						"type": "string"
+					}
+				],
+				"name": "stopStream",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/cipherzero/contracts/VideoStreaming/LiveStreaming.sol": "LiveStreaming"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/cipherzero/contracts/VideoStreaming/LiveStreaming.sol": {
+			"keccak256": "0x0128b48fa99228e81b1d9e4f5ffce63f0240cb40a48739e0e04baedc0001a32a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://524a1938fe6d7bb7a2e6a87526fd01c16671a54badf891da1a5e3ee305cf5a89",
+				"dweb:/ipfs/QmXVug8YRGA5YzREp7SUDyGoFyuuWrQzYj3azFVjfq2TGJ"
+			]
+		}
+	},
+	"version": 1
+}

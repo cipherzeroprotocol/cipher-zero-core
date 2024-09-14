@@ -1,0 +1,71 @@
+{
+	"compiler": {
+		"version": "0.8.3+commit.8d00100c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_uniswapRouter",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/modules/common/SimpleOracle.sol": "SimpleOracle"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol": {
+			"keccak256": "0x7c9bc70e5996c763e02ff38905282bc24fb242b0ef2519a003b36824fc524a4b",
+			"urls": [
+				"bzz-raw://85d5ad2dd23ee127f40907a12865a1e8cb5828814f6f2480285e1827dd72dedf",
+				"dweb:/ipfs/QmayKQWJgWmr46DqWseADyUanmqxh662hPNdAkdHRjiQQH"
+			]
+		},
+		"@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol": {
+			"keccak256": "0x8a3c5c449d4b7cd76513ed6995f4b86e4a86f222c770f8442f5fc128ce29b4d2",
+			"urls": [
+				"bzz-raw://1df63ca373dafae3bd0ee7fe70f890a1dc7c45ed869c01de68413e0e97ff9deb",
+				"dweb:/ipfs/QmefJgEYGUL8KX7kQKYTrDweF8GB7yjy3nw5Bmqzryg7PG"
+			]
+		},
+		"contracts/modules/common/SimpleOracle.sol": {
+			"keccak256": "0x551e7f920aa5b02feeabbac24f23c45d745221f7b133b3ed975de1a21d514d88",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://aec67514a3e109ac41a1661eb735536b185375a7184c1f928bc91780499c06aa",
+				"dweb:/ipfs/QmWzBh5zzTd8a9L7CLw686UsgZdgmwwAmN8ezH1ntgYq3f"
+			]
+		}
+	},
+	"version": 1
+}

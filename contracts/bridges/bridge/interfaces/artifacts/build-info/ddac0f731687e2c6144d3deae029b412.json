@@ -1,0 +1,277 @@
+{
+	"id": "ddac0f731687e2c6144d3deae029b412",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/bridges/bridge/interfaces/IL2WethBridge.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.26;\r\n\r\ninterface IL2WethBridge {\r\n    function initialize(\r\n        address _l1Bridge,\r\n        address _l1WethAddress,\r\n        address _l2WethAddress\r\n    ) external;\r\n}\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/bridges/bridge/interfaces/IL2WethBridge.sol": {
+				"IL2WethBridge": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "_l1Bridge",
+									"type": "address"
+								},
+								{
+									"internalType": "address",
+									"name": "_l1WethAddress",
+									"type": "address"
+								},
+								{
+									"internalType": "address",
+									"name": "_l2WethAddress",
+									"type": "address"
+								}
+							],
+							"name": "initialize",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"initialize(address,address,address)": "c0c53b8b"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_l1Bridge\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_l1WethAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_l2WethAddress\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/bridges/bridge/interfaces/IL2WethBridge.sol\":\"IL2WethBridge\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/bridges/bridge/interfaces/IL2WethBridge.sol\":{\"keccak256\":\"0xdb961c007ef0da072f326948be82c9fbaae5c698b64dd62f2d557189a2982d4b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be21944f7ee0e54c2923e2401b216c10b37eac16635e476b30ef0d5c34937ee5\",\"dweb:/ipfs/QmTABvioxbAoQXhTmaGX7aQh7CMg68ydsb7wC6gQjPasXE\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/bridges/bridge/interfaces/IL2WethBridge.sol": {
+				"ast": {
+					"absolutePath": "contracts/bridges/bridge/interfaces/IL2WethBridge.sol",
+					"exportedSymbols": {
+						"IL2WethBridge": [
+							11
+						]
+					},
+					"id": 12,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".26"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "35:24:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IL2WethBridge",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"fullyImplemented": false,
+							"id": 11,
+							"linearizedBaseContracts": [
+								11
+							],
+							"name": "IL2WethBridge",
+							"nameLocation": "73:13:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"functionSelector": "c0c53b8b",
+									"id": 10,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "initialize",
+									"nameLocation": "103:10:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 8,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 3,
+												"mutability": "mutable",
+												"name": "_l1Bridge",
+												"nameLocation": "132:9:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 10,
+												"src": "124:17:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 2,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "124:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 5,
+												"mutability": "mutable",
+												"name": "_l1WethAddress",
+												"nameLocation": "160:14:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 10,
+												"src": "152:22:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 4,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "152:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 7,
+												"mutability": "mutable",
+												"name": "_l2WethAddress",
+												"nameLocation": "193:14:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 10,
+												"src": "185:22:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 6,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "185:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "113:101:0"
+									},
+									"returnParameters": {
+										"id": 9,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "223:0:0"
+									},
+									"scope": 11,
+									"src": "94:130:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 12,
+							"src": "63:164:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "35:194:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

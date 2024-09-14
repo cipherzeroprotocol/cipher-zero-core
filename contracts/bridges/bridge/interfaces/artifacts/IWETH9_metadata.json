@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "wad",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/interfaces/IWETH9.sol": "IWETH9"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/bridge/interfaces/IWETH9.sol": {
+			"keccak256": "0xbb290d19ddbf04683dff3accb643c8b1973fe3a2541395f6c5d19d2189980a6f",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://064bb6a48a06390b3838b65b9c5c87a0cd1d0556dab3fd475c3da67ef54854ea",
+				"dweb:/ipfs/QmbWAuXoThpVGJ5m2pnJcuVWzWL277NDkNRVndqVMZuSM4"
+			]
+		}
+	},
+	"version": 1
+}

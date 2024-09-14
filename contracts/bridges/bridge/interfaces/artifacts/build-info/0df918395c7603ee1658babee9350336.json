@@ -1,0 +1,381 @@
+{
+	"id": "0df918395c7603ee1658babee9350336",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/bridges/bridge/interfaces/IL1BridgeLegacy.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.26;\r\n\r\n/// @author Matter Labs\r\ninterface IL1BridgeLegacy {\r\n    function deposit(\r\n        address _l2Receiver,\r\n        address _l1Token,\r\n        uint256 _amount,\r\n        uint256 _l2TxGasLimit,\r\n        uint256 _l2TxGasPerPubdataByte\r\n    ) external payable returns (bytes32 txHash);\r\n}\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/bridges/bridge/interfaces/IL1BridgeLegacy.sol": {
+				"IL1BridgeLegacy": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "_l2Receiver",
+									"type": "address"
+								},
+								{
+									"internalType": "address",
+									"name": "_l1Token",
+									"type": "address"
+								},
+								{
+									"internalType": "uint256",
+									"name": "_amount",
+									"type": "uint256"
+								},
+								{
+									"internalType": "uint256",
+									"name": "_l2TxGasLimit",
+									"type": "uint256"
+								},
+								{
+									"internalType": "uint256",
+									"name": "_l2TxGasPerPubdataByte",
+									"type": "uint256"
+								}
+							],
+							"name": "deposit",
+							"outputs": [
+								{
+									"internalType": "bytes32",
+									"name": "txHash",
+									"type": "bytes32"
+								}
+							],
+							"stateMutability": "payable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"author": "Matter Labs",
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"deposit(address,address,uint256,uint256,uint256)": "933999fb"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_l2Receiver\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_l1Token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_l2TxGasLimit\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_l2TxGasPerPubdataByte\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"txHash\",\"type\":\"bytes32\"}],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Matter Labs\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/bridges/bridge/interfaces/IL1BridgeLegacy.sol\":\"IL1BridgeLegacy\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/bridges/bridge/interfaces/IL1BridgeLegacy.sol\":{\"keccak256\":\"0x27b9be596745a8138a64cbca61bf3789923bc9eb515364cdb15d7ce9e0d5d7ad\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://565dcfaf16322714b50240f77cb4e91e1903eef24d43bf406f92d9810e4775c5\",\"dweb:/ipfs/QmbTott1CkhhSqPecZBDLuND6CgkszB4APtjf2espXE5Av\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/bridges/bridge/interfaces/IL1BridgeLegacy.sol": {
+				"ast": {
+					"absolutePath": "contracts/bridges/bridge/interfaces/IL1BridgeLegacy.sol",
+					"exportedSymbols": {
+						"IL1BridgeLegacy": [
+							18
+						]
+					},
+					"id": 19,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".26"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "35:24:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IL1BridgeLegacy",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "63:25:0",
+								"text": "@author Matter Labs"
+							},
+							"fullyImplemented": false,
+							"id": 18,
+							"linearizedBaseContracts": [
+								18
+							],
+							"name": "IL1BridgeLegacy",
+							"nameLocation": "98:15:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"functionSelector": "933999fb",
+									"id": 17,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "deposit",
+									"nameLocation": "130:7:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 13,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 4,
+												"mutability": "mutable",
+												"name": "_l2Receiver",
+												"nameLocation": "156:11:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 17,
+												"src": "148:19:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 3,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "148:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 6,
+												"mutability": "mutable",
+												"name": "_l1Token",
+												"nameLocation": "186:8:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 17,
+												"src": "178:16:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 5,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "178:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 8,
+												"mutability": "mutable",
+												"name": "_amount",
+												"nameLocation": "213:7:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 17,
+												"src": "205:15:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 7,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "205:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 10,
+												"mutability": "mutable",
+												"name": "_l2TxGasLimit",
+												"nameLocation": "239:13:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 17,
+												"src": "231:21:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 9,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "231:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 12,
+												"mutability": "mutable",
+												"name": "_l2TxGasPerPubdataByte",
+												"nameLocation": "271:22:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 17,
+												"src": "263:30:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 11,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "263:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "137:163:0"
+									},
+									"returnParameters": {
+										"id": 16,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 15,
+												"mutability": "mutable",
+												"name": "txHash",
+												"nameLocation": "335:6:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 17,
+												"src": "327:14:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes32",
+													"typeString": "bytes32"
+												},
+												"typeName": {
+													"id": 14,
+													"name": "bytes32",
+													"nodeType": "ElementaryTypeName",
+													"src": "327:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes32",
+														"typeString": "bytes32"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "326:16:0"
+									},
+									"scope": 18,
+									"src": "121:222:0",
+									"stateMutability": "payable",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 19,
+							"src": "88:258:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "35:313:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

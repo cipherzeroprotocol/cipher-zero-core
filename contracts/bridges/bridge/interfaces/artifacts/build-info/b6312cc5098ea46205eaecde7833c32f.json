@@ -1,0 +1,283 @@
+{
+	"id": "b6312cc5098ea46205eaecde7833c32f",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"contracts/bridges/bridge/interfaces/IL2ERC20Bridge.sol": {
+				"content": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.26;\r\n\r\n/// @author Matter Labs\r\ninterface IL2ERC20Bridge {\r\n    function initialize(\r\n        address _l1Bridge,\r\n        bytes32 _l2TokenProxyBytecodeHash,\r\n        address _governor\r\n    ) external;\r\n}\r\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"contracts/bridges/bridge/interfaces/IL2ERC20Bridge.sol": {
+				"IL2ERC20Bridge": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "_l1Bridge",
+									"type": "address"
+								},
+								{
+									"internalType": "bytes32",
+									"name": "_l2TokenProxyBytecodeHash",
+									"type": "bytes32"
+								},
+								{
+									"internalType": "address",
+									"name": "_governor",
+									"type": "address"
+								}
+							],
+							"name": "initialize",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"author": "Matter Labs",
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"initialize(address,bytes32,address)": "d26b3e6e"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_l1Bridge\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"_l2TokenProxyBytecodeHash\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"_governor\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Matter Labs\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/bridges/bridge/interfaces/IL2ERC20Bridge.sol\":\"IL2ERC20Bridge\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/bridges/bridge/interfaces/IL2ERC20Bridge.sol\":{\"keccak256\":\"0xc5e9dd400750724a56d78abbc0eabffa8dc82a854f70d88c0a5169b0a8f391a3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://912b1310a76f418e7a9391ab63f531c9c01a4a1d9175ef6820108b1b38177b25\",\"dweb:/ipfs/QmeZ2mUBuV6R5EZqR68be1vWTPeiYSj7aiQfMKRMD4Jb3c\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"contracts/bridges/bridge/interfaces/IL2ERC20Bridge.sol": {
+				"ast": {
+					"absolutePath": "contracts/bridges/bridge/interfaces/IL2ERC20Bridge.sol",
+					"exportedSymbols": {
+						"IL2ERC20Bridge": [
+							12
+						]
+					},
+					"id": 13,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".26"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "35:24:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IL2ERC20Bridge",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "63:25:0",
+								"text": "@author Matter Labs"
+							},
+							"fullyImplemented": false,
+							"id": 12,
+							"linearizedBaseContracts": [
+								12
+							],
+							"name": "IL2ERC20Bridge",
+							"nameLocation": "98:14:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"functionSelector": "d26b3e6e",
+									"id": 11,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "initialize",
+									"nameLocation": "129:10:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 9,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 4,
+												"mutability": "mutable",
+												"name": "_l1Bridge",
+												"nameLocation": "158:9:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 11,
+												"src": "150:17:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 3,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "150:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 6,
+												"mutability": "mutable",
+												"name": "_l2TokenProxyBytecodeHash",
+												"nameLocation": "186:25:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 11,
+												"src": "178:33:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes32",
+													"typeString": "bytes32"
+												},
+												"typeName": {
+													"id": 5,
+													"name": "bytes32",
+													"nodeType": "ElementaryTypeName",
+													"src": "178:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes32",
+														"typeString": "bytes32"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 8,
+												"mutability": "mutable",
+												"name": "_governor",
+												"nameLocation": "230:9:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 11,
+												"src": "222:17:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 7,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "222:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "139:107:0"
+									},
+									"returnParameters": {
+										"id": 10,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "255:0:0"
+									},
+									"scope": 12,
+									"src": "120:136:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 13,
+							"src": "88:171:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "35:226:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

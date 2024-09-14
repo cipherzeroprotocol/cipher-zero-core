@@ -1,0 +1,190 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_manager",
+						"type": "address"
+					}
+				],
+				"name": "ManagerAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_manager",
+						"type": "address"
+					}
+				],
+				"name": "ManagerRevoked",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnerChanged",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_manager",
+						"type": "address"
+					}
+				],
+				"name": "addManager",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "changeOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "managers",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_manager",
+						"type": "address"
+					}
+				],
+				"name": "revokeManager",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addManager(address)": {
+					"params": {
+						"_manager": "The address of the manager."
+					}
+				},
+				"changeOwner(address)": {
+					"params": {
+						"_newOwner": "The new owner."
+					}
+				},
+				"revokeManager(address)": {
+					"params": {
+						"_manager": "The address of the manager."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addManager(address)": {
+					"notice": "Adds a manager."
+				},
+				"changeOwner(address)": {
+					"notice": "Lets the owner transfer ownership of the contract to a new owner."
+				},
+				"revokeManager(address)": {
+					"notice": "Revokes a manager."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/infrastructure/base/Managed.sol": "Managed"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/infrastructure/base/Managed.sol": {
+			"keccak256": "0x0936b9df683ec20244e2c4497eccb746a7621d5164b931f6046f61a0b59d5acf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0b5b92a1f69d0c0a97979fef644e3fe319777ae59a7da64d55136e499f6e77e0",
+				"dweb:/ipfs/QmWnev6oQ3WeFQghBxCcRQL9YiSbdPsnAvKu6ZETvauUt7"
+			]
+		},
+		"contracts/infrastructure/base/Owned.sol": {
+			"keccak256": "0xddf62fe9ac8fa3260afa266fc1390e83312a12ce1935849a2a5579c373479360",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://d8d83cc1d911ab0d2dcc9f4251ca6fe69c9ea4eeb7056d262d5229a95f197f80",
+				"dweb:/ipfs/QmWAWrKzAzVBkHF9Vscnu8hSwRhfnG8uFgJwBbGbcUMZmX"
+			]
+		}
+	},
+	"version": 1
+}

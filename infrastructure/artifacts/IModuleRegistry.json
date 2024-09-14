@@ -1,0 +1,236 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"deregisterModule(address)": "78b1fa74",
+			"deregisterUpgrader(address)": "8b27f7f5",
+			"isRegisteredModule(address)": "0bcd4ebb",
+			"isRegisteredModule(address[])": "6bb18a54",
+			"isRegisteredUpgrader(address)": "63047bd8",
+			"moduleInfo(address)": "56b97ec1",
+			"recoverToken(address)": "9be65a60",
+			"registerModule(address,bytes32)": "0f0356d0",
+			"registerUpgrader(address,bytes32)": "3f4985cf",
+			"upgraderInfo(address)": "ce03c0a2"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_module",
+					"type": "address"
+				}
+			],
+			"name": "deregisterModule",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_upgrader",
+					"type": "address"
+				}
+			],
+			"name": "deregisterUpgrader",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_module",
+					"type": "address"
+				}
+			],
+			"name": "isRegisteredModule",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address[]",
+					"name": "_modules",
+					"type": "address[]"
+				}
+			],
+			"name": "isRegisteredModule",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_upgrader",
+					"type": "address"
+				}
+			],
+			"name": "isRegisteredUpgrader",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_module",
+					"type": "address"
+				}
+			],
+			"name": "moduleInfo",
+			"outputs": [
+				{
+					"internalType": "bytes32",
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_token",
+					"type": "address"
+				}
+			],
+			"name": "recoverToken",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_module",
+					"type": "address"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "_name",
+					"type": "bytes32"
+				}
+			],
+			"name": "registerModule",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_upgrader",
+					"type": "address"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "_name",
+					"type": "bytes32"
+				}
+			],
+			"name": "registerUpgrader",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_upgrader",
+					"type": "address"
+				}
+			],
+			"name": "upgraderInfo",
+			"outputs": [
+				{
+					"internalType": "bytes32",
+					"name": "",
+					"type": "bytes32"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		}
+	]
+}

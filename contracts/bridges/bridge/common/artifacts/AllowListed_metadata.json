@@ -1,0 +1,55 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"author": "Matter Labs",
+			"custom:security-contact": "security@matterlabs.dev",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/common/AllowListed.sol": "AllowListed"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/bridge/common/AllowListed.sol": {
+			"keccak256": "0xfa60da24f1d22fbb48b9efc58a454f0b995596ddf9181a2d18279dc51d617527",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3e6dd2def1c838e5c5fe48eb91966e3d6e1c6ec00002631e5313e33ca65b1016",
+				"dweb:/ipfs/QmNj64FKAntdtWH5BsR2eycccb2XYRDza4vsXtwPZT5SAd"
+			]
+		},
+		"contracts/bridges/bridge/common/interfaces/IAllowList.sol": {
+			"keccak256": "0xa73d93ec249506a9c7e45d6701d594f641a221d5cd63aab18fed51a3d7cee612",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f6ae14641c15d6b407b12b6b18ee3bd3960947fae9f0c9a52541fd1f8f7eb3c8",
+				"dweb:/ipfs/QmZtD1Y26FNPqqnxrwvnF5fc3TVSk5VcCB9cGeZ535DZgu"
+			]
+		}
+	},
+	"version": 1
+}

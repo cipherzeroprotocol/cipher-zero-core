@@ -1,0 +1,238 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"addGuardian(address,address)": "c6845210",
+			"getGuardians(address)": "f18858ab",
+			"getLock(address)": "6b9db4e6",
+			"getLocker(address)": "919884bf",
+			"guardianCount(address)": "5040fb76",
+			"isGuardian(address,address)": "d4ee9734",
+			"isLocked(address)": "4a4fbeec",
+			"revokeGuardian(address,address)": "1d97d8cc",
+			"setLock(address,uint256)": "b0fc29e6"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_wallet",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "_guardian",
+					"type": "address"
+				}
+			],
+			"name": "addGuardian",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_wallet",
+					"type": "address"
+				}
+			],
+			"name": "getGuardians",
+			"outputs": [
+				{
+					"internalType": "address[]",
+					"name": "",
+					"type": "address[]"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_wallet",
+					"type": "address"
+				}
+			],
+			"name": "getLock",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_wallet",
+					"type": "address"
+				}
+			],
+			"name": "getLocker",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "",
+					"type": "address"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_wallet",
+					"type": "address"
+				}
+			],
+			"name": "guardianCount",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_wallet",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "_guardian",
+					"type": "address"
+				}
+			],
+			"name": "isGuardian",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_wallet",
+					"type": "address"
+				}
+			],
+			"name": "isLocked",
+			"outputs": [
+				{
+					"internalType": "bool",
+					"name": "",
+					"type": "bool"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_wallet",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "_guardian",
+					"type": "address"
+				}
+			],
+			"name": "revokeGuardian",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "_wallet",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_releaseAfter",
+					"type": "uint256"
+				}
+			],
+			"name": "setLock",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

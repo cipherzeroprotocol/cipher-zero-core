@@ -1,0 +1,126 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_salt",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "_bytecodeHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_input",
+						"type": "bytes"
+					}
+				],
+				"name": "create2",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "bytes32",
+								"name": "bytecodeHash",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "address",
+								"name": "newAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "callConstructor",
+								"type": "bool"
+							},
+							{
+								"internalType": "uint256",
+								"name": "value",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes",
+								"name": "input",
+								"type": "bytes"
+							}
+						],
+						"internalType": "struct IL2ContractDeployer.ForceDeployment[]",
+						"name": "_deployParams",
+						"type": "tuple[]"
+					}
+				],
+				"name": "forceDeployOnAddresses",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Matter Labs",
+			"kind": "dev",
+			"methods": {
+				"create2(bytes32,bytes32,bytes)": {
+					"params": {
+						"_bytecodeHash": "The correctly formatted hash of the bytecode.",
+						"_input": "The constructor calldata.",
+						"_salt": "The create2 salt."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"create2(bytes32,bytes32,bytes)": {
+					"notice": "Deploys a contract with similar address derivation rules to the EVM's `CREATE2` opcode."
+				},
+				"forceDeployOnAddresses((bytes32,address,bool,uint256,bytes)[])": {
+					"notice": "This method is to be used only during an upgrade to set bytecodes on specific addresses."
+				}
+			},
+			"notice": "System smart contract that is responsible for deploying other smart contracts on zkSync.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/bridge/common/interfaces/IL2ContractDeployer.sol": "IL2ContractDeployer"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/bridge/common/interfaces/IL2ContractDeployer.sol": {
+			"keccak256": "0x387df3d6050a21e25cac76d76d332ca6c6bb7a7c746b59083960dd472e38fb33",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d4536fb80c6714de26d1d6d5330cc50af573115bd04d86c9c7068b2b460106d8",
+				"dweb:/ipfs/QmP4am9JU3DWWw6DEhX2xtiFQDuyY61u394RdZrfkgc5TD"
+			]
+		}
+	},
+	"version": 1
+}

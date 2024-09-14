@@ -1,0 +1,98 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "encodedVm",
+						"type": "bytes"
+					}
+				],
+				"name": "completeTransfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint16",
+						"name": "recipientChain",
+						"type": "uint16"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "recipient",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint32",
+						"name": "nonce",
+						"type": "uint32"
+					}
+				],
+				"name": "transferTokens",
+				"outputs": [
+					{
+						"internalType": "uint64",
+						"name": "sequence",
+						"type": "uint64"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/bridges/IWormhole.sol": "IWormhole"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/bridges/IWormhole.sol": {
+			"keccak256": "0x7274c1763a17c718eaf034bb2ed26d71e5adf1d4bf98a80901a79b7c59e11552",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ad1cd73a39811724c9a35583f89d4f21548165badb3dc211c08e2a7c4871f1c2",
+				"dweb:/ipfs/QmdmVqV1n1XndN3UTjynyC9bnvuUkobsnJSxshnHZeH1ze"
+			]
+		}
+	},
+	"version": 1
+}

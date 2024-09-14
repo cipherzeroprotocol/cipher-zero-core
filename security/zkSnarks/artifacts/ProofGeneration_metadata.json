@@ -1,0 +1,709 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "version",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_proofVerifier",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "AccessControlBadConfirmation",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "neededRole",
+						"type": "bytes32"
+					}
+				],
+				"name": "AccessControlUnauthorizedAccount",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "InvalidShortString",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "str",
+						"type": "string"
+					}
+				],
+				"name": "StringTooLong",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [],
+				"name": "EIP712DomainChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "proofId",
+						"type": "string"
+					}
+				],
+				"name": "ProofGenerated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "previousAdminRole",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "newAdminRole",
+						"type": "bytes32"
+					}
+				],
+				"name": "RoleAdminChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					}
+				],
+				"name": "RoleGranted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					}
+				],
+				"name": "RoleRevoked",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "ADMIN_ROLE",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "DEFAULT_ADMIN_ROLE",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "VERIFIER_ROLE",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "eip712Domain",
+				"outputs": [
+					{
+						"internalType": "bytes1",
+						"name": "fields",
+						"type": "bytes1"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "version",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "chainId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "verifyingContract",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "salt",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "extensions",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "proof",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "inputs",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "string",
+						"name": "proofId",
+						"type": "string"
+					}
+				],
+				"name": "generateProof",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					}
+				],
+				"name": "getRoleAdmin",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "grantRole",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "grantVerifierRole",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "hasRole",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "hasVerifierRole",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "proofVerifier",
+				"outputs": [
+					{
+						"internalType": "contract IProofVerifier",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "callerConfirmation",
+						"type": "address"
+					}
+				],
+				"name": "renounceRole",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "role",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "revokeRole",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "revokeVerifierRole",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_proofVerifier",
+						"type": "address"
+					}
+				],
+				"name": "setProofVerifier",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "interfaceId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsInterface",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "This contract is responsible for generating zk-SNARKs proofs for transactions and data validation.",
+			"errors": {
+				"AccessControlBadConfirmation()": [
+					{
+						"details": "The caller of a function is not the expected one. NOTE: Don't confuse with {AccessControlUnauthorizedAccount}."
+					}
+				],
+				"AccessControlUnauthorizedAccount(address,bytes32)": [
+					{
+						"details": "The `account` is missing a role."
+					}
+				]
+			},
+			"events": {
+				"EIP712DomainChanged()": {
+					"details": "MAY be emitted to signal that the domain could have changed."
+				},
+				"RoleAdminChanged(bytes32,bytes32,bytes32)": {
+					"details": "Emitted when `newAdminRole` is set as ``role``'s admin role, replacing `previousAdminRole` `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite {RoleAdminChanged} not being emitted signaling this."
+				},
+				"RoleGranted(bytes32,address,address)": {
+					"details": "Emitted when `account` is granted `role`. `sender` is the account that originated the contract call, an admin role bearer except when using {AccessControl-_setupRole}."
+				},
+				"RoleRevoked(bytes32,address,address)": {
+					"details": "Emitted when `account` is revoked `role`. `sender` is the account that originated the contract call:   - if using `revokeRole`, it is the admin role bearer   - if using `renounceRole`, it is the role bearer (i.e. `account`)"
+				}
+			},
+			"kind": "dev",
+			"methods": {
+				"eip712Domain()": {
+					"details": "See {IERC-5267}."
+				},
+				"generateProof(bytes,uint256[],string)": {
+					"details": "Generate zk-SNARK proof for a transaction or data.",
+					"params": {
+						"inputs": "The inputs used for the proof.",
+						"proof": "The zk-SNARK proof.",
+						"proofId": "Unique identifier for the proof."
+					}
+				},
+				"getRoleAdmin(bytes32)": {
+					"details": "Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}."
+				},
+				"grantRole(bytes32,address)": {
+					"details": "Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleGranted} event."
+				},
+				"grantVerifierRole(address)": {
+					"details": "Grant the verifier role to an account.",
+					"params": {
+						"account": "The account to grant the verifier role to."
+					}
+				},
+				"hasRole(bytes32,address)": {
+					"details": "Returns `true` if `account` has been granted `role`."
+				},
+				"hasVerifierRole(address)": {
+					"details": "Check if an account has the verifier role.",
+					"params": {
+						"account": "The account to check."
+					},
+					"returns": {
+						"_0": "True if the account has the verifier role, false otherwise."
+					}
+				},
+				"renounceRole(bytes32,address)": {
+					"details": "Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `callerConfirmation`. May emit a {RoleRevoked} event."
+				},
+				"revokeRole(bytes32,address)": {
+					"details": "Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role. May emit a {RoleRevoked} event."
+				},
+				"revokeVerifierRole(address)": {
+					"details": "Revoke the verifier role from an account.",
+					"params": {
+						"account": "The account to revoke the verifier role from."
+					}
+				},
+				"setProofVerifier(address)": {
+					"details": "Set a new proof verifier contract address.",
+					"params": {
+						"_proofVerifier": "The address of the new proof verifier contract."
+					}
+				},
+				"supportsInterface(bytes4)": {
+					"details": "See {IERC165-supportsInterface}."
+				}
+			},
+			"title": "ProofGeneration",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/security/zkSnarks/ProofGeneration.sol": "ProofGeneration"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/access/AccessControl.sol": {
+			"keccak256": "0xa0e92d42942f4f57c5be50568dac11e9d00c93efcb458026e18d2d9b9b2e7308",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://46326c0bb1e296b67185e81c918e0b40501b8b6386165855df0a3f3c634b6a80",
+				"dweb:/ipfs/QmTwyrDYtsxsk6pymJTK94PnEpzsmkpUxFuzEiakDopy4Z"
+			]
+		},
+		"@openzeppelin/contracts/access/IAccessControl.sol": {
+			"keccak256": "0xb6b36edd6a2999fd243ff226d6cbf84bd71af2432bbd0dfe19392996a1d9cb41",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1fd2f35495652e57e3f99bc6c510bc5f7dd398a176ea2e72d8ed730aebc6ca26",
+				"dweb:/ipfs/QmTQV6X4gkikTib49cho5iDX3JvSQbdsoEChoDwrk3CbbH"
+			]
+		},
+		"@openzeppelin/contracts/interfaces/IERC1271.sol": {
+			"keccak256": "0x85a45f3f10014a0f8be41157a32b6a5f905753ea64a4b64e29fc12b7deeecf39",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c3c74009ce36136b36c77c23935b8e4a7b4f253be2da2be4fb4a916b1ce43743",
+				"dweb:/ipfs/QmcH36v3iN7SJJuF73AunLR2LtNxhVJ1wm63ph4dPZ4pcL"
+			]
+		},
+		"@openzeppelin/contracts/interfaces/IERC5267.sol": {
+			"keccak256": "0x92aa1df62dc3d33f1656d63bede0923e0df0b706ad4137c8b10b0a8fe549fd92",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c5c0f29195ad64cbe556da8e257dac8f05f78c53f90323c0d2accf8e6922d33a",
+				"dweb:/ipfs/QmQ61TED8uaCZwcbh8KkgRSsCav7x7HbcGHwHts3U4DmUP"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x493033a8d1b176a037b2cc6a04dad01a5c157722049bbecf632ca876224dd4b2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6a708e8a5bdb1011c2c381c9a5cfd8a9a956d7d0a9dc1bd8bcdaf52f76ef2f12",
+				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
+			]
+		},
+		"@openzeppelin/contracts/utils/ShortStrings.sol": {
+			"keccak256": "0x18a7171df639a934592915a520ecb97c5bbc9675a1105607aac8a94e72bf62c6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7478e1f13da69a2867ccd883001d836b75620362e743f196376d63ed0c422a1c",
+				"dweb:/ipfs/QmWywcQ9TNfwtoqAxbn25d8C5VrV12PrPS9UjtGe6pL2BA"
+			]
+		},
+		"@openzeppelin/contracts/utils/StorageSlot.sol": {
+			"keccak256": "0x32ba59b4b7299237c8ba56319110989d7978a039faf754793064e967e5894418",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1ae50c8b562427df610cc4540c9bf104acca7ef8e2dcae567ae7e52272281e9c",
+				"dweb:/ipfs/QmTHiadFCSJUPpRjNegc5SahmeU8bAoY8i9Aq6tVscbcKR"
+			]
+		},
+		"@openzeppelin/contracts/utils/Strings.sol": {
+			"keccak256": "0x55f102ea785d8399c0e58d1108e2d289506dde18abc6db1b7f68c1f9f9bc5792",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6e52e0a7765c943ef14e5bcf11e46e6139fa044be564881378349236bf2e3453",
+				"dweb:/ipfs/QmZEeeXoFPW47amyP35gfzomF9DixqqTEPwzBakv6cZw6i"
+			]
+		},
+		"@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
+			"keccak256": "0xeed0a08b0b091f528356cbc7245891a4c748682d4f6a18055e8e6ca77d12a6cf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ba80ba06c8e6be852847e4c5f4492cef801feb6558ae09ed705ff2e04ea8b13c",
+				"dweb:/ipfs/QmXRJDv3xHLVQCVXg1ZvR35QS9sij5y9NDWYzMfUfAdTHF"
+			]
+		},
+		"@openzeppelin/contracts/utils/cryptography/EIP712.sol": {
+			"keccak256": "0x999f705a027ed6dc2d4e0df2cc4a509852c6bfd11de1c8161bf88832d0503fd0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0798def67258d9a3cc20b2b4da7ebf351a5cefe0abfdd665d2d81f8e32f89b21",
+				"dweb:/ipfs/QmPEvJosnPfzHNjKvCv2D3891mA2Ww8eUwkqrxBjuYdHCt"
+			]
+		},
+		"@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol": {
+			"keccak256": "0xba333517a3add42cd35fe877656fc3dfcc9de53baa4f3aabbd6d12a92e4ea435",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2ceacff44c0fdc81e48e0e0b1db87a2076d3c1fb497341de077bf1da9f6b406c",
+				"dweb:/ipfs/QmRUo1muMRAewxrKQ7TkXUtknyRoR57AyEkoPpiuZQ8FzX"
+			]
+		},
+		"@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol": {
+			"keccak256": "0x6b11eb41a228cca35d4b662b4df69fcd75192851365102690f57b2ac01e83fe6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ab006a2983ed350d2af21ddcdd835dcae3b8340086cc4d088460da5abd041f69",
+				"dweb:/ipfs/QmbEacDhkJZiGrgzLjB4pNtE8Z1uudjDw1DvcDUTVQFsLG"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+			"keccak256": "0x9e8778b14317ba9e256c30a76fd6c32b960af621987f56069e1e819c77c6a133",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1777404f1dcd0fac188e55a288724ec3c67b45288e49cc64723e95e702b49ab8",
+				"dweb:/ipfs/QmZFdC626GButBApwDUvvTnUzdinevC3B24d7yyh57XkiA"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x4296879f55019b23e135000eb36896057e7101fb7fb859c5ef690cf14643757b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://87b3541437c8c443ccd36795e56a338ed12855eec17f8da624511b8d1a7e14df",
+				"dweb:/ipfs/QmeJQCtZrQjtJLr6u7ZHWeH3pBnjtLWzvRrKViAi7UZqxL"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/Math.sol": {
+			"keccak256": "0x005ec64c6313f0555d59e278f9a7a5ab2db5bdc72a027f255a37c327af1ec02d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4ece9f0b9c8daca08c76b6b5405a6446b6f73b3a15fab7ff56e296cbd4a2c875",
+				"dweb:/ipfs/QmQyRpyPRL5SQuAgj6SHmbir3foX65FJjbVTTQrA2EFg6L"
+			]
+		},
+		"@openzeppelin/contracts/utils/math/SignedMath.sol": {
+			"keccak256": "0x5f7e4076e175393767754387c962926577f1660dd9b810187b9002407656be72",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7d533a1c97cd43a57cd9c465f7ee8dd0e39ae93a8fb8ff8e5303a356b081cdcc",
+				"dweb:/ipfs/QmVBEei6aTnvYNZp2CHYVNKyZS4q1KkjANfY39WVXZXVoT"
+			]
+		},
+		"contracts/security/zkSnarks/ProofGeneration.sol": {
+			"keccak256": "0x6f7db362cd0beeb1311acd8060f4122dba729de4dca675436514aefa8515052e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7702ffc57d68f7e81d663cf8b46299ed5cd5fbd1d40d262ddffdad51e2975a38",
+				"dweb:/ipfs/QmPHSSXz25u1FYgNEnTCKCRMbjCzjoAXQ1CeKQTXo95JWJ"
+			]
+		}
+	},
+	"version": 1
+}

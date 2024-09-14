@@ -1,0 +1,100 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnerChanged",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "changeOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"changeOwner(address)": {
+					"params": {
+						"_newOwner": "The new owner."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"changeOwner(address)": {
+					"notice": "Lets the owner transfer ownership of the contract to a new owner."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/infrastructure/base/Owned.sol": "Owned"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/infrastructure/base/Owned.sol": {
+			"keccak256": "0xddf62fe9ac8fa3260afa266fc1390e83312a12ce1935849a2a5579c373479360",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://d8d83cc1d911ab0d2dcc9f4251ca6fe69c9ea4eeb7056d262d5229a95f197f80",
+				"dweb:/ipfs/QmWAWrKzAzVBkHF9Vscnu8hSwRhfnG8uFgJwBbGbcUMZmX"
+			]
+		}
+	},
+	"version": 1
+}

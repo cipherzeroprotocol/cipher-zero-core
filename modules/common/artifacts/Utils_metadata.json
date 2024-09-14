@@ -1,0 +1,47 @@
+{
+	"compiler": {
+		"version": "0.8.3+commit.8d00100c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "Utils",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Common utility methods used by modules.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/modules/common/Utils.sol": "Utils"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/modules/common/Utils.sol": {
+			"keccak256": "0xab8d2e664994be92e96975e096bc0b645ba269e427da41f831da8e32c14c5e1a",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://8527e8479295fdf80c3a98c32882c32d62a6c1be72121005f59e1112d5e0ebca",
+				"dweb:/ipfs/QmRMq7kMQ4oxjSSK9vz6LFbC1EHFpeGSe6ZjA8iL2t9ABK"
+			]
+		}
+	},
+	"version": 1
+}

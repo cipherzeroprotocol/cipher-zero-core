@@ -1,0 +1,126 @@
+{
+	"compiler": {
+		"version": "0.8.3+commit.8d00100c"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					}
+				],
+				"name": "addModule",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					}
+				],
+				"name": "init",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "_methodId",
+						"type": "bytes4"
+					}
+				],
+				"name": "supportsStaticCall",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_isSupported",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"author": "Julien Niset - <julien@argent.xyz>, Olivier VDB - <olivier@argent.xyz>",
+			"kind": "dev",
+			"methods": {
+				"addModule(address,address)": {
+					"params": {
+						"_module": "The modules to authorise.\t",
+						"_wallet": "The target wallet.\t"
+					}
+				},
+				"init(address)": {
+					"params": {
+						"_wallet": "The wallet."
+					}
+				},
+				"supportsStaticCall(bytes4)": {
+					"params": {
+						"_methodId": "The method id."
+					}
+				}
+			},
+			"title": "IModule",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addModule(address,address)": {
+					"notice": "Adds a module to a wallet. Cannot execute when wallet is locked (or under recovery)\t"
+				},
+				"init(address)": {
+					"notice": "Inits a Module for a wallet by e.g. setting some wallet specific parameters in storage."
+				},
+				"supportsStaticCall(bytes4)": {
+					"notice": "Returns whether the module implements a callback for a given static call method."
+				}
+			},
+			"notice": "Interface for a Module.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/modules/common/IModule.sol": "IModule"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/modules/common/IModule.sol": {
+			"keccak256": "0xdb7e81eb115c5723f73fde6a27d852cbccb53dc0ec23004bcbf05c46e479e903",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://fe693dcda5649f4e3671e545daf9597da621401633c25eb9c2cc4b5a1542564b",
+				"dweb:/ipfs/QmPddVqoEZPTiSN6akqhxxdwqTwHbLfyHLCBLpz2nEfdPi"
+			]
+		}
+	},
+	"version": 1
+}
