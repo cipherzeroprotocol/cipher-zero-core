@@ -83,7 +83,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/cipherzero/contracts/VideoStreaming/LiveStreaming.sol": "LiveStreaming"
+			"contracts/VideoStreaming/LiveStreaming.sol": "LiveStreaming"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -97,7 +97,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/cipherzero/contracts/VideoStreaming/LiveStreaming.sol": {
+		"contracts/VideoStreaming/LiveStreaming.sol": {
 			"keccak256": "0x0128b48fa99228e81b1d9e4f5ffce63f0240cb40a48739e0e04baedc0001a32a",
 			"license": "MIT",
 			"urls": [

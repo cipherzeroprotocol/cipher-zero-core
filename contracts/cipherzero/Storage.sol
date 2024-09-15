@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
-import "./interfaces/IStorage.sol";
+import "../interfaces/IStorage.sol";
 
 contract Storage is IStorage {
     mapping(address => string) private data;

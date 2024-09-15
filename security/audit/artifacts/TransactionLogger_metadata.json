@@ -492,7 +492,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/security/audit/TransactionLogger.sol": "TransactionLogger"
+			"security/audit/TransactionLogger.sol": "TransactionLogger"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -546,7 +546,7 @@
 				"dweb:/ipfs/QmeJQCtZrQjtJLr6u7ZHWeH3pBnjtLWzvRrKViAi7UZqxL"
 			]
 		},
-		"contracts/security/audit/TransactionLogger.sol": {
+		"security/audit/TransactionLogger.sol": {
 			"keccak256": "0x10d9f03158253facde189c40b357ee9a78a5d4c3551498f0f71638d5b9cf3c90",
 			"license": "MIT",
 			"urls": [
@@ -554,7 +554,7 @@
 				"dweb:/ipfs/QmPrFeLK3Y5h5hJxaT6JmeaE9i9dHifoH5P4C4FohFVEuq"
 			]
 		},
-		"contracts/security/audit/_setupRole.sol": {
+		"security/audit/_setupRole.sol": {
 			"keccak256": "0x8b1c7cecee9c15a1ae9d9842e85424e1f952a6e50532c47b27973fb67a2c201d",
 			"license": "MIT",
 			"urls": [

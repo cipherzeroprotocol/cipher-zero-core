@@ -554,7 +554,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/security/zkSnarks/ProofGeneration.sol": "ProofGeneration"
+			"security/zkSnarks/ProofGeneration.sol": "ProofGeneration"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -696,7 +696,7 @@
 				"dweb:/ipfs/QmVBEei6aTnvYNZp2CHYVNKyZS4q1KkjANfY39WVXZXVoT"
 			]
 		},
-		"contracts/security/zkSnarks/ProofGeneration.sol": {
+		"security/zkSnarks/ProofGeneration.sol": {
 			"keccak256": "0x6f7db362cd0beeb1311acd8060f4122dba729de4dca675436514aefa8515052e",
 			"license": "MIT",
 			"urls": [

@@ -56,7 +56,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/cipherzero/contracts/Automation/OracleIntegration.sol": "OracleIntegration"
+			"contracts/Automation/OracleIntegration.sol": "OracleIntegration"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -70,7 +70,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/cipherzero/contracts/Automation/OracleIntegration.sol": {
+		"contracts/Automation/OracleIntegration.sol": {
 			"keccak256": "0x52fe5f874d4149f60df911b8a2ac7145d5abc4694d494bbb077feef4fbfe26ec",
 			"license": "MIT",
 			"urls": [

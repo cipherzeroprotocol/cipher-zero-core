@@ -422,7 +422,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/infrastructure/WalletFactory.sol": "WalletFactory"
+			"infrastructure/WalletFactory.sol": "WalletFactory"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -436,7 +436,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/infrastructure/WalletFactory.sol": {
+		"infrastructure/WalletFactory.sol": {
 			"keccak256": "0x3b3fb706e2d485eaed97593ec556e53c373253c9b9e87b88c8d885780613cb57",
 			"license": "GPL-3.0-only",
 			"urls": [
@@ -444,7 +444,7 @@
 				"dweb:/ipfs/QmQMfMXbgMHB4P3dSfPYD8T4EbDQnHSxCK5k8j7hMoRt7r"
 			]
 		},
-		"contracts/infrastructure/base/Managed.sol": {
+		"infrastructure/base/Managed.sol": {
 			"keccak256": "0x0936b9df683ec20244e2c4497eccb746a7621d5164b931f6046f61a0b59d5acf",
 			"license": "MIT",
 			"urls": [
@@ -452,7 +452,7 @@
 				"dweb:/ipfs/QmWnev6oQ3WeFQghBxCcRQL9YiSbdPsnAvKu6ZETvauUt7"
 			]
 		},
-		"contracts/infrastructure/base/Owned.sol": {
+		"infrastructure/base/Owned.sol": {
 			"keccak256": "0xddf62fe9ac8fa3260afa266fc1390e83312a12ce1935849a2a5579c373479360",
 			"license": "GPL-3.0-only",
 			"urls": [
@@ -460,7 +460,7 @@
 				"dweb:/ipfs/QmWAWrKzAzVBkHF9Vscnu8hSwRhfnG8uFgJwBbGbcUMZmX"
 			]
 		},
-		"contracts/infrastructure/storage/IGuardianStorage.sol": {
+		"infrastructure/storage/IGuardianStorage.sol": {
 			"keccak256": "0x61b10b8bd19d6a582aff52e8d761fd44d7839ef1384ecb70648c61e22dc7d456",
 			"license": "GPL-3.0-only",
 			"urls": [
@@ -468,15 +468,7 @@
 				"dweb:/ipfs/QmUFbe2CJBtkajeMMu6VYqniej8SzWZB3ExUoVmUrSLBCH"
 			]
 		},
-		"contracts/modules/common/IModule.sol": {
-			"keccak256": "0xdb7e81eb115c5723f73fde6a27d852cbccb53dc0ec23004bcbf05c46e479e903",
-			"license": "GPL-3.0-only",
-			"urls": [
-				"bzz-raw://fe693dcda5649f4e3671e545daf9597da621401633c25eb9c2cc4b5a1542564b",
-				"dweb:/ipfs/QmPddVqoEZPTiSN6akqhxxdwqTwHbLfyHLCBLpz2nEfdPi"
-			]
-		},
-		"contracts/modules/common/Utils.sol": {
+		"modules/common/Utils.sol": {
 			"keccak256": "0xab8d2e664994be92e96975e096bc0b645ba269e427da41f831da8e32c14c5e1a",
 			"license": "GPL-3.0-only",
 			"urls": [
@@ -484,15 +476,23 @@
 				"dweb:/ipfs/QmRMq7kMQ4oxjSSK9vz6LFbC1EHFpeGSe6ZjA8iL2t9ABK"
 			]
 		},
-		"contracts/wallet/BaseWallet.sol": {
-			"keccak256": "0xfc0203560d572a8eb75ec143f40a2b33624007ee7992b7abe91a9cdca8a805cf",
+		"wallet/BaseWallet.sol": {
+			"keccak256": "0x127c264d8a64f2f62bb6288a0eb095b0621983d5be45613a31ef658b3afac3af",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a17515324ac705263c6621c4f1e1311089a8222c438fa6df5913bc8dbcaff4a1",
-				"dweb:/ipfs/QmfYcsz5z1WeNAcCwDAT9Q1R3xN7ezAEgftLCVsaNf9Z3V"
+				"bzz-raw://b3c9dabf2c70c7f9f3f9a09404a9198ef8be47484161745b37c6027a5f7004ab",
+				"dweb:/ipfs/QmZEHTWcAeFpssqudU2fzHATJZapHbGY1RbmhBUeWWrWAV"
 			]
 		},
-		"contracts/wallet/IWallet.sol": {
+		"wallet/IModule.sol": {
+			"keccak256": "0xdb7e81eb115c5723f73fde6a27d852cbccb53dc0ec23004bcbf05c46e479e903",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://fe693dcda5649f4e3671e545daf9597da621401633c25eb9c2cc4b5a1542564b",
+				"dweb:/ipfs/QmPddVqoEZPTiSN6akqhxxdwqTwHbLfyHLCBLpz2nEfdPi"
+			]
+		},
+		"wallet/IWallet.sol": {
 			"keccak256": "0x419c35d8560646a01707b86608a77014c2998e88d3c9d5c239a69df936787cee",
 			"license": "GPL-3.0-only",
 			"urls": [
@@ -500,7 +500,7 @@
 				"dweb:/ipfs/QmTrmgrvYgF55aZqA44GS9PwYDXKN9rntfcnxbuQnZs3we"
 			]
 		},
-		"contracts/wallet/Proxy.sol": {
+		"wallet/Proxy.sol": {
 			"keccak256": "0x78c2ffa86fe4250987e0956ac11f948dd41630a7fe5771caaefa59e8f486dc34",
 			"license": "GPL-3.0-only",
 			"urls": [

@@ -117,11 +117,11 @@
 	},
 	"sources": {
 		"contracts/bridges/IWormhole.sol": {
-			"keccak256": "0x7274c1763a17c718eaf034bb2ed26d71e5adf1d4bf98a80901a79b7c59e11552",
+			"keccak256": "0x5f27d8c774c91d7c032266e66c0fc5d2c8c1b7279fef07afce4b03be723f445b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ad1cd73a39811724c9a35583f89d4f21548165badb3dc211c08e2a7c4871f1c2",
-				"dweb:/ipfs/QmdmVqV1n1XndN3UTjynyC9bnvuUkobsnJSxshnHZeH1ze"
+				"bzz-raw://8baeadf94d5fb527030a13398e0f910be8e84a9982d4706c66be71a2755ebc84",
+				"dweb:/ipfs/QmQmEsaFXb9YBSu6m5GXDmiYytx6X6RnF5Yp5gkZAUoMGG"
 			]
 		},
 		"contracts/bridges/Wormhole.sol": {

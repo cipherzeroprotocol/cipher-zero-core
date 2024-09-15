@@ -94,7 +94,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/cipherzero/contracts/VideoStreaming/OnDemandContent.sol": "OnDemandContent"
+			"contracts/VideoStreaming/OnDemandContent.sol": "OnDemandContent"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -108,7 +108,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/cipherzero/contracts/VideoStreaming/OnDemandContent.sol": {
+		"contracts/VideoStreaming/OnDemandContent.sol": {
 			"keccak256": "0x6ae5ca7bd5a4c0c147e00fceaf78cde02bb097958904099f73db544a53c6e310",
 			"license": "MIT",
 			"urls": [

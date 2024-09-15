@@ -1,0 +1,106 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_implementation",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "Received",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "implementation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"author": "Julien Niset - <julien@argent.xyz>",
+			"kind": "dev",
+			"methods": {},
+			"title": "Proxy",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Basic proxy that delegates all calls to a fixed implementing contract. The implementing contract cannot be upgraded.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"wallet/Proxy.sol": "Proxy"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"wallet/Proxy.sol": {
+			"keccak256": "0x78c2ffa86fe4250987e0956ac11f948dd41630a7fe5771caaefa59e8f486dc34",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://6a952c5b20ac974dabddcd24f983c46b51c77e645c40c88a7d1dfebeaea0a070",
+				"dweb:/ipfs/Qmeje2PxaBuAjvsFLb95qrhF595SFMdhYM8UHhKGnsC5eg"
+			]
+		}
+	},
+	"version": 1
+}

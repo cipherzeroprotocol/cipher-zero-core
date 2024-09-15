@@ -94,7 +94,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/cipherzero/contracts/Identity/ReputationSystem.sol": "ReputationSystem"
+			"contracts/Identity/ReputationSystem.sol": "ReputationSystem"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -108,7 +108,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/cipherzero/contracts/Identity/ReputationSystem.sol": {
+		"contracts/Identity/ReputationSystem.sol": {
 			"keccak256": "0x66812e3b5424040180a949bd3c6a51869e721c0b1fe81f9cec3dfa0c1fe21cbf",
 			"license": "MIT",
 			"urls": [

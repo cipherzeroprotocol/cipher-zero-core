@@ -623,7 +623,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/infrastructure/storage/Upload.sol": "Upload"
+			"infrastructure/storage/Upload.sol": "Upload"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -685,7 +685,7 @@
 				"dweb:/ipfs/QmNqYc8To2NdnpP6E1tGz7t6A7beuENde5yovwov5pW1fA"
 			]
 		},
-		"contracts/infrastructure/storage/Counters.sol": {
+		"infrastructure/storage/Counters.sol": {
 			"keccak256": "0xa890b9e4d2416f5d25afb556b179358d64cb1023da660a2813a18b2a21e87025",
 			"license": "MIT",
 			"urls": [
@@ -693,7 +693,7 @@
 				"dweb:/ipfs/QmXPWvW8dJGe1Vj8uPHMxPKXmWUVzP9W4i41SQcfLe7icY"
 			]
 		},
-		"contracts/infrastructure/storage/Upload.sol": {
+		"infrastructure/storage/Upload.sol": {
 			"keccak256": "0x1a6889d2cacb57b1da49ce9605e411b27289a6c4c4dbd42a05d058a9bc8dede4",
 			"license": "MIT",
 			"urls": [

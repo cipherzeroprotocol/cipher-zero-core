@@ -1,0 +1,227 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "_value",
+						"type": "bool"
+					}
+				],
+				"name": "authoriseModule",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					}
+				],
+				"name": "authorised",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes4",
+						"name": "_method",
+						"type": "bytes4"
+					}
+				],
+				"name": "enableStaticCall",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "_sig",
+						"type": "bytes4"
+					}
+				],
+				"name": "enabled",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "modules",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "setOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"authoriseModule(address,bool)": {
+					"params": {
+						"_module": "The target module.",
+						"_value": "Set to `true` to authorise the module."
+					}
+				},
+				"authorised(address)": {
+					"params": {
+						"_module": "The module address to check."
+					},
+					"returns": {
+						"_0": "`true` if the module is authorised, otherwise `false`."
+					}
+				},
+				"enableStaticCall(address,bytes4)": {
+					"params": {
+						"_method": "The static method signature.",
+						"_module": "The target module."
+					}
+				},
+				"enabled(bytes4)": {
+					"params": {
+						"_sig": "The signature of the static call."
+					},
+					"returns": {
+						"_0": "the module doing the redirection"
+					}
+				},
+				"modules()": {
+					"returns": {
+						"_0": "The number of authorised modules."
+					}
+				},
+				"owner()": {
+					"returns": {
+						"_0": "The wallet owner address."
+					}
+				},
+				"setOwner(address)": {
+					"params": {
+						"_newOwner": "The new owner."
+					}
+				}
+			},
+			"title": "IWallet",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"authoriseModule(address,bool)": {
+					"notice": "Enables/Disables a module."
+				},
+				"authorised(address)": {
+					"notice": "Checks if a module is authorised on the wallet."
+				},
+				"enableStaticCall(address,bytes4)": {
+					"notice": "Enables a static method by specifying the target module to which the call must be delegated."
+				},
+				"enabled(bytes4)": {
+					"notice": "Returns the module responsible for a static call redirection."
+				},
+				"modules()": {
+					"notice": "Returns the number of authorised modules."
+				},
+				"owner()": {
+					"notice": "Returns the wallet owner."
+				},
+				"setOwner(address)": {
+					"notice": "Sets a new owner for the wallet."
+				}
+			},
+			"notice": "Interface for the BaseWallet",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"wallet/IWallet.sol": "IWallet"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"wallet/IWallet.sol": {
+			"keccak256": "0x419c35d8560646a01707b86608a77014c2998e88d3c9d5c239a69df936787cee",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://b5689f84dc8a12aea4c0c96b3494cc83f4e1a2dfdb6461af45be555c5fab3843",
+				"dweb:/ipfs/QmTrmgrvYgF55aZqA44GS9PwYDXKN9rntfcnxbuQnZs3we"
+			]
+		}
+	},
+	"version": 1
+}

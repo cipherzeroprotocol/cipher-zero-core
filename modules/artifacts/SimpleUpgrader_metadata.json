@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.3+commit.8d00100c"
+		"version": "0.8.26+commit.8a97fa7a"
 	},
 	"language": "Solidity",
 	"output": {
@@ -155,9 +155,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/modules/SimpleUpgrader.sol": "SimpleUpgrader"
+			"modules/SimpleUpgrader.sol": "SimpleUpgrader"
 		},
-		"evmVersion": "istanbul",
+		"evmVersion": "cancun",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -169,7 +169,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/infrastructure/IModuleRegistry.sol": {
+		"infrastructure/IModuleRegistry.sol": {
 			"keccak256": "0x3973176b829751ce6387d5a7d0ec383ebadf30c6872cfab1a2f4d289a9be54cc",
 			"license": "GPL-3.0-only",
 			"urls": [
@@ -177,7 +177,7 @@
 				"dweb:/ipfs/Qmd3vasUSZJxUm34AsxgkqUV4F6uLsPDuVBfEUCkKLscBe"
 			]
 		},
-		"contracts/modules/SimpleUpgrader.sol": {
+		"modules/SimpleUpgrader.sol": {
 			"keccak256": "0xe6daede834ad5174c3d9077e58a9df34241e79dcc441e1baacc7e5bc2fb29b9e",
 			"license": "GPL-3.0-only",
 			"urls": [
@@ -185,7 +185,7 @@
 				"dweb:/ipfs/QmectvXVYRLeaPBPFi2vUqqir76v2mM6MarvzGzgVKpfjP"
 			]
 		},
-		"contracts/modules/common/IModule.sol": {
+		"modules/common/IModule.sol": {
 			"keccak256": "0xdb7e81eb115c5723f73fde6a27d852cbccb53dc0ec23004bcbf05c46e479e903",
 			"license": "GPL-3.0-only",
 			"urls": [
@@ -193,7 +193,7 @@
 				"dweb:/ipfs/QmPddVqoEZPTiSN6akqhxxdwqTwHbLfyHLCBLpz2nEfdPi"
 			]
 		},
-		"contracts/wallet/IWallet.sol": {
+		"wallet/IWallet.sol": {
 			"keccak256": "0x419c35d8560646a01707b86608a77014c2998e88d3c9d5c239a69df936787cee",
 			"license": "GPL-3.0-only",
 			"urls": [

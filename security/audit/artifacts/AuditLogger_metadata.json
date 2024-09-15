@@ -456,7 +456,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/security/audit/AuditLogger.sol": "AuditLogger"
+			"security/audit/AuditLogger.sol": "AuditLogger"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -518,7 +518,7 @@
 				"dweb:/ipfs/QmNqYc8To2NdnpP6E1tGz7t6A7beuENde5yovwov5pW1fA"
 			]
 		},
-		"contracts/security/audit/AuditLogger.sol": {
+		"security/audit/AuditLogger.sol": {
 			"keccak256": "0x3195b43f91ef74d00306878848d2c178d05f00631323c3277a9c280e7cf1c899",
 			"license": "MIT",
 			"urls": [
@@ -526,7 +526,7 @@
 				"dweb:/ipfs/QmdG3Ku61j7tvgBPTRwvt5yQemmMPzf2BHeqN9YnCWQzEd"
 			]
 		},
-		"contracts/security/audit/_setupRole.sol": {
+		"security/audit/_setupRole.sol": {
 			"keccak256": "0x8b1c7cecee9c15a1ae9d9842e85424e1f952a6e50532c47b27973fb67a2c201d",
 			"license": "MIT",
 			"urls": [

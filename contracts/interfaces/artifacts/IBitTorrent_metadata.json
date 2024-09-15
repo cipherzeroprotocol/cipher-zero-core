@@ -51,7 +51,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/cipherzero/interfaces/IBitTorrent.sol": "IBitTorrent"
+			"contracts/interfaces/IBitTorrent.sol": "IBitTorrent"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -65,7 +65,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/cipherzero/interfaces/IBitTorrent.sol": {
+		"contracts/interfaces/IBitTorrent.sol": {
 			"keccak256": "0x05a427c9f86fa86d7cccb9a447cd9fb86382ed84fa354e2995da79e9940e1562",
 			"license": "MIT",
 			"urls": [

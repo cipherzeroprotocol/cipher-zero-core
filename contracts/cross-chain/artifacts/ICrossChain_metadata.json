@@ -37,7 +37,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/cipherzero/contracts/CrossChain/CrossChainTransfers.sol": "ICrossChain"
+			"contracts/cross-chain/CrossChainTransfers.sol": "ICrossChain"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -51,7 +51,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/cipherzero/contracts/CrossChain/CrossChainTransfers.sol": {
+		"contracts/cross-chain/CrossChainTransfers.sol": {
 			"keccak256": "0xd558cb150309ef11c552918db95e0b32f63fffb24a23a63a7c06e95957557fe1",
 			"license": "MIT",
 			"urls": [

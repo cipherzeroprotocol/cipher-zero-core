@@ -51,7 +51,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/cipherzero/contracts/Encryption/EndToEndEncryption.sol": "EndToEndEncryption"
+			"contracts/Encryption/EndToEndEncryption.sol": "EndToEndEncryption"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -65,7 +65,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/cipherzero/contracts/Encryption/EndToEndEncryption.sol": {
+		"contracts/Encryption/EndToEndEncryption.sol": {
 			"keccak256": "0xac9a4388f75844cdeaf4e5ddd78c74a127d9bf03d08517e2feb451821531b5fd",
 			"license": "MIT",
 			"urls": [

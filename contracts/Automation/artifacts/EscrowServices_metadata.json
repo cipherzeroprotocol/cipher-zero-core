@@ -96,7 +96,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/cipherzero/contracts/Automation/EscrowServices.sol": "EscrowServices"
+			"contracts/Automation/EscrowServices.sol": "EscrowServices"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -110,7 +110,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/cipherzero/contracts/Automation/EscrowServices.sol": {
+		"contracts/Automation/EscrowServices.sol": {
 			"keccak256": "0x98c837a5bff1bce947c9c39bb7ba0ea82c0f6a3ca7036606c9efbb9b8f3eb717",
 			"license": "MIT",
 			"urls": [

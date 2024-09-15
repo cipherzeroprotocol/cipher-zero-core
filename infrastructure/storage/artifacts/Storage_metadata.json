@@ -18,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/infrastructure/storage/Storage.sol": "Storage"
+			"infrastructure/storage/Storage.sol": "Storage"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -32,7 +32,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/infrastructure/storage/Storage.sol": {
+		"infrastructure/storage/Storage.sol": {
 			"keccak256": "0x3a8ffe67dbf48b01cafe2527a79639055581252f3fc64723eac90ce46c82a5ca",
 			"license": "MIT",
 			"urls": [
@@ -40,7 +40,7 @@
 				"dweb:/ipfs/QmXEDqiijs31vh7Tbd1EZeeTDdu5TzTVK6jsE5Bo4VvgCM"
 			]
 		},
-		"contracts/wallet/IWallet.sol": {
+		"wallet/IWallet.sol": {
 			"keccak256": "0x419c35d8560646a01707b86608a77014c2998e88d3c9d5c239a69df936787cee",
 			"license": "GPL-3.0-only",
 			"urls": [

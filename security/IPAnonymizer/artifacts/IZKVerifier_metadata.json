@@ -1,0 +1,70 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[8]",
+						"name": "proof",
+						"type": "uint256[8]"
+					},
+					{
+						"internalType": "uint256[1]",
+						"name": "input",
+						"type": "uint256[1]"
+					}
+				],
+				"name": "verifyProof",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"security/IPAnonymizer/IZKVerifier.sol": "IZKVerifier"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"security/IPAnonymizer/IZKVerifier.sol": {
+			"keccak256": "0x242ab35e5d8cdfc12b966273f5ebfb2add949110e2b059f2e9abc7019ffb28b4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9a8fcd9e88f072f19ad3e5dc61b828fe3385f4c0ce47e3f9ce5059837433c56b",
+				"dweb:/ipfs/QmZhtYkHLwJux8uCabA3Ma81EzYunGNqVPVq3s3gheJpBU"
+			]
+		}
+	},
+	"version": 1
+}

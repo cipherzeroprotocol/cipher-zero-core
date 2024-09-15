@@ -67,7 +67,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/cipherzero/contracts/Analytics/RealTimeMonitoring.sol": "RealTimeMonitoring"
+			"contracts/Analytics/RealTimeMonitoring.sol": "RealTimeMonitoring"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -81,7 +81,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/cipherzero/contracts/Analytics/RealTimeMonitoring.sol": {
+		"contracts/Analytics/RealTimeMonitoring.sol": {
 			"keccak256": "0x1cd5cac8b140e797c5abcc4d3e582ca4e3344a63ec467fc6557cfa567b100bde",
 			"license": "MIT",
 			"urls": [

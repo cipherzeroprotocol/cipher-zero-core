@@ -90,7 +90,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/infrastructure/storage/TransferStorage.sol": "TransferStorage"
+			"infrastructure/storage/TransferStorage.sol": "TransferStorage"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -104,7 +104,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/infrastructure/storage/ITransferStorage.sol": {
+		"infrastructure/storage/ITransferStorage.sol": {
 			"keccak256": "0x7e928dd0006ae792605a8503466f824f614b07601e66c149b557784e2144b547",
 			"license": "GPL-3.0-only",
 			"urls": [
@@ -112,7 +112,7 @@
 				"dweb:/ipfs/QmdkKY3JdwbmV3N8u9VDiofrtLSyYaSnqJep2qbSq9Sd4V"
 			]
 		},
-		"contracts/infrastructure/storage/Storage.sol": {
+		"infrastructure/storage/Storage.sol": {
 			"keccak256": "0x3a8ffe67dbf48b01cafe2527a79639055581252f3fc64723eac90ce46c82a5ca",
 			"license": "MIT",
 			"urls": [
@@ -120,7 +120,7 @@
 				"dweb:/ipfs/QmXEDqiijs31vh7Tbd1EZeeTDdu5TzTVK6jsE5Bo4VvgCM"
 			]
 		},
-		"contracts/infrastructure/storage/TransferStorage.sol": {
+		"infrastructure/storage/TransferStorage.sol": {
 			"keccak256": "0x9553d54dbaf1f59a92fcb5274a1739a00252c66a09f93577968433da9173adb9",
 			"license": "MIT",
 			"urls": [
@@ -128,7 +128,7 @@
 				"dweb:/ipfs/QmWowk5swJcoGxNZrQUfFYf7Zqmm4uXi6FsdkdKWBMRJNw"
 			]
 		},
-		"contracts/wallet/IWallet.sol": {
+		"wallet/IWallet.sol": {
 			"keccak256": "0x419c35d8560646a01707b86608a77014c2998e88d3c9d5c239a69df936787cee",
 			"license": "GPL-3.0-only",
 			"urls": [

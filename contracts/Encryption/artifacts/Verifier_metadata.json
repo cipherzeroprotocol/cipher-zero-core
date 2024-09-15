@@ -85,7 +85,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/cipherzero/contracts/Encryption/Verifier.sol": "Verifier"
+			"contracts/Encryption/Verifier.sol": "Verifier"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -99,7 +99,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/cipherzero/contracts/Encryption/Verifier.sol": {
+		"contracts/Encryption/Verifier.sol": {
 			"keccak256": "0x515914e8ade54e17a74e23575375af40a07809ccfd9572a9bf69f0c3123993ef",
 			"license": "MIT",
 			"urls": [
@@ -107,7 +107,7 @@
 				"dweb:/ipfs/QmWa1t5fyrpTkNfhMmht47TwNLyhrqAYJZEuw5DUJPkMzt"
 			]
 		},
-		"contracts/cipherzero/contracts/Encryption/interfaces/IVerifier.sol": {
+		"contracts/Encryption/interfaces/IVerifier.sol": {
 			"keccak256": "0x8081ccc8639780f78d8ceb784d43e7b901e0c56d5c1bacc817bfe60d6331f8c8",
 			"license": "MIT",
 			"urls": [

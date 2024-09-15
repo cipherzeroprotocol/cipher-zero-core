@@ -224,7 +224,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/infrastructure/storage/IGuardianStorage.sol": "IGuardianStorage"
+			"infrastructure/storage/IGuardianStorage.sol": "IGuardianStorage"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -238,7 +238,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/infrastructure/storage/IGuardianStorage.sol": {
+		"infrastructure/storage/IGuardianStorage.sol": {
 			"keccak256": "0x61b10b8bd19d6a582aff52e8d761fd44d7839ef1384ecb70648c61e22dc7d456",
 			"license": "GPL-3.0-only",
 			"urls": [

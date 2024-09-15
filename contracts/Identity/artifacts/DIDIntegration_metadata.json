@@ -89,7 +89,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/cipherzero/contracts/Identity/DIDIntegration.sol": "DIDIntegration"
+			"contracts/Identity/DIDIntegration.sol": "DIDIntegration"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -103,7 +103,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/cipherzero/contracts/Identity/DIDIntegration.sol": {
+		"contracts/Identity/DIDIntegration.sol": {
 			"keccak256": "0xdcf632c73a49d36cfd78a37177638920490f2fdc769bcc27e64f5630d34c0018",
 			"license": "MIT",
 			"urls": [

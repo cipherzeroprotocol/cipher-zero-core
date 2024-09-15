@@ -82,7 +82,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/cipherzero/contracts/Incentives/FileSharingIncentives.sol": "FileSharingIncentives"
+			"contracts/Incentives/FileSharingIncentives.sol": "FileSharingIncentives"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -96,7 +96,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/cipherzero/contracts/Incentives/FileSharingIncentives.sol": {
+		"contracts/Incentives/FileSharingIncentives.sol": {
 			"keccak256": "0x6bdc1aed44d181c22ec243150946a261bdadb812897f492a18c05202dce2bacc",
 			"license": "MIT",
 			"urls": [

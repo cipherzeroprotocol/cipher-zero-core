@@ -94,7 +94,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/cipherzero/contracts/Analytics/UsageAnalytics.sol": "UsageAnalytics"
+			"contracts/Analytics/UsageAnalytics.sol": "UsageAnalytics"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -108,7 +108,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/cipherzero/contracts/Analytics/UsageAnalytics.sol": {
+		"contracts/Analytics/UsageAnalytics.sol": {
 			"keccak256": "0xc0b10f32945142ec14a633d2a94ff7fcac1db9835934d56b10fd2f4a1097f173",
 			"license": "MIT",
 			"urls": [

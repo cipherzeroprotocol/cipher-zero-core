@@ -1,0 +1,121 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "",
+			"opcodes": "",
+			"sourceMap": ""
+		},
+		"gasEstimates": null,
+		"methodIdentifiers": {
+			"create2(bytes32,bytes32,bytes)": "3cda3351",
+			"forceDeployOnAddresses((bytes32,address,bool,uint256,bytes)[])": "e9f18c17"
+		}
+	},
+	"abi": [
+		{
+			"inputs": [
+				{
+					"internalType": "bytes32",
+					"name": "_salt",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "bytes32",
+					"name": "_bytecodeHash",
+					"type": "bytes32"
+				},
+				{
+					"internalType": "bytes",
+					"name": "_input",
+					"type": "bytes"
+				}
+			],
+			"name": "create2",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"components": [
+						{
+							"internalType": "bytes32",
+							"name": "bytecodeHash",
+							"type": "bytes32"
+						},
+						{
+							"internalType": "address",
+							"name": "newAddress",
+							"type": "address"
+						},
+						{
+							"internalType": "bool",
+							"name": "callConstructor",
+							"type": "bool"
+						},
+						{
+							"internalType": "uint256",
+							"name": "value",
+							"type": "uint256"
+						},
+						{
+							"internalType": "bytes",
+							"name": "input",
+							"type": "bytes"
+						}
+					],
+					"internalType": "struct IL2ContractDeployer.ForceDeployment[]",
+					"name": "_deployParams",
+					"type": "tuple[]"
+				}
+			],
+			"name": "forceDeployOnAddresses",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}

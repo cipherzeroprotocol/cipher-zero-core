@@ -94,7 +94,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/cipherzero/contracts/Analytics/Analytics.sol": "Analytics"
+			"contracts/Analytics/Analytics.sol": "Analytics"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -108,7 +108,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/cipherzero/contracts/Analytics/Analytics.sol": {
+		"contracts/Analytics/Analytics.sol": {
 			"keccak256": "0xbcc9656e527fe1c40a7517f7cb2e7b5edf40bcfc7db9cba925254ca4b822e2e5",
 			"license": "MIT",
 			"urls": [

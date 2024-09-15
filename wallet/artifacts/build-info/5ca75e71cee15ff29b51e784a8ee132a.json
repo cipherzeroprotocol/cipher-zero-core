@@ -1,0 +1,881 @@
+{
+	"id": "5ca75e71cee15ff29b51e784a8ee132a",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.26",
+	"solcLongVersion": "0.8.26+commit.8a97fa7a",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"wallet/IWallet.sol": {
+				"content": "\n\n// SPDX-License-Identifier: GPL-3.0-only\npragma solidity >=0.5.4 <0.9.0;\n\n/**\n * @title IWallet\n * @notice Interface for the BaseWallet\n */\ninterface IWallet {\n    /**\n     * @notice Returns the wallet owner.\n     * @return The wallet owner address.\n     */\n    function owner() external view returns (address);\n\n    /**\n     * @notice Returns the number of authorised modules.\n     * @return The number of authorised modules.\n     */\n    function modules() external view returns (uint);\n\n    /**\n     * @notice Sets a new owner for the wallet.\n     * @param _newOwner The new owner.\n     */\n    function setOwner(address _newOwner) external;\n\n    /**\n     * @notice Checks if a module is authorised on the wallet.\n     * @param _module The module address to check.\n     * @return `true` if the module is authorised, otherwise `false`.\n     */\n    function authorised(address _module) external view returns (bool);\n\n    /**\n     * @notice Returns the module responsible for a static call redirection.\n     * @param _sig The signature of the static call.\n     * @return the module doing the redirection\n     */\n    function enabled(bytes4 _sig) external view returns (address);\n\n    /**\n     * @notice Enables/Disables a module.\n     * @param _module The target module.\n     * @param _value Set to `true` to authorise the module.\n     */\n    function authoriseModule(address _module, bool _value) external;\n\n    /**\n    * @notice Enables a static method by specifying the target module to which the call must be delegated.\n    * @param _module The target module.\n    * @param _method The static method signature.\n    */\n    function enableStaticCall(address _module, bytes4 _method) external;\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"wallet/IWallet.sol": {
+				"IWallet": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "_module",
+									"type": "address"
+								},
+								{
+									"internalType": "bool",
+									"name": "_value",
+									"type": "bool"
+								}
+							],
+							"name": "authoriseModule",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "_module",
+									"type": "address"
+								}
+							],
+							"name": "authorised",
+							"outputs": [
+								{
+									"internalType": "bool",
+									"name": "",
+									"type": "bool"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "_module",
+									"type": "address"
+								},
+								{
+									"internalType": "bytes4",
+									"name": "_method",
+									"type": "bytes4"
+								}
+							],
+							"name": "enableStaticCall",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "bytes4",
+									"name": "_sig",
+									"type": "bytes4"
+								}
+							],
+							"name": "enabled",
+							"outputs": [
+								{
+									"internalType": "address",
+									"name": "",
+									"type": "address"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						},
+						{
+							"inputs": [],
+							"name": "modules",
+							"outputs": [
+								{
+									"internalType": "uint256",
+									"name": "",
+									"type": "uint256"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						},
+						{
+							"inputs": [],
+							"name": "owner",
+							"outputs": [
+								{
+									"internalType": "address",
+									"name": "",
+									"type": "address"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						},
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "_newOwner",
+									"type": "address"
+								}
+							],
+							"name": "setOwner",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {
+							"authoriseModule(address,bool)": {
+								"params": {
+									"_module": "The target module.",
+									"_value": "Set to `true` to authorise the module."
+								}
+							},
+							"authorised(address)": {
+								"params": {
+									"_module": "The module address to check."
+								},
+								"returns": {
+									"_0": "`true` if the module is authorised, otherwise `false`."
+								}
+							},
+							"enableStaticCall(address,bytes4)": {
+								"params": {
+									"_method": "The static method signature.",
+									"_module": "The target module."
+								}
+							},
+							"enabled(bytes4)": {
+								"params": {
+									"_sig": "The signature of the static call."
+								},
+								"returns": {
+									"_0": "the module doing the redirection"
+								}
+							},
+							"modules()": {
+								"returns": {
+									"_0": "The number of authorised modules."
+								}
+							},
+							"owner()": {
+								"returns": {
+									"_0": "The wallet owner address."
+								}
+							},
+							"setOwner(address)": {
+								"params": {
+									"_newOwner": "The new owner."
+								}
+							}
+						},
+						"title": "IWallet",
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"authoriseModule(address,bool)": "1f17732d",
+							"authorised(address)": "d6eb1bbf",
+							"enableStaticCall(address,bytes4)": "13da30b2",
+							"enabled(bytes4)": "5f54892b",
+							"modules()": "f7e80e98",
+							"owner()": "8da5cb5b",
+							"setOwner(address)": "13af4035"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_module\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_value\",\"type\":\"bool\"}],\"name\":\"authoriseModule\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_module\",\"type\":\"address\"}],\"name\":\"authorised\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_module\",\"type\":\"address\"},{\"internalType\":\"bytes4\",\"name\":\"_method\",\"type\":\"bytes4\"}],\"name\":\"enableStaticCall\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"_sig\",\"type\":\"bytes4\"}],\"name\":\"enabled\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"modules\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"setOwner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"authoriseModule(address,bool)\":{\"params\":{\"_module\":\"The target module.\",\"_value\":\"Set to `true` to authorise the module.\"}},\"authorised(address)\":{\"params\":{\"_module\":\"The module address to check.\"},\"returns\":{\"_0\":\"`true` if the module is authorised, otherwise `false`.\"}},\"enableStaticCall(address,bytes4)\":{\"params\":{\"_method\":\"The static method signature.\",\"_module\":\"The target module.\"}},\"enabled(bytes4)\":{\"params\":{\"_sig\":\"The signature of the static call.\"},\"returns\":{\"_0\":\"the module doing the redirection\"}},\"modules()\":{\"returns\":{\"_0\":\"The number of authorised modules.\"}},\"owner()\":{\"returns\":{\"_0\":\"The wallet owner address.\"}},\"setOwner(address)\":{\"params\":{\"_newOwner\":\"The new owner.\"}}},\"title\":\"IWallet\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"authoriseModule(address,bool)\":{\"notice\":\"Enables/Disables a module.\"},\"authorised(address)\":{\"notice\":\"Checks if a module is authorised on the wallet.\"},\"enableStaticCall(address,bytes4)\":{\"notice\":\"Enables a static method by specifying the target module to which the call must be delegated.\"},\"enabled(bytes4)\":{\"notice\":\"Returns the module responsible for a static call redirection.\"},\"modules()\":{\"notice\":\"Returns the number of authorised modules.\"},\"owner()\":{\"notice\":\"Returns the wallet owner.\"},\"setOwner(address)\":{\"notice\":\"Sets a new owner for the wallet.\"}},\"notice\":\"Interface for the BaseWallet\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"wallet/IWallet.sol\":\"IWallet\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"wallet/IWallet.sol\":{\"keccak256\":\"0x419c35d8560646a01707b86608a77014c2998e88d3c9d5c239a69df936787cee\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://b5689f84dc8a12aea4c0c96b3494cc83f4e1a2dfdb6461af45be555c5fab3843\",\"dweb:/ipfs/QmTrmgrvYgF55aZqA44GS9PwYDXKN9rntfcnxbuQnZs3we\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {
+							"authoriseModule(address,bool)": {
+								"notice": "Enables/Disables a module."
+							},
+							"authorised(address)": {
+								"notice": "Checks if a module is authorised on the wallet."
+							},
+							"enableStaticCall(address,bytes4)": {
+								"notice": "Enables a static method by specifying the target module to which the call must be delegated."
+							},
+							"enabled(bytes4)": {
+								"notice": "Returns the module responsible for a static call redirection."
+							},
+							"modules()": {
+								"notice": "Returns the number of authorised modules."
+							},
+							"owner()": {
+								"notice": "Returns the wallet owner."
+							},
+							"setOwner(address)": {
+								"notice": "Sets a new owner for the wallet."
+							}
+						},
+						"notice": "Interface for the BaseWallet",
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"wallet/IWallet.sol": {
+				"ast": {
+					"absolutePath": "wallet/IWallet.sol",
+					"exportedSymbols": {
+						"IWallet": [
+							53
+						]
+					},
+					"id": 54,
+					"license": "GPL-3.0-only",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.5",
+								".4",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "43:31:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IWallet",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "76:65:0",
+								"text": " @title IWallet\n @notice Interface for the BaseWallet"
+							},
+							"fullyImplemented": false,
+							"id": 53,
+							"linearizedBaseContracts": [
+								53
+							],
+							"name": "IWallet",
+							"nameLocation": "152:7:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"documentation": {
+										"id": 3,
+										"nodeType": "StructuredDocumentation",
+										"src": "166:93:0",
+										"text": " @notice Returns the wallet owner.\n @return The wallet owner address."
+									},
+									"functionSelector": "8da5cb5b",
+									"id": 8,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "owner",
+									"nameLocation": "273:5:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 4,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "278:2:0"
+									},
+									"returnParameters": {
+										"id": 7,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 6,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 8,
+												"src": "304:7:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 5,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "304:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "303:9:0"
+									},
+									"scope": 53,
+									"src": "264:49:0",
+									"stateMutability": "view",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"documentation": {
+										"id": 9,
+										"nodeType": "StructuredDocumentation",
+										"src": "319:117:0",
+										"text": " @notice Returns the number of authorised modules.\n @return The number of authorised modules."
+									},
+									"functionSelector": "f7e80e98",
+									"id": 14,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "modules",
+									"nameLocation": "450:7:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 10,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "457:2:0"
+									},
+									"returnParameters": {
+										"id": 13,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 12,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 14,
+												"src": "483:4:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 11,
+													"name": "uint",
+													"nodeType": "ElementaryTypeName",
+													"src": "483:4:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "482:6:0"
+									},
+									"scope": 53,
+									"src": "441:48:0",
+									"stateMutability": "view",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"documentation": {
+										"id": 15,
+										"nodeType": "StructuredDocumentation",
+										"src": "495:98:0",
+										"text": " @notice Sets a new owner for the wallet.\n @param _newOwner The new owner."
+									},
+									"functionSelector": "13af4035",
+									"id": 20,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "setOwner",
+									"nameLocation": "607:8:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 18,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 17,
+												"mutability": "mutable",
+												"name": "_newOwner",
+												"nameLocation": "624:9:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 20,
+												"src": "616:17:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 16,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "616:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "615:19:0"
+									},
+									"returnParameters": {
+										"id": 19,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "643:0:0"
+									},
+									"scope": 53,
+									"src": "598:46:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"documentation": {
+										"id": 21,
+										"nodeType": "StructuredDocumentation",
+										"src": "650:195:0",
+										"text": " @notice Checks if a module is authorised on the wallet.\n @param _module The module address to check.\n @return `true` if the module is authorised, otherwise `false`."
+									},
+									"functionSelector": "d6eb1bbf",
+									"id": 28,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "authorised",
+									"nameLocation": "859:10:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 24,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 23,
+												"mutability": "mutable",
+												"name": "_module",
+												"nameLocation": "878:7:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 28,
+												"src": "870:15:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 22,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "870:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "869:17:0"
+									},
+									"returnParameters": {
+										"id": 27,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 26,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 28,
+												"src": "910:4:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bool",
+													"typeString": "bool"
+												},
+												"typeName": {
+													"id": 25,
+													"name": "bool",
+													"nodeType": "ElementaryTypeName",
+													"src": "910:4:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bool",
+														"typeString": "bool"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "909:6:0"
+									},
+									"scope": 53,
+									"src": "850:66:0",
+									"stateMutability": "view",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"documentation": {
+										"id": 29,
+										"nodeType": "StructuredDocumentation",
+										"src": "922:189:0",
+										"text": " @notice Returns the module responsible for a static call redirection.\n @param _sig The signature of the static call.\n @return the module doing the redirection"
+									},
+									"functionSelector": "5f54892b",
+									"id": 36,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "enabled",
+									"nameLocation": "1125:7:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 32,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 31,
+												"mutability": "mutable",
+												"name": "_sig",
+												"nameLocation": "1140:4:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 36,
+												"src": "1133:11:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes4",
+													"typeString": "bytes4"
+												},
+												"typeName": {
+													"id": 30,
+													"name": "bytes4",
+													"nodeType": "ElementaryTypeName",
+													"src": "1133:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes4",
+														"typeString": "bytes4"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "1132:13:0"
+									},
+									"returnParameters": {
+										"id": 35,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 34,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 36,
+												"src": "1169:7:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 33,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "1169:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "1168:9:0"
+									},
+									"scope": 53,
+									"src": "1116:62:0",
+									"stateMutability": "view",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"documentation": {
+										"id": 37,
+										"nodeType": "StructuredDocumentation",
+										"src": "1184:154:0",
+										"text": " @notice Enables/Disables a module.\n @param _module The target module.\n @param _value Set to `true` to authorise the module."
+									},
+									"functionSelector": "1f17732d",
+									"id": 44,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "authoriseModule",
+									"nameLocation": "1352:15:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 42,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 39,
+												"mutability": "mutable",
+												"name": "_module",
+												"nameLocation": "1376:7:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 44,
+												"src": "1368:15:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 38,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "1368:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 41,
+												"mutability": "mutable",
+												"name": "_value",
+												"nameLocation": "1390:6:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 44,
+												"src": "1385:11:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bool",
+													"typeString": "bool"
+												},
+												"typeName": {
+													"id": 40,
+													"name": "bool",
+													"nodeType": "ElementaryTypeName",
+													"src": "1385:4:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bool",
+														"typeString": "bool"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "1367:30:0"
+									},
+									"returnParameters": {
+										"id": 43,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "1406:0:0"
+									},
+									"scope": 53,
+									"src": "1343:64:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								},
+								{
+									"documentation": {
+										"id": 45,
+										"nodeType": "StructuredDocumentation",
+										"src": "1413:207:0",
+										"text": " @notice Enables a static method by specifying the target module to which the call must be delegated.\n @param _module The target module.\n @param _method The static method signature."
+									},
+									"functionSelector": "13da30b2",
+									"id": 52,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "enableStaticCall",
+									"nameLocation": "1634:16:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 50,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 47,
+												"mutability": "mutable",
+												"name": "_module",
+												"nameLocation": "1659:7:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 52,
+												"src": "1651:15:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 46,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "1651:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 49,
+												"mutability": "mutable",
+												"name": "_method",
+												"nameLocation": "1675:7:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 52,
+												"src": "1668:14:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes4",
+													"typeString": "bytes4"
+												},
+												"typeName": {
+													"id": 48,
+													"name": "bytes4",
+													"nodeType": "ElementaryTypeName",
+													"src": "1668:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes4",
+														"typeString": "bytes4"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "1650:33:0"
+									},
+									"returnParameters": {
+										"id": 51,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "1692:0:0"
+									},
+									"scope": 53,
+									"src": "1625:68:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 54,
+							"src": "142:1553:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "43:1652:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

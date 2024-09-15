@@ -485,7 +485,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/infrastructure/storage/HashStorage.sol": "HashStorage"
+			"infrastructure/storage/HashStorage.sol": "HashStorage"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -547,7 +547,7 @@
 				"dweb:/ipfs/QmNqYc8To2NdnpP6E1tGz7t6A7beuENde5yovwov5pW1fA"
 			]
 		},
-		"contracts/infrastructure/storage/HashStorage.sol": {
+		"infrastructure/storage/HashStorage.sol": {
 			"keccak256": "0x75fe034d3e6ab5d1f59381dc9232f26c8aa4c96d4b128224e23e3be8b5cd7d43",
 			"license": "MIT",
 			"urls": [
@@ -555,7 +555,7 @@
 				"dweb:/ipfs/QmNhLMnnx4Gm92SVqLGhPpU3YD6EhKbdk5v3iQ5Gv1PSPk"
 			]
 		},
-		"contracts/infrastructure/storage/_setupRole.sol": {
+		"infrastructure/storage/_setupRole.sol": {
 			"keccak256": "0x8b1c7cecee9c15a1ae9d9842e85424e1f952a6e50532c47b27973fb67a2c201d",
 			"license": "MIT",
 			"urls": [

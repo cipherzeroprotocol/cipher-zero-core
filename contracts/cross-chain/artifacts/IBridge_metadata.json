@@ -47,7 +47,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/cipherzero/contracts/CrossChain/Interoperability.sol": "IBridge"
+			"contracts/cross-chain/Interoperability.sol": "IBridge"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -85,7 +85,7 @@
 				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
 			]
 		},
-		"contracts/cipherzero/contracts/CrossChain/Interoperability.sol": {
+		"contracts/cross-chain/Interoperability.sol": {
 			"keccak256": "0x7370f79756001a0a55f99c3245fd094a0943021a3391a33bfb4ef66c841e3523",
 			"license": "MIT",
 			"urls": [

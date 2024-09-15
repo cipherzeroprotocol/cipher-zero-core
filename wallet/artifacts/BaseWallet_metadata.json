@@ -1,0 +1,424 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "module",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "value",
+						"type": "bool"
+					}
+				],
+				"name": "AuthorisedModule",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "module",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "Invoked",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "OwnerChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "Received",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "_value",
+						"type": "bool"
+					}
+				],
+				"name": "authoriseModule",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "authorised",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_module",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes4",
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"name": "enableStaticCall",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "_sig",
+						"type": "bytes4"
+					}
+				],
+				"name": "enabled",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_modules",
+						"type": "address[]"
+					}
+				],
+				"name": "init",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_target",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "invoke",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "_result",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "modules",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "setOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "staticCallExecutor",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"author": "Julien Niset - <julien@argent.xyz>",
+			"kind": "dev",
+			"methods": {
+				"authoriseModule(address,bool)": {
+					"params": {
+						"_module": "The target module.",
+						"_value": "Set to `true` to authorise the module."
+					}
+				},
+				"enableStaticCall(address,bytes4)": {
+					"params": {
+						"_method": "The static method signature.",
+						"_module": "The target module."
+					}
+				},
+				"enabled(bytes4)": {
+					"params": {
+						"_sig": "The signature of the static call."
+					},
+					"returns": {
+						"_0": "the module doing the redirection"
+					}
+				},
+				"init(address,address[])": {
+					"params": {
+						"_modules": "The modules to authorise.",
+						"_owner": "The owner."
+					}
+				},
+				"invoke(address,uint256,bytes)": {
+					"params": {
+						"_data": "The data of the transaction.",
+						"_target": "The address for the transaction.",
+						"_value": "The value of the transaction."
+					}
+				},
+				"setOwner(address)": {
+					"params": {
+						"_newOwner": "The new owner."
+					}
+				}
+			},
+			"stateVariables": {
+				"authorised": {
+					"params": {
+						"_module": "The module address to check."
+					},
+					"return": "`true` if the module is authorised, otherwise `false`.",
+					"returns": {
+						"_0": "`true` if the module is authorised, otherwise `false`."
+					}
+				},
+				"modules": {
+					"return": "The number of authorised modules.",
+					"returns": {
+						"_0": "The number of authorised modules."
+					}
+				},
+				"owner": {
+					"return": "The wallet owner address.",
+					"returns": {
+						"_0": "The wallet owner address."
+					}
+				}
+			},
+			"title": "BaseWallet",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"authoriseModule(address,bool)": {
+					"notice": "Enables/Disables a module."
+				},
+				"authorised(address)": {
+					"notice": "Checks if a module is authorised on the wallet."
+				},
+				"enableStaticCall(address,bytes4)": {
+					"notice": "Enables a static method by specifying the target module to which the call must be delegated."
+				},
+				"enabled(bytes4)": {
+					"notice": "Returns the module responsible for a static call redirection."
+				},
+				"init(address,address[])": {
+					"notice": "Inits the wallet by setting the owner and authorising a list of modules."
+				},
+				"invoke(address,uint256,bytes)": {
+					"notice": "Performs a generic transaction."
+				},
+				"modules()": {
+					"notice": "Returns the number of authorised modules."
+				},
+				"owner()": {
+					"notice": "Returns the wallet owner."
+				},
+				"setOwner(address)": {
+					"notice": "Sets a new owner for the wallet."
+				}
+			},
+			"notice": "Simple modular wallet that authorises modules to call its invoke() method.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"wallet/BaseWallet.sol": "BaseWallet"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"wallet/BaseWallet.sol": {
+			"keccak256": "0x127c264d8a64f2f62bb6288a0eb095b0621983d5be45613a31ef658b3afac3af",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b3c9dabf2c70c7f9f3f9a09404a9198ef8be47484161745b37c6027a5f7004ab",
+				"dweb:/ipfs/QmZEHTWcAeFpssqudU2fzHATJZapHbGY1RbmhBUeWWrWAV"
+			]
+		},
+		"wallet/IModule.sol": {
+			"keccak256": "0xdb7e81eb115c5723f73fde6a27d852cbccb53dc0ec23004bcbf05c46e479e903",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://fe693dcda5649f4e3671e545daf9597da621401633c25eb9c2cc4b5a1542564b",
+				"dweb:/ipfs/QmPddVqoEZPTiSN6akqhxxdwqTwHbLfyHLCBLpz2nEfdPi"
+			]
+		},
+		"wallet/IWallet.sol": {
+			"keccak256": "0x419c35d8560646a01707b86608a77014c2998e88d3c9d5c239a69df936787cee",
+			"license": "GPL-3.0-only",
+			"urls": [
+				"bzz-raw://b5689f84dc8a12aea4c0c96b3494cc83f4e1a2dfdb6461af45be555c5fab3843",
+				"dweb:/ipfs/QmTrmgrvYgF55aZqA44GS9PwYDXKN9rntfcnxbuQnZs3we"
+			]
+		}
+	},
+	"version": 1
+}

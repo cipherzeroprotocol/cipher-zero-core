@@ -49,9 +49,9 @@ contract AssetTransfer is ReentrancyGuard, AccessControl, Pausable {
 
     constructor(address _assetRegistry) {
         assetRegistry = AssetRegistry(_assetRegistry);
-        _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
-        _setupRole(TRANSFER_ADMIN_ROLE, msg.sender);
-        _setupRole(BRIDGE_ROLE, msg.sender);
+        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
+        _grantRole(TRANSFER_ADMIN_ROLE, msg.sender);
+        _grantRole(BRIDGE_ROLE, msg.sender);
     }
 
     /**

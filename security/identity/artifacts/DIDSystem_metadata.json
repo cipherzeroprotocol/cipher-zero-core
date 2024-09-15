@@ -163,7 +163,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/security/identity/DID.sol": "DIDSystem"
+			"security/identity/DID.sol": "DIDSystem"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -249,7 +249,7 @@
 				"dweb:/ipfs/QmVBEei6aTnvYNZp2CHYVNKyZS4q1KkjANfY39WVXZXVoT"
 			]
 		},
-		"contracts/security/identity/DID.sol": {
+		"security/identity/DID.sol": {
 			"keccak256": "0xfdec50f81173784690700b5b1087590329537b6f33ad0bba94d9b9ff518ad852",
 			"license": "MIT",
 			"urls": [
@@ -257,7 +257,7 @@
 				"dweb:/ipfs/QmbKfeUEcgPGjd7aeMLpheh2bK6RL2jFLdrbVWhrK3GPXR"
 			]
 		},
-		"contracts/security/identity/_setupRole.sol": {
+		"security/identity/_setupRole.sol": {
 			"keccak256": "0x8b1c7cecee9c15a1ae9d9842e85424e1f952a6e50532c47b27973fb67a2c201d",
 			"license": "MIT",
 			"urls": [

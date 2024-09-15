@@ -19,7 +19,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/infrastructure/storage/Counters.sol": "Counters"
+			"infrastructure/storage/Counters.sol": "Counters"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -33,7 +33,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/infrastructure/storage/Counters.sol": {
+		"infrastructure/storage/Counters.sol": {
 			"keccak256": "0xa890b9e4d2416f5d25afb556b179358d64cb1023da660a2813a18b2a21e87025",
 			"license": "MIT",
 			"urls": [

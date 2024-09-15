@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
-import "./interfaces/IMessaging.sol";
+import "../interfaces/IMessaging.sol";
 
 contract Messaging is IMessaging {
     struct Message {

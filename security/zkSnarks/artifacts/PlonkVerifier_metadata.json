@@ -43,7 +43,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/security/zkSnarks/Verifier.sol": "PlonkVerifier"
+			"security/zkSnarks/Verifier.sol": "PlonkVerifier"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -57,7 +57,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/security/zkSnarks/Verifier.sol": {
+		"security/zkSnarks/Verifier.sol": {
 			"keccak256": "0x75f24aef4e157b6d58122cae7e6a1851cde6c679b9452edbd6486d36c1020c52",
 			"license": "GPL-3.0",
 			"urls": [

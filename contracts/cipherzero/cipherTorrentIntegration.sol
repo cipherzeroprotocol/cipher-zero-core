@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
-import "./interfaces/IBitTorrent.sol";
+import "../interfaces/IBitTorrent.sol";
 
 contract BitTorrentIntegration is IBitTorrent {
     mapping(address => string[]) private userFiles;
